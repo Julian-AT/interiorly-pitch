@@ -11,7 +11,7 @@ import {
 } from "@/components/icons";
 import Eren from "@/public/images/team/eren.jpg";
 import Fabian from "@/public/images/team/Fabian.jpg";
-import Julian from "@/public/images/team/julian.jpg";
+import Julian from "@/public/images/team/Julian.jpg";
 import Image, { StaticImageData } from "next/image";
 import { Separator } from "@/components/ui/separator";
 

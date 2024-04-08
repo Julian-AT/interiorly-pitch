@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import Bedroom from "@/public/images/bedroom.jpg";
 import Eren from "@/public/images/team/eren.jpg";
 import Fabian from "@/public/images/team/Fabian.jpg";
-import Julian from "@/public/images/team/julian.jpg";
+import Julian from "@/public/images/team/Julian.jpg";
 
 export function SlideTeam() {
   return (
