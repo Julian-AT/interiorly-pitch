@@ -22,7 +22,12 @@ export function SlideTechStack() {
           <div className="grid grid-rows-2 gap-8">
             <Card className="flex flex-col items-center justify-center space-y-5 p-5">
               <Image src={NextLogo} alt="NextJS" width={76} height={76} />
-              <h2 className="text-2xl">NextJS</h2>
+              <div className="flex flex-col items-center justify-center">
+                <h2 className="text-2xl">NextJS</h2>
+                <span className="text-muted-foreground text-base">
+                  React Based Framework
+                </span>
+              </div>
               <p className="text-[#878787] text-sm text-center">
                 Accelerates web app development with server-side rendering and
                 efficient routing, optimizing user experience.
@@ -35,7 +40,12 @@ export function SlideTechStack() {
                 width={76}
                 height={76}
               />{" "}
-              <h2 className="text-2xl">Drizzle ORM</h2>
+              <div className="flex flex-col items-center justify-center">
+                <h2 className="text-2xl">Drizzle ORM</h2>
+                <span className="text-muted-foreground text-base">
+                  Object Relational Mapping
+                </span>
+              </div>
               <p className="text-[#878787] text-sm text-center">
                 Streamlines database interactions, facilitating seamless data
                 manipulation and retrieval for enhanced productivity.
@@ -50,7 +60,12 @@ export function SlideTechStack() {
                 width={76}
                 height={76}
               />{" "}
-              <h2 className="text-2xl">PostgreSQL</h2>
+              <div className="flex flex-col items-center justify-center">
+                <h2 className="text-2xl">PostgreSQL</h2>
+                <span className="text-muted-foreground text-base">
+                  Open-Source Relational Database
+                </span>
+              </div>
               <p className="text-[#878787] text-sm text-center">
                 Highly stable database system supporting complex data
                 structures, ensuring reliable data storage and retrieval.
@@ -58,7 +73,14 @@ export function SlideTechStack() {
             </Card>
             <Card className="flex flex-col items-center justify-center space-y-5 p-5">
               <Image src={SupabaseLogo} alt="Supabase" width={76} height={76} />{" "}
-              <h2 className="text-2xl">Supabase</h2>
+              <div>
+                <div className="flex flex-col items-center justify-center">
+                  <h2 className="text-2xl">Supabase</h2>
+                  <span className="text-muted-foreground text-base">
+                    Open-Source Firebase Alternative
+                  </span>
+                </div>
+              </div>
               <p className="text-[#878787] text-sm text-center">
                 Scalable backend infrastructure with built-in authentication,
                 empowering rapid development and secure data management.

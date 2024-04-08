@@ -377,6 +377,29 @@ export function IconChevronLeft({
   );
 }
 
+export function IconDoubleChevronLeft({
+  className,
+  ...props
+}: React.ComponentProps<"svg">) {
+  return (
+    <svg
+      data-slot="icon"
+      fill="none"
+      stroke-width="1.5"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      className={cn("h-4 w-4", className)}
+      {...props}
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+      ></path>
+    </svg>
+  );
+}
+
 export function IconChevronRight({
   className,
   ...props
@@ -395,6 +418,29 @@ export function IconChevronRight({
         stroke-linecap="round"
         stroke-linejoin="round"
         d="m8.25 4.5 7.5 7.5-7.5 7.5"
+      ></path>
+    </svg>
+  );
+}
+
+export function IconDoubleChevronRight({
+  className,
+  ...props
+}: React.ComponentProps<"svg">) {
+  return (
+    <svg
+      data-slot="icon"
+      fill="none"
+      stroke-width="1.5"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      className={cn("h-4 w-4", className)}
+      {...props}
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
       ></path>
     </svg>
   );

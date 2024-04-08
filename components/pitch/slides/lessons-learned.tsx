@@ -53,15 +53,15 @@ const lessonsLearned: LessonLearned[] = [
     items: [
       {
         description:
-          "Communication is crucial and can increases the quality of work dramatically.",
+          "Developing a SaaS app for AI interior design demands perseverance, embracing setbacks, and unwavering commitment.",
       },
       {
         description:
-          "Full-Stack Development can be a tedious but rewarding task.",
+          "Opting for software projects aligned with my interests is fundamental. Passion empowers perseverance through obstacles.",
       },
       {
         description:
-          "Managing your Work-time, School-time and Private-time is as crucial but even more challenging then communication.",
+          "Continuous learning is essential in keeping up with evolving technologies and industry trends.",
       },
     ],
   },
@@ -72,15 +72,15 @@ const lessonsLearned: LessonLearned[] = [
     items: [
       {
         description:
-          "Communication is crucial and can increases the quality of work dramatically.",
+          "Training an AI model requires persistence, accepting failures, and dedication.",
       },
       {
         description:
-          "Full-Stack Development can be a tedious but rewarding task.",
+          "Work, school, and personal commitments can be challenging, but staying organized and committed is crucial.",
       },
       {
         description:
-          "Managing your Work-time, School-time and Private-time is as crucial but even more challenging then communication.",
+          "When you enjoy what you do, overcoming obstacles becomes more manageable.",
       },
     ],
   },
@@ -123,19 +123,21 @@ export function SlideLessonsLearned() {
                   )}
                 </span>
               </div>
-              {item.items.map((lesson, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center justify-center text-center space-x-3"
-                >
-                  <div className="w-12 my-5">
-                    <Separator />
+              <div className="grid gird-rows-3">
+                {item.items.map((lesson, idx) => (
+                  <div
+                    key={idx}
+                    className="flex flex-col items-center justify-center text-center space-x-3 h-32"
+                  >
+                    <div className="w-12 my-5">
+                      <Separator />
+                    </div>
+                    <q className="text-[#e6e6e6] text-center">
+                      {lesson.description}
+                    </q>
                   </div>
-                  <q className="text-[#e6e6e6] text-center">
-                    {lesson.description}
-                  </q>
-                </div>
-              ))}
+                ))}
+              </div>
             </Card>
           ))}
         </div>
