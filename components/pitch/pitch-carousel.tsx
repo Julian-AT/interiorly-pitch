@@ -17,6 +17,7 @@ import { SlideTechStack } from "./slides/stack";
 import { SlideFeatures } from "./slides/features";
 import { CarouselToolbar } from "./carousel-toolbar";
 import { SlideLessonsLearned } from "./slides/lessons-learned";
+import { SlideFuture } from "./slides/future";
 
 const PitchCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -50,6 +51,9 @@ const PitchCarousel = () => {
         </CarouselItem>
         <CarouselItem>
           <SlideLessonsLearned />
+        </CarouselItem>
+        <CarouselItem>
+          <SlideFuture />
         </CarouselItem>
       </CarouselContent>
       <CarouselToolbar api={api} />

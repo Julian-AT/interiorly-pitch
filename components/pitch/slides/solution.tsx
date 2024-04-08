@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { IconBankNotes, IconSparkles, IconUserGroup } from "@/components/icons";
-import LivingRoom from "@/public/images/livingroom.jpg";
+import LaptopMockup from "@/public/images/laptop-mockup.png";
 
 export function SlideSolution() {
   return (
@@ -53,16 +53,16 @@ export function SlideSolution() {
             </Card>
           </div>
 
-          <div className="ml-auto w-full">
+          <Card className="ml-auto w-full px-5">
             <Image
-              src={LivingRoom}
-              alt="Bedroom"
+              src={LaptopMockup}
+              alt="Laptop Mockup"
               width={650}
               height={875}
               quality={100}
-              className="object-cover w-full h-full rounded-lg"
+              className="object-contain w-full h-full rounded-lg"
             />
-          </div>
+          </Card>
         </div>
       </div>
     </div>

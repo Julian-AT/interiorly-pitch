@@ -3,6 +3,12 @@ import React from "react";
 import Eren from "@/public/images/team/eren.jpg";
 import Fabian from "@/public/images/team/Fabian.jpg";
 import LivingRoom from "@/public/images/livingroom.png";
+import {
+  IconCheck,
+  IconCommandLine,
+  IconDoubleCheck,
+  IconSingleCheck,
+} from "../icons";
 
 const Chat = () => {
   return (
@@ -66,8 +72,8 @@ const Chat = () => {
                 className="object-cover rounded-lg"
               />
             </div>
-            <span className="text-sm font-normal text-[#878787]">
-              Delivered
+            <span className="text-sm font-normal flex justify-end items-center text-[#878787]">
+              Delivered <IconDoubleCheck className="w-5 h-4" />
             </span>
           </div>
         </div>
@@ -75,7 +81,7 @@ const Chat = () => {
       <div className="flex self-end gap-2.5 mr-3">
         <div className="flex flex-col gap-1 col-span-3">
           <div className="flex flex-col w-full max-w-[326px] leading-1.5 p-4  bg-[#1c1c1c] rounded-s-xl rounded-br-xl ">
-            <div className="flex space-x-2 items-center justify-end mb-2">
+            <div className="flex space-x-2 items-center justify-start mb-2">
               <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
                 11:50
               </span>
@@ -91,8 +97,8 @@ const Chat = () => {
             <p className="text-sm font-normal text-[#878787] text-right">
               Woah! I Love the color scheme 😍{" "}
             </p>
-            <span className="text-sm font-normal text-right mt-3 text-[#878787]">
-              Sent
+            <span className="text-sm font-normal flex justify-start items-center text-right mt-3 text-[#878787]">
+              Sent <IconDoubleCheck className="w-4   h-4" />
             </span>
           </div>
         </div>
