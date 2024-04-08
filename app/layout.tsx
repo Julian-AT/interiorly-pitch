@@ -4,15 +4,23 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ImageGenerationProvider } from "@/lib/hooks/use-images";
+import { Metadata } from "next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-interface RootLayoutProps extends React.HTMLAttributes<HTMLDivElement> {}
+export const metadata: Metadata = {
+  title: "Interiorly AI Pitch",
+  description: "Interiorly AI Pitch",
+};
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
