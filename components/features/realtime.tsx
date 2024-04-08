@@ -2,7 +2,7 @@ import React from "react";
 import { Avatar, AvatarGroup } from "@nextui-org/react";
 import Eren from "@/public/images/team/eren.jpg";
 import Fabian from "@/public/images/team/Fabian.jpg";
-import Julian from "@/public/images/team/julian.jpg";
+import Julian from "@/public/images/team/Julian.jpg";
 import LivingRoom from "@/public/images/livingroom.png";
 import Image from "next/image";
 import CursorEren from "@/public/images/cursor_eren.png";
