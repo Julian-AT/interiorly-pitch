@@ -34,7 +34,7 @@ const lessonsLearned: LessonLearned[] = [
     items: [
       {
         description:
-          "Communication is crucial and can increases the quality of work dramatically.",
+          "Communication is crucial and can increase the quality of work dramatically.",
       },
       {
         description:

@@ -12,7 +12,7 @@ export function SlideTechStack() {
   return (
     <div className="min-h-screen relative w-screen flex">
       <div className="absolute left-4 right-4 md:left-8 md:right-8 top-4 flex justify-between text-lg">
-        <span>Tech Stack</span>
+        <span>Tech Stack (WebApp)</span>
         <span className="text-muted-foreground">
           <Link href="/">interiorly.ai</Link>
         </span>

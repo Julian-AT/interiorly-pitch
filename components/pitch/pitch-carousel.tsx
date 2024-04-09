@@ -22,6 +22,7 @@ import { SlideEvolution } from "./slides/evolution";
 import { SlideScreenshots } from "./slides/screenshots";
 import { SlideFinish } from "./slides/finish";
 import { SlidePages } from "./slides/pages";
+import { SlideTechStack2 } from "./slides/stack2";
 
 const PitchCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -52,6 +53,9 @@ const PitchCarousel = () => {
         </CarouselItem>
         <CarouselItem>
           <SlideTechStack />
+        </CarouselItem>
+        <CarouselItem>
+          <SlideTechStack2 />
         </CarouselItem>
         <CarouselItem>
           <SlidePages />
