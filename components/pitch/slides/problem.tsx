@@ -18,8 +18,8 @@ export function SlideProblem() {
           <div className="grid grid-rows-2 gap-8">
             <Card className="flex flex-col items-center justify-center space-y-5 p-5">
               <IconPuzzlePiece className="w-12 h-12" />
-              <h2 className="text-2xl">Complexity</h2>
-              <p className="text-[#878787] text-sm text-center">
+              <h2 className="text-3xl">Complexity</h2>
+              <p className="text-[#878787] text-center">
                 The process of designing living spaces is exceedingly complex,
                 demanding not only a deep understanding of a room&apos;s
                 aesthetic and functional requirements but also a significant
@@ -45,8 +45,8 @@ export function SlideProblem() {
           <div className="grid grid-rows-2 gap-5">
             <Card className="flex flex-col items-center justify-center space-y-5 p-5">
               <IconBolt className="w-12 h-12" />
-              <h2 className="text-2xl">Creativity</h2>
-              <p className="text-[#878787] text-sm text-center">
+              <h2 className="text-3xl">Creativity</h2>
+              <p className="text-[#878787] text-center">
                 Interior design can often feel overwhelming due to its
                 intricacies and the broad spectrum of decisions and options that
                 must be considered.
@@ -54,8 +54,8 @@ export function SlideProblem() {
             </Card>
             <Card className="flex flex-col items-center justify-center space-y-5 p-5">
               <IconBankNotes className="w-12 h-12" />
-              <h2 className="text-2xl">Expenses</h2>
-              <p className="text-[#878787] text-sm text-center">
+              <h2 className="text-3xl">Expenses</h2>
+              <p className="text-[#878787] text-center">
                 The considerable costs often discourage many individuals from
                 seriously considering the remodeling or redesign of their living
                 spaces.
