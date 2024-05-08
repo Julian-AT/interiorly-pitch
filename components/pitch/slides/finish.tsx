@@ -2,6 +2,7 @@ import Logo from "@/components/logo";
 import Link from "next/link";
 import QRCode from "@/public/images/qr.png";
 import Image from "next/image";
+import BookMeeting from "@/components/book-meeting";
 
 export function SlideFinish() {
   const contactMethods = [
@@ -80,26 +81,11 @@ export function SlideFinish() {
           <Link href="/">interiorly.ai</Link>
         </span>
       </div>
-      <div className="flex flex-col min-h-screen justify-center items-center container">
-        <Image src={QRCode} alt="QR Code" className="w-64 h-64 mb-5" />
-        <h1 className="text-7xl leading-[1.2] px-4 md:px-0 font-medium text-center">
-          Book a meeting with us to learn more about Interiorly AI
-        </h1>
-        <ul className="mt-12 flex flex-wrap gap-x-12 gap-y-6 items-center justify-center lg:gap-x-24">
-          {contactMethods.map((item, idx) => (
-            <li key={idx}>
-              <h4 className="text-lg font-semibold text-center  ">
-                {item.title}
-              </h4>
-              <div className="mt-3 flex items-center gap-x-3">
-                <div className="flex-none text-gray-400 text-center">
-                  {item.icon}
-                </div>
-                <p className="text-gray-300">{item.contact}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+      <div className="flex flex-col min-h-screen justify-center items-center container gap-8">
+        <span className="text-center text-3xl text-secondary-foreground font-bold">
+          Interested in Interiorly AI? Book a Meeting.
+        </span>
+        <BookMeeting />
       </div>
     </div>
   );

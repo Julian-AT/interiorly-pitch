@@ -1,18 +1,16 @@
 import React from "react";
-import { Avatar, AvatarGroup } from "@nextui-org/react";
-import Eren from "@/public/images/team/eren.jpg";
-import Fabian from "@/public/images/team/Fabian.jpg";
 import Julian from "@/public/images/team/Julian.jpg";
+import Anthony from "@/public/images/team/Julian.jpg";
 import LivingRoom from "@/public/images/livingroom.png";
 import Image from "next/image";
-import CursorEren from "@/public/images/cursor_eren.png";
 import CursorJulian from "@/public/images/cursor_julian.png";
-import { Card } from "../pitch/ui";
+import CursorAnthony from "@/public/images/cursor_anthony.png";
+import { Card } from "@/components/pitch/ui";
 
 const RealtimeCollaboration = () => {
   return (
-    <Card className="flex flex-col w-full justify-start">
-      <div className="flex justify-between items-center w-full">
+    <Card className="flex flex-col w-full justify-start card-faded p-[1px] border-none relative overflow-hidden">
+      <div className="flex justify-between items-center w-full px-6 pt-8 pb-6">
         <span className="font-semibold flex items-center gap-2">
           <Image
             src={LivingRoom}
@@ -23,18 +21,11 @@ const RealtimeCollaboration = () => {
         </span>
         <div className="flex -space-x-4 rtl:space-x-reverse">
           <Image
-            src={Eren}
-            alt="Eren Gülüm"
+            src={Anthony}
+            alt="Anthony Owah"
             width={40}
             height={40}
             className="rounded-full w-10 h-10 object-cover border-2 border-green-500"
-          />
-          <Image
-            src={Fabian}
-            alt="Fabian Adametz"
-            width={40}
-            height={40}
-            className="rounded-full w-10 h-10 object-cover border-2 border-orange-500"
           />
           <Image
             src={Julian}
@@ -51,12 +42,12 @@ const RealtimeCollaboration = () => {
           </a>
         </div>
       </div>
-      <div className="w-full relative flex flex-col gap-2.5">
+      <div className="w-full relative flex flex-col gap-2.5 px-6 pt-8">
         <div className="absolute h-full w-full bg-gradient-to-t from-background to-transparent from-[10%]" />
         <div className="relative">
           <Image
-            src={CursorEren}
-            alt="Cursor Eren"
+            src={CursorAnthony}
+            alt="Cursor Anthony"
             className="absolute w-32 ml-[20%] mt-[60%]"
           />
           <Image

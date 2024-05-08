@@ -1,10 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
-import Team from "@/public/images/team/team.jpg";
-import Eren from "@/public/images/team/eren.jpg";
-import Fabian from "@/public/images/team/Fabian.jpg";
 import Julian from "@/public/images/team/Julian.jpg";
+import Anthony from "@/public/images/team/Julian.jpg";
+import Team from "@/public/images/img2img_after.png";
 
 export function SlideTeam() {
   return (
@@ -15,71 +14,66 @@ export function SlideTeam() {
           <Link href="/">interiorly.ai</Link>
         </span>
       </div>
-      <div className="grid grid-cols-3 gap-8 container min-h-screen  items-center justify-center">
-        <div className="grid md:grid-rows-3 gap-8 px-4  md:px-0 md:pt-0 h-full md:h-auto overflow-auto relative border">
-          <Card className="flex flex-col p-5 h-full w-full space-y-3">
-            <Image
-              src={Julian}
-              alt="Julian Schmidt"
-              width={64}
-              height={64}
-              quality={100}
-              className="rounded-full w-14 h-14 object-cover"
-            />{" "}
-            <div>
-              <h2 className="text-xl">Julian Schmidt</h2>
-              <span className="text-secondary-foreground/50">
-                Lead Full-Stack Developer
-              </span>
-            </div>
-          </Card>
-          <Card className="flex flex-col p-5 h-full w-full space-y-3">
-            <Image
-              src={Fabian}
-              alt="Fabian Adametz"
-              width={64}
-              height={64}
-              quality={100}
-              className="rounded-full w-14 h-14 object-cover"
-            />
-            <div>
-              <h2 className="text-xl">Fabian Adametz</h2>
-              <span className="text-secondary-foreground/50">
-                AI & Project Management
-              </span>
-            </div>
-          </Card>
-          <Card className="flex flex-col p-5 h-full w-full space-y-3">
-            <Image
-              src={Eren}
-              alt="Eren Gülüm"
-              width={64}
-              height={64}
-              quality={100}
-              className="rounded-full w-14 h-14 object-cover"
-            />
-            <div>
-              <h2 className="text-xl">Eren Gülüm</h2>
-              <span className="text-secondary-foreground/50">
-                Junior Full-Stack Developer
-              </span>
-            </div>
-          </Card>
-        </div>
-        <div className="h-[580px]">
+      <div className="container min-h-screen flex items-center justify-center ">
+        <div className="grid grid-cols-2 gap-8 w-full h-full">
+          <div className="grid grid-row-2 gap-8">
+            <Card className="flex flex-col p-5 h-full w-full space-y-3">
+              <div className="flex items-center">
+                <Image
+                  src={Julian}
+                  alt="Julian Schmidt"
+                  width={128}
+                  height={128}
+                  quality={100}
+                  className="rounded-full w-24 h-24 object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl">Julian Schmidt</h2>
+                <span className="text-muted-foreground text-lg">
+                  Fullstack Development & AI
+                </span>
+              </div>
+              <div>
+                <p className="text-secondary-foreground/50">
+                  Full Stack Developer. Founded Interiorly (formerly
+                  &quot;RoomVision&quot;) in 2021. Passionate about AI and its
+                  applications in the real world.
+                </p>
+              </div>
+            </Card>
+            <Card className="flex flex-col p-5 w-full space-y-3">
+              <div className="flex items-center">
+                <Image
+                  src={Anthony}
+                  alt="Anthony Owah"
+                  width={128}
+                  height={128}
+                  quality={100}
+                  className="rounded-full w-24 h-24 object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl">Anthony Owah</h2>
+                <span className="text-muted-foreground text-lg">
+                  Backend Development & PM
+                </span>
+              </div>
+              <div>
+                <p className="text-secondary-foreground/50">
+                  Project Manager and (backend) Developer. Effectively
+                  coordinate complex projects while developing technical
+                  solutions to meet requirements and implement efficient
+                  systems.
+                </p>
+              </div>
+            </Card>
+          </div>
           <Image
             src={Team}
-            alt="Julian Schmidt"
-            width={1100}
-            height={2100}
-            quality={100}
-            className="w-full h-full rounded-lg border-2 border-border object-cover"
+            alt="Team"
+            className="object-contain rounded-lg w-full h-full"
           />
-        </div>
-        <div className="ml-auto w-full space-y-8 items-center flex">
-          <h2 className="text-[64px] font-medium text-center leading-tight">
-            “The speed and velocity we have together is unmatched.”
-          </h2>
         </div>
       </div>
     </div>

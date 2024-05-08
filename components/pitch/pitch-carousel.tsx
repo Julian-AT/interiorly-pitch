@@ -16,65 +16,45 @@ import { SlideVision } from "./slides/vision";
 import { SlideTechStack } from "./slides/stack";
 import { SlideFeatures } from "./slides/features";
 import { CarouselToolbar } from "./carousel-toolbar";
-import { SlideLessonsLearned } from "./slides/lessons-learned";
 import { SlideFuture } from "./slides/future";
 import { SlideEvolution } from "./slides/evolution";
 import { SlideScreenshots } from "./slides/screenshots";
 import { SlideFinish } from "./slides/finish";
 import { SlidePages } from "./slides/pages";
-import { SlideTechStack2 } from "./slides/stack2";
 
-const PitchCarousel = () => {
+const Slides = {
+  SlideStart: <SlideStart />,
+  SlideProblem: <SlideProblem />,
+  SlideSolution: <SlideSolution />,
+  SlideFeatures: <SlideFeatures />,
+  SlideEvolution: <SlideEvolution />,
+  SlideSubscription: <SlideSubscription />,
+  SlideTeam: <SlideTeam />,
+  SlideTechStack: <SlideTechStack />,
+  SlidePages: <SlidePages />,
+  SlideScreenshots: <SlideScreenshots />,
+  SlideVision: <SlideVision />,
+  SlideFuture: <SlideFuture />,
+  SlideFinish: <SlideFinish />,
+};
+
+interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
+  slides: (keyof typeof Slides)[];
+}
+
+const PitchCarousel = ({ slides }: PitchCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
 
   return (
     <Carousel className="w-full min-h-full relative" setApi={setApi}>
       <CarouselContent>
-        <CarouselItem>
-          <SlideStart />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideProblem />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideSolution />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideFeatures />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideEvolution />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideSubscription />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideTeam />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideTechStack />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideTechStack2 />
-        </CarouselItem>
-        <CarouselItem>
-          <SlidePages />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideScreenshots />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideVision />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideLessonsLearned />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideFuture />
-        </CarouselItem>
-        <CarouselItem>
-          <SlideFinish />
-        </CarouselItem>
+        {slides.map((slide, index) => {
+          if (!Slides[slide]) {
+            console.error(`Slide ${slide} not found`);
+            return null;
+          }
+          return <CarouselItem key={index}>{Slides[slide]}</CarouselItem>;
+        })}
       </CarouselContent>
       <CarouselToolbar api={api} />
     </Carousel>

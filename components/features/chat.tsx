@@ -1,14 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import Eren from "@/public/images/team/eren.jpg";
-import Fabian from "@/public/images/team/Fabian.jpg";
 import LivingRoom from "@/public/images/livingroom.png";
-import {
-  IconCheck,
-  IconCommandLine,
-  IconDoubleCheck,
-  IconSingleCheck,
-} from "../icons";
+import { IconDoubleCheck } from "@/components/icons";
+
+import Julian from "@/public/images/team/Julian.jpg";
+import Anthony from "@/public/images/team/Julian.jpg";
 
 const Chat = () => {
   return (
@@ -18,13 +14,13 @@ const Chat = () => {
           <div className="flex flex-col w-full max-w-[326px] leading-1.5 p-4  bg-[#1c1c1c] rounded-e-xl rounded-es-xl ">
             <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
               <Image
-                src={Eren}
-                alt="Eren Gülüm"
+                src={Anthony}
+                alt="Anthony Owah"
                 width={64}
                 height={64}
                 className="rounded-full w-8 h-8 object-cover col-span-1"
               />
-              <span className="">Eren Gülüm</span>
+              <span className="">Anthony Owah</span>
               <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
                 11:46
               </span>
@@ -85,10 +81,10 @@ const Chat = () => {
               <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
                 11:50
               </span>
-              <span className="">Fabian Adametz</span>
+              <span className="">Julian Schmidt</span>
               <Image
-                src={Fabian}
-                alt="Fabian Adametz"
+                src={Julian}
+                alt="Julian Schmidt"
                 width={64}
                 height={64}
                 className="rounded-full w-8 h-8 object-cover"
