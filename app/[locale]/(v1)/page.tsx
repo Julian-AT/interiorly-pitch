@@ -15,6 +15,7 @@ export default function Home() {
           "SlidePages",
           "SlideTechStack",
           "SlideTeam",
+          "SlideNextSteps",
           "SlideFinish",
         ]}
       />

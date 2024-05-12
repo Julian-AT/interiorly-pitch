@@ -7,42 +7,31 @@ import { ImageGenerationForm } from "@/components/features/image-generation-form
 import Chat from "@/components/features/chat";
 import ImageGenerationResultCarousel from "@/components/features/image-generation-result";
 import RealtimeCollaboration from "@/components/features/realtime";
+import SlideShell from "../slide-shell";
 
 export function SlideFeatures() {
   return (
-    <div className="min-h-screen relative w-screen flex">
-      <div className="absolute left-4 right-4 md:left-8 md:right-8 top-4 flex justify-between text-lg">
-        <span>Features</span>
-        <span className="text-muted-foreground">
-          <Link href="/">interiorly.ai</Link>
-        </span>
-      </div>
-      <div className="container min-h-screen flex items-center justify-center">
-        <div className="grid md:grid-cols-3 gap-8 md:px-0 md:pt-0 h-[580px] md:h-auto overflow-auto pb-[100px] md:pb-0 relative">
-          <Card className="flex flex-col items-center justify-center space-y-5 p-5">
-            <IconChat className="w-12 h-12" />
-            <h2 className="text-2xl font-semibold">Chat Interaction</h2>{" "}
-            <Chat />
-          </Card>
-          <Card className="flex flex-col items-center justify-center space-y-5 p-5">
-            <IconImage className="w-12 h-12" />
-            <h2 className="text-2xl font-semibold">Image Generation</h2>{" "}
-            <div className="flex-1 flex items-center">
-              <ImageGenerationResultCarousel />
-            </div>
-            <ImageGenerationForm />
-          </Card>
-          <Card className="flex flex-col items-center justify-center space-y-5 p-5">
-            <IconCollaboration className="w-12 h-12" />
-            <h2 className="text-2xl font-semibold">
-              Realtime Collaboration
-            </h2>{" "}
-            <div className="flex-1 flex w-full">
-              <RealtimeCollaboration />
-            </div>
-          </Card>
+    <SlideShell title="Features" className="border">
+      <Card className="flex flex-col items-center justify-center space-y-5 p-5 h-full relative">
+        <IconChat className="w-12 h-12" />
+        <h2 className="text-2xl font-semibold">Chat Interaction</h2>
+        <Chat />
+      </Card>
+      <Card className="flex flex-col items-center justify-center space-y-5 p-5 h-full">
+        <IconImage className="w-12 h-12" />
+        <h2 className="text-2xl font-semibold">Image Generation</h2>{" "}
+        <div className="flex-1 flex items-center relative">
+          <ImageGenerationResultCarousel />
         </div>
-      </div>
-    </div>
+        <ImageGenerationForm />
+      </Card>
+      <Card className="flex flex-col items-center justify-center space-y-5 p-5 h-full">
+        <IconCollaboration className="w-12 h-12" />
+        <h2 className="text-2xl font-semibold">Realtime Collaboration</h2>{" "}
+        <div className="flex-1 flex w-full">
+          <RealtimeCollaboration />
+        </div>
+      </Card>
+    </SlideShell>
   );
 }

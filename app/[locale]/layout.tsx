@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Inter as FontSans } from "next/font/google";
-
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ImageGenerationProvider } from "@/lib/hooks/use-images";
@@ -16,13 +17,17 @@ export const metadata: Metadata = {
   description: "Interiorly AI Pitch",
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params: { locale },
+}: {
   children: React.ReactNode;
-}>) {
+  params: { locale: string };
+}) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head />
       <body
         className={cn(
@@ -31,7 +36,11 @@ export default function RootLayout({
         )}
       >
         <ImageGenerationProvider>
-          <TooltipProvider>{children}</TooltipProvider>
+          <TooltipProvider>
+            <NextIntlClientProvider messages={messages}>
+              {children}
+            </NextIntlClientProvider>
+          </TooltipProvider>
         </ImageGenerationProvider>
       </body>
     </html>

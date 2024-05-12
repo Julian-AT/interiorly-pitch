@@ -65,7 +65,7 @@ const Chat = () => {
                 alt="Living Room"
                 width={512}
                 height={512}
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg w-full"
               />
             </div>
             <span className="text-sm font-normal flex justify-end items-center text-[#878787]">

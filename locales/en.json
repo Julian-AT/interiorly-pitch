@@ -1,0 +1,20 @@
+{
+    "slide_problem": {
+        "title": "Current Problem",
+        "problems": {
+            "problem_1": {
+                "title": "Complexity",
+                "text": "Designing living spaces involves immense complexity, demanding both deep understanding and significant financial investment."
+            },
+            "problem_2": {
+                "title": "Costs",
+                "text": "High costs deter many from considering serious remodeling or redesign of their living spaces."
+            },
+            "problem_3": {
+                "title": "Lack of User-Friendly Tools",
+                "text": "The interior design market lacks user-friendly tools, hindering accessibility for homeowners."
+            }
+        },
+        "summary": "Interior design challenges encompass complexity, costs, and a scarcity of user-friendly tools."
+    }
+}

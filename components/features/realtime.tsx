@@ -9,8 +9,8 @@ import { Card } from "@/components/pitch/ui";
 
 const RealtimeCollaboration = () => {
   return (
-    <Card className="flex flex-col w-full justify-start card-faded p-[1px] border-none relative overflow-hidden">
-      <div className="flex justify-between items-center w-full px-6 pt-8 pb-6">
+    <Card className="flex flex-col w-full card-faded p-[1px] border-none relative overflow-hidden">
+      <div className="flex justify-between items-center w-full px-6 pt-8">
         <span className="font-semibold flex items-center gap-2">
           <Image
             src={LivingRoom}
@@ -42,7 +42,7 @@ const RealtimeCollaboration = () => {
           </a>
         </div>
       </div>
-      <div className="w-full relative flex flex-col gap-2.5 px-6 pt-8">
+      <div className="w-full relative flex flex-col gap-2.5 px-6">
         <div className="absolute h-full w-full bg-gradient-to-t from-background to-transparent from-[10%]" />
         <div className="relative">
           <Image
@@ -57,18 +57,13 @@ const RealtimeCollaboration = () => {
           />
         </div>
         <div className="h-2 rounded-full bg-secondary" />
-        <div className="h-2 w-3/4 rounded-full bg-secondary" />
-        <div className="h-2 rounded-full bg-secondary" />
         <div className="h-2 w-10/12 rounded-full bg-secondary" />
         <div className="h-48 rounded-lg bg-secondary" />
-        <div className="h-2 rounded-full bg-secondary" />
         <div className="h-2 w-4/5 rounded-full bg-secondary" />
         <div className="h-2 rounded-full bg-secondary" />
         <div className="h-2 w-5/6 rounded-full bg-secondary" />
         <div className="h-2 rounded-full bg-secondary" />
-        <div className="h-2 rounded-full bg-secondary" />
-        <div className="h-2 rounded-full bg-secondary" />
-        <div className="h-2 rounded-full bg-secondary" />
+        <div className="h-2 w-5/6 rounded-full bg-secondary" />
         <div className="h-2 rounded-full bg-secondary" />
       </div>
     </Card>

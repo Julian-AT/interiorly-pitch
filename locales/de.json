@@ -1,0 +1,20 @@
+{
+    "slide_problem": {
+        "title": "Aktuelles Problem",
+        "problems": {
+            "problem_1": {
+                "title": "Komplexität",
+                "text": "Der Prozess der Gestaltung von Wohnräumen ist unglaublich komplex und anspruchsvoll. Die Vielzahl der beteiligten Aspekte kann oft überwältigend sein. Innenarchitektur erfordert nicht nur ein tiefes Verständnis für die ästhetischen und funktionalen Anforderungen eines Raums, sondern auch erhebliche finanzielle Mittel."
+            },
+            "problem_2": {
+                "title": "Kosten",
+                "text": "Die erheblichen Kosten schrecken viele Menschen davon ab, eine Umgestaltung oder Neugestaltung ihrer Wohnräume ernsthaft zu erwägen."
+            },
+            "problem_3": {
+                "title": "Mangel an benutzerfreundlichen Werkzeugen",
+                "text": "Der Markt für Innenarchitektur verfügt über keine benutzerfreundlichen Werkzeuge, die den Prozess für Hausbesitzer einfacher und zugänglicher machen könnten."
+            }
+        },
+        "summary": "Die Herausforderungen im Bereich Innenarchitektur umfassen Komplexität, Kosten und einen Mangel an benutzerfreundlichen Werkzeugen."
+    }
+}

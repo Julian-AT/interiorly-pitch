@@ -7,27 +7,26 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { SlideStart } from "./slides/start";
-import { SlideProblem } from "./slides/problem";
-import { SlideSolution } from "./slides/solution";
-import { SlideTeam } from "./slides/team";
-import { SlideSubscription } from "./slides/pricing";
-import { SlideVision } from "./slides/vision";
-import { SlideTechStack } from "./slides/stack";
-import { SlideFeatures } from "./slides/features";
-import { CarouselToolbar } from "./carousel-toolbar";
-import { SlideFuture } from "./slides/future";
-import { SlideEvolution } from "./slides/evolution";
-import { SlideScreenshots } from "./slides/screenshots";
-import { SlideFinish } from "./slides/finish";
-import { SlidePages } from "./slides/pages";
+import { SlideStart } from "@/components/pitch/slides/start";
+import { SlideProblem } from "@/components/pitch/slides/problem";
+import { SlideSolution } from "@/components/pitch/slides/solution";
+import { SlideTeam } from "@/components/pitch/slides/team";
+import { SlideSubscription } from "@/components/pitch/slides/pricing";
+import { SlideVision } from "@/components/pitch/slides/vision";
+import { SlideTechStack } from "@/components/pitch/slides/stack";
+import { SlideFeatures } from "@/components/pitch/slides/features";
+import { CarouselToolbar } from "@/components/pitch/carousel-toolbar";
+import { SlideFuture } from "@/components/pitch/slides/future";
+import { SlideScreenshots } from "@/components/pitch/slides/screenshots";
+import { SlideFinish } from "@/components/pitch/slides/finish";
+import { SlidePages } from "@/components/pitch/slides/pages";
+import SlideNextSteps from "@/components/pitch/slides/next-steps";
 
 const Slides = {
   SlideStart: <SlideStart />,
   SlideProblem: <SlideProblem />,
   SlideSolution: <SlideSolution />,
   SlideFeatures: <SlideFeatures />,
-  SlideEvolution: <SlideEvolution />,
   SlideSubscription: <SlideSubscription />,
   SlideTeam: <SlideTeam />,
   SlideTechStack: <SlideTechStack />,
@@ -36,6 +35,7 @@ const Slides = {
   SlideVision: <SlideVision />,
   SlideFuture: <SlideFuture />,
   SlideFinish: <SlideFinish />,
+  SlideNextSteps: <SlideNextSteps />,
 };
 
 interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
