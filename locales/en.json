@@ -63,116 +63,117 @@
     "subscriptions": {
       "subscription_1": {
         "title": "Hobby",
-        "features": [
-          {
+        "price": "0.00",
+        "features": {
+          "feature_1": {
             "feature": "Up to 10 images per day",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_2": {
             "feature": "Up to 1 workspace",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_3": {
             "feature": "Up to 2 collaborators",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_4": {
             "feature": "Up to 1 folder",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_5": {
             "feature": "Up to 3 files",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_6": {
             "feature": "Custom logos",
-            "included": false
+            "included": "false"
           },
-          {
+          "feature_7": {
             "feature": "Monetizing of our images",
-            "included": false
+            "included": "false"
           },
-          {
+          "feature_8": {
             "feature": "Attribution is mandatory",
-            "included": false
+            "included": "false"
           }
-        ]
+        }
       },
       "subscription_2": {
         "title": "Pro",
-        "price": 15.99,
-        "features": [
-          {
+        "price": "15.99",
+        "features": {
+          "feature_1": {
             "feature": "Up to 100 images per day",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_2": {
             "feature": "Up to 3 workspace",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_3": {
             "feature": "Up to 10 collaborators",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_4": {
             "feature": "Up to 5 folder",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_5": {
             "feature": "Up to 10 files",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_6": {
             "feature": "Custom logos",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_7": {
             "feature": "Monetizing of our images",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_8": {
             "feature": "Attribution is mandatory",
-            "included": true
+            "included": "true"
           }
-        ]
+        }
       },
       "subscription_3": {
         "title": "Enterprise",
         "price": "Custom",
-        "features": [
-          {
+        "features": {
+          "feature_1": {
             "feature": "Up to 1000 images per day",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_2": {
             "feature": "Up to 10 workspace",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_3": {
             "feature": "Up to 100 collaborators",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_4": {
             "feature": "Up to 50 folders",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_5": {
             "feature": "Up to 50 files",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_6": {
             "feature": "Custom logos",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_7": {
             "feature": "Monetizing of our images",
-            "included": true
+            "included": "true"
           },
-          {
+          "feature_8": {
             "feature": "Attribution is mandatory",
-            "included": true
+            "included": "true"
           }
-        ]
+        }
       }
     }
   },

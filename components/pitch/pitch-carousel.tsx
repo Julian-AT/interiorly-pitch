@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   Carousel,
   CarouselApi,
@@ -16,7 +16,6 @@ import { SlideVision } from "@/components/pitch/slides/vision";
 import { SlideTechStack } from "@/components/pitch/slides/stack";
 import { SlideFeatures } from "@/components/pitch/slides/features";
 import { CarouselToolbar } from "@/components/pitch/carousel-toolbar";
-import { SlideFuture } from "@/components/pitch/slides/future";
 import { SlideScreenshots } from "@/components/pitch/slides/screenshots";
 import { SlideFinish } from "@/components/pitch/slides/finish";
 import { SlidePages } from "@/components/pitch/slides/pages";
@@ -33,7 +32,6 @@ const Slides = {
   SlidePages: <SlidePages />,
   SlideScreenshots: <SlideScreenshots />,
   SlideVision: <SlideVision />,
-  SlideFuture: <SlideFuture />,
   SlideFinish: <SlideFinish />,
   SlideNextSteps: <SlideNextSteps />,
 };
@@ -44,6 +42,7 @@ interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const PitchCarousel = ({ slides }: PitchCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
+  api?.on("select", (idx) => console.log("Selected slide", idx));
 
   return (
     <Carousel className="w-full min-h-full relative" setApi={setApi}>

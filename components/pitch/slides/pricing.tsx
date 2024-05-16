@@ -30,11 +30,27 @@ export function SlideSubscription() {
     },
   ];
 
-  const plans = [
-    t("subscriptions.subscription_1"),
-    t("subscriptions.subscription_2"),
-    t("subscriptions.subscription_3"),
-  ];
+  const plans: any[] = [];
+
+  Array.from({ length: 3 }).forEach((_, idx) => {
+    idx = idx + 1;
+    plans.push({
+      title: t(`subscriptions.subscription_${idx}.title`),
+      price: t(`subscriptions.subscription_${idx}.price`),
+      features: Array.from({ length: 8 }).map((value, feature_idx) => {
+        feature_idx = feature_idx + 1;
+        return {
+          feature: t(
+            `subscriptions.subscription_${idx}.features.feature_${feature_idx}.feature`
+          ),
+          included:
+            t(
+              `subscriptions.subscription_${idx}.features.feature_${feature_idx}.included`
+            ) === "true",
+        };
+      }),
+    });
+  });
 
   return (
     <div className="min-h-screen relative w-screen">
@@ -58,21 +74,25 @@ export function SlideSubscription() {
                 <div>
                   <span className="text-xl font-medium">{item.title}</span>
                   <div className="mt-4 text-3xl font-semibold">
-                    {item.price !== "Custom" && "$"}
+                    {item.price !== "Custom" &&
+                      item.price !== "Individuell" &&
+                      "$"}
                     {item.price}
-                    {item.price !== "Custom" ? (
+                    {item.price !== "Custom" && item.price !== "Individuell" ? (
                       <span className="text-xl ml-1 text-[#878787] font-normal">
                         /mo
                       </span>
                     ) : (
                       <span className="text-xl ml-1 text-[#878787] font-normal">
-                        Contact for a quote
+                        {item.price !== "Individuell"
+                          ? "Contact for a quote"
+                          : "Kontaktieren"}
                       </span>
                     )}
                   </div>
                 </div>
                 <ul className="py-8 space-y-3">
-                  {/* {item.features.map((featureItem: any, idx: number) => (
+                  {item.features.map((featureItem: any, idx: number) => (
                     <li key={idx} className="flex items-center gap-5">
                       {featureItem.included ? (
                         <IconCheck className="w-5 h-5 text-[#2DCE89]" />
@@ -83,7 +103,7 @@ export function SlideSubscription() {
                       )}
                       {featureItem.feature}
                     </li>
-                  ))} */}
+                  ))}
                 </ul>
               </Card>
             ))}

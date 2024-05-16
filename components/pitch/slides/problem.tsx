@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LivingRoom from "@/public/images/livingroom.jpg";
+import LivingRoom from "@/public/images/rooms/livingroom.jpg";
 import { Card } from "@/components/ui/card";
 import { IconBankNotes, IconBolt, IconPuzzlePiece } from "@/components/icons";
 import { useTranslations } from "next-intl";

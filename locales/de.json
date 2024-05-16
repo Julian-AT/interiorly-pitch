@@ -58,6 +58,125 @@
       }
     }
   },
+  "slide_subscriptions": {
+    "title": "Abonnementmodell",
+    "subscriptions": {
+      "subscription_1": {
+        "title": "Hobby",
+        "price": "0,00",
+        "features": {
+          "feature_1": {
+            "feature": "Bis zu 10 Bild-Generationen pro Tag",
+            "included": "true"
+          },
+          "feature_2": {
+            "feature": "Bis zu 1 Workspace",
+            "included": "true"
+          },
+          "feature_3": {
+            "feature": "Bis zu 2 Kollaboratoren/Workspace",
+            "included": "true"
+          },
+          "feature_4": {
+            "feature": "Bis zu 1 Ordner/Workspace",
+            "included": "true"
+          },
+          "feature_5": {
+            "feature": "Bis zu 3 Datein/Workspace",
+            "included": "true"
+          },
+          "feature_6": {
+            "feature": "Workspace Logos",
+            "included": "false"
+          },
+          "feature_7": {
+            "feature": "Monetarisierung der Bilder",
+            "included": "false"
+          },
+          "feature_8": {
+            "feature": "Quellenangabe ist optional",
+            "included": "false"
+          }
+        }
+      },
+      "subscription_2": {
+        "title": "Pro",
+        "price": "15,99",
+        "features": {
+          "feature_1": {
+            "feature": "Bis zu 100 Bild-Generationen pro Tag",
+            "included": "true"
+          },
+          "feature_2": {
+            "feature": "Bis zu 3 Workspaces",
+            "included": "true"
+          },
+          "feature_3": {
+            "feature": "Bis zu 10 Kollaboratoren/Workspace",
+            "included": "true"
+          },
+          "feature_4": {
+            "feature": "Bis zu 5 Ordner/Workspace",
+            "included": "true"
+          },
+          "feature_5": {
+            "feature": "Bis zu 10 Datein/Workspace",
+            "included": "true"
+          },
+          "feature_6": {
+            "feature": "Workspace Logos",
+            "included": "true"
+          },
+          "feature_7": {
+            "feature": "Monetarisierung der Bilder",
+            "included": "true"
+          },
+          "feature_8": {
+            "feature": "Quellenangabe ist optional",
+            "included": "true"
+          }
+        }
+      },
+      "subscription_3": {
+        "title": "Unternehmen",
+        "price": "Individuell",
+        "features": {
+          "feature_1": {
+            "feature": "Bis zu 1000 Bild-Generationen pro Tag",
+            "included": "true"
+          },
+          "feature_2": {
+            "feature": "Bis zu 10 Workspaces",
+            "included": "true"
+          },
+          "feature_3": {
+            "feature": "Bis zu 100 Kollaboratoren/Workspace",
+            "included": "true"
+          },
+          "feature_4": {
+            "feature": "Bis zu 50 Ordner/Workspace",
+            "included": "true"
+          },
+          "feature_5": {
+            "feature": "Bis zu 50 Datein/Workspace",
+            "included": "true"
+          },
+          "feature_6": {
+            "feature": "Individuelle Workspace Logos",
+            "included": "true"
+          },
+          "feature_7": {
+            "feature": "Monetarisierung der Bilder",
+            "included": "true"
+          },
+          "feature_8": {
+            "feature": "Quellenangabe ist optional",
+            "included": "true"
+          }
+        }
+      }
+    }
+  },
   "slide_pages": {
     "title": "Seiten",
     "pages": {

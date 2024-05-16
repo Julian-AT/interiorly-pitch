@@ -2,9 +2,9 @@ import React from "react";
 import SlideShell from "@/components/pitch/slide-shell";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import Dashboard from "@/public/images/screens/dashboard.png";
-import Images from "@/public/images/laptop-mockup.png";
-import SSSS from "@/public/images/iphone-mockup.png";
+import DashboardScreen from "@/public/images/screens/dashboard.png";
+import LaptopMockup from "@/public/images/mockups/laptop-mockup.png";
+import IPhoneMockup from "@/public/images/mockups/iphone-mockup.png";
 import NoiseImage from "@/public/images/noise.webp";
 import { useTranslations } from "next-intl";
 
@@ -21,7 +21,7 @@ const SlideNextSteps = () => {
           </span>
         </div>
         <Image
-          src={Images}
+          src={LaptopMockup}
           width={512}
           height={512}
           alt="linear demo image"
@@ -44,14 +44,14 @@ const SlideNextSteps = () => {
           </span>
         </div>
         <Image
-          src={SSSS}
+          src={IPhoneMockup}
           width={350}
           height={350}
           alt="linear demo image"
           className="absolute -right-[7.5%] -bottom-48 object-contain rounded-2xl"
         />
         <Image
-          src={Dashboard}
+          src={DashboardScreen}
           width={500}
           height={500}
           alt="linear demo image"

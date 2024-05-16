@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import LivingRoom from "@/public/images/livingroom.png";
+import LivingRoom from "@/public/images/rooms/livingroom.png";
 import { IconDoubleCheck } from "@/components/icons";
-
 import Julian from "@/public/images/team/Julian.jpg";
 import Anthony from "@/public/images/team/Anthony.jpg";
 

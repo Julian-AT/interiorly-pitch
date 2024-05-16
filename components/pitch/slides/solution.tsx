@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { IconBankNotes, IconSparkles, IconUserGroup } from "@/components/icons";
-import LaptopMockup from "@/public/images/laptop-mockup.png";
+import LaptopMockup from "@/public/images/mockups/laptop-mockup.png";
 import SlideShell from "@/components/pitch/slide-shell";
 import { useTranslations } from "next-intl";
 

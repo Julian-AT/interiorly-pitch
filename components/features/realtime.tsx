@@ -1,10 +1,10 @@
 import React from "react";
 import Julian from "@/public/images/team/Julian.jpg";
 import Anthony from "@/public/images/team/Anthony.jpg";
-import LivingRoom from "@/public/images/livingroom.png";
+import LivingRoom from "@/public/images/rooms/livingroom.png";
 import Image from "next/image";
-import CursorJulian from "@/public/images/cursor_julian.png";
-import CursorAnthony from "@/public/images/cursor_anthony.png";
+import CursorJulian from "@/public/images/cursors/cursor_julian.png";
+import CursorAnthony from "@/public/images/cursors/cursor_anthony.png";
 import { Card } from "@/components/pitch/ui";
 
 const RealtimeCollaboration = () => {
