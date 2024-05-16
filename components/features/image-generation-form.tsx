@@ -15,9 +15,17 @@ import { useEffect, useRef } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { useEnterSubmit } from "@/lib/hooks/use-enter-submit";
 import { cn } from "@/lib/utils";
-import { IconChat, IconRandomize, IconSpinner } from "../icons";
+import { IconChat, IconRandomize, IconSpinner } from "@/components/icons";
 
-export function ImageGenerationForm() {
+interface ImageGenerationFormProps {
+  buttonText: string;
+  tooltipText: string;
+}
+
+export function ImageGenerationForm({
+  buttonText,
+  tooltipText,
+}: ImageGenerationFormProps) {
   const { generateImage, isLoading } = useImageGeneration();
   const { formRef, onKeyDown } = useEnterSubmit();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -95,10 +103,10 @@ export function ImageGenerationForm() {
                 onClick={handleRandomizePrompt}
               >
                 <IconRandomize className="w-4 h-4 text-secondary-foreground" />
-                <span className="sr-only">Randomize Prompt</span>
+                <span className="sr-only">{tooltipText}</span>
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Randomize Prompt</TooltipContent>
+            <TooltipContent>{tooltipText}</TooltipContent>
           </Tooltip>
         </div>
         {errors.prompt && (
@@ -111,7 +119,7 @@ export function ImageGenerationForm() {
               <IconSpinner className="mr-2 animate-spin w-full h-4 m-auto" />
             </span>
           ) : (
-            <span>Generate</span>
+            <span>{buttonText}</span>
           )}
         </Button>
       </form>

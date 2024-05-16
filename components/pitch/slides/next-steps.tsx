@@ -1,21 +1,23 @@
 import React from "react";
-import SlideShell from "../slide-shell";
+import SlideShell from "@/components/pitch/slide-shell";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import Dashboard from "@/public/images/screens/dashboard.png";
 import Images from "@/public/images/laptop-mockup.png";
 import SSSS from "@/public/images/iphone-mockup.png";
 import NoiseImage from "@/public/images/noise.webp";
+import { useTranslations } from "next-intl";
 
 const SlideNextSteps = () => {
+  const t = useTranslations("slide_next_steps");
+
   return (
-    <SlideShell title="Next Steps" className="grid-rows-2">
+    <SlideShell title={t("title")} className="grid-rows-2">
       <Card className="flex flex-col justify-center p-5 h-full col-span-2 relative overflow-hidden">
         <div className="ml-10 w-96">
-          <h1 className="font-bold text-4xl">Preliminary study</h1>
+          <h1 className="font-bold text-4xl">{t("steps.step_1.title")}</h1>
           <span className="text-muted-foreground text-lg">
-            Initiating a preliminary study to gather initial insights and
-            evaluate feasibility prior to engaging in detailed analysis.
+            {t("steps.step_1.text")}
           </span>
         </div>
         <Image
@@ -29,16 +31,16 @@ const SlideNextSteps = () => {
       </Card>
       <Card className="flex flex-col items-center justify-center p-5 h-full relative">
         <Noise />
-        <h1 className="font-bold text-4xl">PLACEHOLDER</h1>
+        <h1 className="font-bold text-4xl">{t("steps.step_2.title")}</h1>
+        <span className="text-muted-foreground text-lg text-center">
+          {t("steps.step_2.text")}
+        </span>{" "}
       </Card>
       <Card className="flex flex-col items-center justify-center p-5 h-full col-span-3 relative overflow-hidden">
         <div className="w-[600px] text-center flex flex-col gap-5">
-          <h1 className="font-bold text-4xl">
-            Evolving User Experience through UI Implementation
-          </h1>
-          <span className="text-muted-foreground text-lg">
-            Execute the design blueprint to bring the envisioned UI to life,
-            ensuring seamless implementation and user-centric functionality.
+          <h1 className="font-bold text-4xl">{t("steps.step_3.title")}</h1>
+          <span className="text-muted-foreground text-lg text-center">
+            {t("steps.step_3.text")}
           </span>
         </div>
         <Image

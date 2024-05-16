@@ -4,9 +4,14 @@ import LivingRoom from "@/public/images/livingroom.png";
 import { IconDoubleCheck } from "@/components/icons";
 
 import Julian from "@/public/images/team/Julian.jpg";
-import Anthony from "@/public/images/team/Julian.jpg";
+import Anthony from "@/public/images/team/Anthony.jpg";
 
-const Chat = () => {
+interface ChatProps {
+  message_text: string;
+  delivered_indicator: string;
+}
+
+const Chat = ({ message_text, delivered_indicator }: ChatProps) => {
   return (
     <>
       <div className="flex gap-2.5 mr-3">
@@ -25,10 +30,7 @@ const Chat = () => {
                 11:46
               </span>
             </div>
-            <p className="text-sm font-normal text-[#878787]">
-              Check out this dark modern living room, generated with Interiorly
-              AI{" "}
-            </p>
+            <p className="text-sm font-normal text-[#878787]">{message_text}</p>
             <div className="group relative my-2.5">
               <div className="absolute w-full h-full bg-[#121212] opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                 <button
@@ -69,12 +71,12 @@ const Chat = () => {
               />
             </div>
             <span className="text-sm font-normal flex justify-end items-center text-[#878787]">
-              Delivered <IconDoubleCheck className="w-5 h-4" />
+              {delivered_indicator} <IconDoubleCheck className="w-5 h-4" />
             </span>
           </div>
         </div>
       </div>
-      <div className="flex self-end gap-2.5 mr-3">
+      {/* <div className="flex self-end gap-2.5 mr-3">
         <div className="flex flex-col gap-1 col-span-3">
           <div className="flex flex-col w-full max-w-[326px] leading-1.5 p-4  bg-[#1c1c1c] rounded-s-xl rounded-br-xl ">
             <div className="flex space-x-2 items-center justify-start mb-2">
@@ -98,7 +100,7 @@ const Chat = () => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

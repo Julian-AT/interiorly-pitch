@@ -1,72 +1,78 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
 import { Card } from "@/components/ui/card";
 import DashboardScreen from "@/public/images/screens/dashboard.png";
 import LoginScreen from "@/public/images/screens/login.png";
 import RegisterScreen from "@/public/images/screens/register.png";
 import SettingsScreen from "@/public/images/screens/settings.png";
+import SlideShell from "@/components/pitch/slide-shell";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useTranslations } from "next-intl";
 
 export function SlidePages() {
+  const t = useTranslations("slide_pages");
+
+  const screens = [
+    {
+      image: DashboardScreen,
+      title: t("pages.page_1.title"),
+    },
+    {
+      image: SettingsScreen,
+      title: t("pages.page_2.title"),
+    },
+    {
+      image: LoginScreen,
+      title: t("pages.page_3.title"),
+    },
+    {
+      image: RegisterScreen,
+      title: t("pages.page_4.title"),
+    },
+  ];
+
   return (
-    <div className="min-h-screen relative w-screen">
-      <div className="absolute left-4 right-4 md:left-8 md:right-8 top-4 flex justify-between text-lg">
-        <span>Pages</span>
-        <span className="text-[#878787]">
-          <Link href="/">interiorly.ai</Link>
-        </span>
-      </div>
-      <div className="flex flex-col min-h-screen justify-center container">
-        <div className="grid md:grid-cols-2 gap-8 px-4 md:px-0 md:pt-0 h-[580px] md:h-auto overflow-auto pb-[100px] md:pb-0">
-          <div className="space-y-8">
-            <Card className="min-h-[350px] py-3 flex flex-col items-center  space-y-3">
-              <h2 className="text-xl">Dashboard Page</h2>
-              <Image
-                src={DashboardScreen}
-                alt="Dashboard Screen"
-                className="w-4/5  rounded-lg"
-                quality={100}
-                width={400}
-                height={400}
-              />
-            </Card>
-            <Card className="min-h-[350px] py-3 flex flex-col items-center space-y-3">
-              <h2 className="text-xl">Settings Page</h2>
-              <Image
-                src={SettingsScreen}
-                alt="Settings Screen"
-                className="w-4/5  rounded-lg"
-                quality={100}
-                width={400}
-                height={400}
-              />
-            </Card>
-          </div>
-          <div className="space-y-8">
-            <Card className="min-h-[350px] py-3 flex flex-col items-center  space-y-3">
-              <h2 className="text-xl">Login Page</h2>
-              <Image
-                src={LoginScreen}
-                alt="Login Screen"
-                className="w-4/5  rounded-lg"
-                quality={100}
-                width={400}
-                height={400}
-              />
-            </Card>
-            <Card className="min-h-[350px] py-3 flex flex-col items-center space-y-3">
-              <h2 className="text-xl">Register Page</h2>
-              <Image
-                src={RegisterScreen}
-                alt="Register Screen"
-                className="w-4/5  rounded-lg"
-                quality={100}
-                width={400}
-                height={400}
-              />
-            </Card>
-          </div>
-        </div>
-      </div>
-    </div>
+    <SlideShell title={t("title")} className="xl:grid-cols-2">
+      {screens.map(
+        (screen: { image: StaticImageData; title: string }, index: number) => (
+          <Dialog key={index}>
+            <DialogTrigger className="h-full relative">
+              <Card
+                className="py-3 flex flex-col items-center gap-3 h-full"
+                key={index}
+              >
+                <h2 className="text-xl">{screen.title}</h2>
+                <Image
+                  src={screen.image}
+                  alt={screen.title}
+                  className="rounded-lg"
+                  width={400}
+                  height={250}
+                  quality={100}
+                />
+              </Card>
+            </DialogTrigger>
+            <DialogContent className="max-w-screen-xl w-full">
+              <DialogHeader>
+                <DialogDescription>
+                  <Image
+                    src={screen.image}
+                    alt={screen.title}
+                    className="w-screen object-cover rounded-lg p-3"
+                    quality={100}
+                  />
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
+        )
+      )}
+    </SlideShell>
   );
 }

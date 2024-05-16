@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
-import LivingRoom from "@/public/images/bedroom.jpg";
+import LivingRoom from "@/public/images/livingroom.jpg";
 import { Card } from "@/components/ui/card";
 import { IconBankNotes, IconBolt, IconPuzzlePiece } from "@/components/icons";
 import { useTranslations } from "next-intl";
-import SlideShell from "../slide-shell";
+import SlideShell from "@/components/pitch/slide-shell";
 
 export function SlideProblem() {
   const t = useTranslations("slide_problem");
@@ -22,7 +21,7 @@ export function SlideProblem() {
           </p>
         </Card>
         <h2 className="flex items-center justify-center text-5xl text-center leading-tight">
-          The interior design market lacks customer-friendly tools.
+          {t("summary")}
         </h2>
       </div>
       <div className="h-full w-full">

@@ -1,20 +1,147 @@
 {
-    "slide_problem": {
-        "title": "Aktuelles Problem",
-        "problems": {
-            "problem_1": {
-                "title": "Komplexität",
-                "text": "Der Prozess der Gestaltung von Wohnräumen ist unglaublich komplex und anspruchsvoll. Die Vielzahl der beteiligten Aspekte kann oft überwältigend sein. Innenarchitektur erfordert nicht nur ein tiefes Verständnis für die ästhetischen und funktionalen Anforderungen eines Raums, sondern auch erhebliche finanzielle Mittel."
-            },
-            "problem_2": {
-                "title": "Kosten",
-                "text": "Die erheblichen Kosten schrecken viele Menschen davon ab, eine Umgestaltung oder Neugestaltung ihrer Wohnräume ernsthaft zu erwägen."
-            },
-            "problem_3": {
-                "title": "Mangel an benutzerfreundlichen Werkzeugen",
-                "text": "Der Markt für Innenarchitektur verfügt über keine benutzerfreundlichen Werkzeuge, die den Prozess für Hausbesitzer einfacher und zugänglicher machen könnten."
-            }
-        },
-        "summary": "Die Herausforderungen im Bereich Innenarchitektur umfassen Komplexität, Kosten und einen Mangel an benutzerfreundlichen Werkzeugen."
+  "slide_start": {
+    "select_menu": {
+      "main": "Hauptversion"
     }
+  },
+  "slide_problem": {
+    "title": "Aktuelles Problem",
+    "problems": {
+      "problem_1": {
+        "title": "Komplexität",
+        "text": "Die Gestaltung von Wohnräumen ist komplex und erfordert Verständnis für ästhetische und funktionale Anforderungen."
+      },
+      "problem_2": {
+        "title": "Kreativität",
+        "text": "Innenarchitektur kann überwältigend sein wegen ihrer Komplexität und der Vielzahl an Entscheidungen und Optionen."
+      },
+      "problem_3": {
+        "title": "Kosten",
+        "text": "Hohe Kosten schrecken viele von einer Wohnraumumgestaltung ab. Die meisten Menschen haben nicht das Budget, um einen Innenarchitekten zu engagieren."
+      }
+    },
+    "summary": "Der Markt bietet keine benutzer-\norientierten Werkzeuge."
+  },
+  "slide_solution": {
+    "title": "Unsere Lösung",
+    "solutions": {
+      "solution_1": {
+        "title": "Künstliche Intelligenz",
+        "text": "Intelligente Designkonzepte bieten einen bequemen und effizienten Weg, inspirierende Ideen für Raumgestaltung zu erhalten."
+      },
+      "solution_2": {
+        "title": "Echtzeit-Zusammenarbeit",
+        "text": "Moderne Technologien ermöglichen effiziente Echtzeit-Zusammenarbeit zwischen Designern, Kunden und Stakeholdern."
+      },
+      "solution_3": {
+        "title": "Erschwinglich",
+        "text": "Die Verwirklichung von Designträumen ohne ein hohes Budget eröffnet eine Welt voller kreativer Möglichkeiten und Innovationen."
+      }
+    },
+    "summary": "Maßgeschneiderte Innenarchitektur-\nvorschläge, nur ein Klick entfernt!"
+  },
+  "slide_features": {
+    "title": "Funktionen",
+    "features": {
+      "feature_1": {
+        "title": "Chat-Interaktion",
+        "message_text": "Hier ist ein Konzept für ein modernes, dunkles Wohnzimmer 📌",
+        "delivered_indicator": "Zugestellt"
+      },
+      "feature_2": {
+        "title": "Bildgenerierung",
+        "button_text": "Generieren",
+        "tooltip_text": "Zufälligen Anstoß erstellen"
+      },
+      "feature_3": {
+        "title": "Echtzeit-Zusammenarbeit"
+      }
+    }
+  },
+  "slide_pages": {
+    "title": "Seiten",
+    "pages": {
+      "page_1": {
+        "title": "Dashboard-Seite"
+      },
+      "page_2": {
+        "title": "Einstellungen-Seite"
+      },
+      "page_3": {
+        "title": "Anmelden-Seite"
+      },
+      "page_4": {
+        "title": "Registrieren-Seite"
+      }
+    }
+  },
+  "slide_tech_stack": {
+    "title": "Technologie-Stack",
+    "technologies": {
+      "technology_1": {
+        "title": "Clerk",
+        "description": "Benutzerverwaltungsplattform",
+        "text": "Einbettbare UIs, flexible APIs und Administrations-Dashboards zur Authentifizierung und Verwaltung von Benutzern."
+      },
+      "technology_2": {
+        "title": "Trunk",
+        "description": "Automatisierte Code-Qualität",
+        "text": "Führt automatisch einen Satz von über 100 idiomatischen statischen Analysewerkzeugen, Lintern, Formattierungs- und Sicherheitswerkzeugen aus."
+      },
+      "technology_3": {
+        "title": "NextJS",
+        "description": "Fullstack-Framework"
+      },
+      "technology_4": {
+        "title": "Convex",
+        "description": "Open-Source-Backend",
+        "text": "Open-Source Backend as a Service Plattform. Ermöglicht die effiziente und skalierbare Entwicklung von APIs und Anwendungen."
+      },
+      "technology_5": {
+        "title": "Edgestore",
+        "description": "Dateispeicher & CDN",
+        "text": "Blob Speicher, CDN und eine sehr einfach zu bedienende, type-safe libraries."
+      }
+    }
+  },
+  "slide_vision": {
+    "title": "Unsere Vision",
+    "vision": "Unser Ziel ist es, führende Anlaufstelle für Innenarchitektur-Design sowohl für Unternehmen als auch Einzelpersonen zu werden."
+  },
+  "slide_team": {
+    "title": "Wer wir sind",
+    "team_members": {
+      "team_member_1": {
+        "name": "Julian Schmidt",
+        "role": "Fullstack-Entwicklung & KI",
+        "text": "Full-Stack-Entwickler. Zuständig für die Implementierung von KI-Technologien und die Entwicklung von benutzerzentrierten Anwendungen"
+      },
+      "team_member_2": {
+        "name": "Anthony Owah",
+        "role": "Backend-Entwicklung & PM",
+        "text": "Projektmanager und (Backend-)Entwickler. Verantwortlich für die Entwicklung von APIs und die Koordination des Entwicklerteams."
+      }
+    }
+  },
+  "slide_next_steps": {
+    "title": "Nächste Schritte",
+    "steps": {
+      "step_1": {
+        "title": "Vorstudie Erstellen",
+        "text": "Einleiten einer vorläufigen Studie, um erste Erkenntnisse zu sammeln und die Machbarkeit vor der Durchführung einer detaillierten Analyse zu bewerten."
+      },
+      "step_2": {
+        "title": "Rich-Text Editor",
+        "text": "Notion Style Editor für die Erstellung von Designkonzepten und die Zusammenarbeit in Echtzeit."
+      },
+      "step_3": {
+        "title": "Weiterentwicklung der Benutzererfahrung durch UI-Implementierung",
+        "text": "Ausführen des Design-Blueprints, um die vorgestellte Benutzeroberfläche zum Leben zu erwecken, und dabei eine nahtlose Implementierung und benutzerzentrierte Funktionalität sicherstellen."
+      }
+    }
+  },
+  "slide_finish": {
+    "title": "Kontakt",
+    "text": "Interessiert an Interiorly AI? Kontaktieren Sie uns für ein Meeting! 🚀"
+  }
 }

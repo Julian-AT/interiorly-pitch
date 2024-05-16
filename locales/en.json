@@ -1,20 +1,265 @@
 {
-    "slide_problem": {
-        "title": "Current Problem",
-        "problems": {
-            "problem_1": {
-                "title": "Complexity",
-                "text": "Designing living spaces involves immense complexity, demanding both deep understanding and significant financial investment."
-            },
-            "problem_2": {
-                "title": "Costs",
-                "text": "High costs deter many from considering serious remodeling or redesign of their living spaces."
-            },
-            "problem_3": {
-                "title": "Lack of User-Friendly Tools",
-                "text": "The interior design market lacks user-friendly tools, hindering accessibility for homeowners."
-            }
-        },
-        "summary": "Interior design challenges encompass complexity, costs, and a scarcity of user-friendly tools."
+  "slide_start": {
+    "select_menu": {
+      "main": "Main Version"
     }
+  },
+  "slide_problem": {
+    "title": "Current Problem",
+    "problems": {
+      "problem_1": {
+        "title": "Complexity",
+        "text": "The process of designing living spaces is exceedingly complex, demanding not only a deep understanding of a room&apos;s aesthetic and functional requirements but also a significant financial commitment."
+      },
+      "problem_2": {
+        "title": "Creativity",
+        "text": "Interior design can often feel overwhelming due to its intricacies and the broad spectrum of decisions and options that must be considered."
+      },
+      "problem_3": {
+        "title": "Expenses",
+        "text": "The considerable costs often discourage many individuals from seriously considering the remodeling or redesign of their living spaces."
+      }
+    },
+    "summary": "The interior design market lacks customer-friendly tools.   "
+  },
+  "slide_solution": {
+    "title": "Our Solution",
+    "solutions": {
+      "solution_1": {
+        "title": "Artificial Intelligence",
+        "text": "Intelligent design concepts provide a convenient and efficient way to obtain inspiring ideas for room design."
+      },
+      "solution_2": {
+        "title": "Realtime Collaboration",
+        "text": "Modern technologies enable efficient and collaborative real-time collaboration between designers, clients, and stakeholders."
+      },
+      "solution_3": {
+        "title": "Affordable",
+        "text": "Realizing design dreams without a high budget opens the door to a world of creative possibilities and innovations"
+      }
+    },
+    "summary": "Interior design suggestions tailored to your needs with the simple click of a button."
+  },
+  "slide_features": {
+    "title": "Features",
+    "features": {
+      "feature_1": {
+        "title": "Chat Interaction",
+        "message_text": "Check out this dark modern living room, generated with Interiorly AI",
+        "delivered_indicator": "Delivered"
+      },
+      "feature_2": {
+        "title": "Image Generation",
+        "button_text": "Generate",
+        "tooltip_text": "Randomize Prompt"
+      },
+      "feature_3": {
+        "title": "Realtime Collaboration"
+      }
+    }
+  },
+  "slide_subscriptions": {
+    "title": "Subscription Model",
+    "subscriptions": {
+      "subscription_1": {
+        "title": "Hobby",
+        "features": [
+          {
+            "feature": "Up to 10 images per day",
+            "included": true
+          },
+          {
+            "feature": "Up to 1 workspace",
+            "included": true
+          },
+          {
+            "feature": "Up to 2 collaborators",
+            "included": true
+          },
+          {
+            "feature": "Up to 1 folder",
+            "included": true
+          },
+          {
+            "feature": "Up to 3 files",
+            "included": true
+          },
+          {
+            "feature": "Custom logos",
+            "included": false
+          },
+          {
+            "feature": "Monetizing of our images",
+            "included": false
+          },
+          {
+            "feature": "Attribution is mandatory",
+            "included": false
+          }
+        ]
+      },
+      "subscription_2": {
+        "title": "Pro",
+        "price": 15.99,
+        "features": [
+          {
+            "feature": "Up to 100 images per day",
+            "included": true
+          },
+          {
+            "feature": "Up to 3 workspace",
+            "included": true
+          },
+          {
+            "feature": "Up to 10 collaborators",
+            "included": true
+          },
+          {
+            "feature": "Up to 5 folder",
+            "included": true
+          },
+          {
+            "feature": "Up to 10 files",
+            "included": true
+          },
+          {
+            "feature": "Custom logos",
+            "included": true
+          },
+          {
+            "feature": "Monetizing of our images",
+            "included": true
+          },
+          {
+            "feature": "Attribution is mandatory",
+            "included": true
+          }
+        ]
+      },
+      "subscription_3": {
+        "title": "Enterprise",
+        "price": "Custom",
+        "features": [
+          {
+            "feature": "Up to 1000 images per day",
+            "included": true
+          },
+          {
+            "feature": "Up to 10 workspace",
+            "included": true
+          },
+          {
+            "feature": "Up to 100 collaborators",
+            "included": true
+          },
+          {
+            "feature": "Up to 50 folders",
+            "included": true
+          },
+          {
+            "feature": "Up to 50 files",
+            "included": true
+          },
+          {
+            "feature": "Custom logos",
+            "included": true
+          },
+          {
+            "feature": "Monetizing of our images",
+            "included": true
+          },
+          {
+            "feature": "Attribution is mandatory",
+            "included": true
+          }
+        ]
+      }
+    }
+  },
+  "slide_pages": {
+    "title": "Pages",
+    "pages": {
+      "page_1": {
+        "title": "Dashboard Page"
+      },
+      "page_2": {
+        "title": "Settings Page"
+      },
+      "page_3": {
+        "title": "Sign-In Page"
+      },
+      "page_4": {
+        "title": "Sign-Up Page"
+      }
+    }
+  },
+  "slide_tech_stack": {
+    "title": "Tech Stack",
+    "technologies": {
+      "technology_1": {
+        "title": "Clerk",
+        "description": "User Management Platform",
+        "text": "embeddable UIs, flexible APIs, and admin dashboards to authenticate and manage users."
+      },
+      "technology_2": {
+        "title": "Trunk",
+        "description": "Automated code quality",
+        "text": "Automatically run a set of 100+ idiomatic static analyzers, linters, formatters, and security tools."
+      },
+      "technology_3": {
+        "title": "NextJS",
+        "description": "Fullstack Framework"
+      },
+      "technology_4": {
+        "title": "Convex",
+        "description": "Open-Source Backend",
+        "text": "Fetch data and perform business logic with strong consistency by writing pure TypeScript."
+      },
+      "technology_5": {
+        "title": "Edgestore",
+        "description": "File Storage & CDN",
+        "text": "Storage, CDN and a super easy to use type-safe library."
+      }
+    }
+  },
+  "slide_vision": {
+    "title": "Our Vision",
+    "vision": "Our goal is to become the premier destination for interior design, serving both businesses and individuals alike."
+  },
+  "slide_team": {
+    "title": "Who we are",
+    "team_members": {
+      "team_member_1": {
+        "name": "Julian Schmidt",
+        "role": "Fullstack Development & AI",
+        "text": "Full Stack Developer. Founded Interiorly (formerly \"RoomVision\") in 2021. Passionate about AI and its applications in the real world."
+      },
+      "team_member_2": {
+        "name": "Anthony Owah",
+        "role": "Backend Development & PM",
+        "text": "Project Manager and (backend) Developer. Effectively coordinate complex projects while developing technical solutions to meet requirements and implement efficient systems."
+      }
+    }
+  },
+  "slide_next_steps": {
+    "title": "Next Steps",
+    "steps": {
+      "step_1": {
+        "title": "Preliminary Study",
+        "text": "Initiating a preliminary study to gather initial insights and evaluate feasibility prior to engaging in detailed analysis."
+      },
+      "step_2": {
+        "title": "Rich-Text Editor",
+        "text": "Notion like rich-text editor for users to express their design ideas."
+      },
+      "step_3": {
+        "title": "Evolving User Experience through UI Implementation",
+        "text": "Execute the design blueprint to bring the envisioned UI to life, ensuring seamless implementation and user-centric functionality."
+      }
+    }
+  },
+  "slide_finish": {
+    "title": "Contact",
+    "text": "Interested in Interiorly AI? Book a Meeting. 🚀"
+  }
 }

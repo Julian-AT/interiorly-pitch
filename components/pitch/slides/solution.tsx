@@ -3,45 +3,42 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { IconBankNotes, IconSparkles, IconUserGroup } from "@/components/icons";
 import LaptopMockup from "@/public/images/laptop-mockup.png";
-import SlideShell from "../slide-shell";
+import SlideShell from "@/components/pitch/slide-shell";
+import { useTranslations } from "next-intl";
 
 export function SlideSolution() {
+  const t = useTranslations("slide_solution");
+
   return (
-    <SlideShell title="Our Solution">
+    <SlideShell title={t("title")}>
       <div className="grid grid-rows-2 h-full gap-8">
         <Card className="flex flex-col items-center justify-center space-y-5 p-5">
           <IconSparkles className="w-12 h-12" />
-          <h2 className="text-3xl">Artificial Intelligence</h2>
+          <h2 className="text-3xl">{t("solutions.solution_1.title")}</h2>
           <p className="text-[#878787] text-center">
-            Intelligent design concepts provide a <br />
-            convenient and efficient way to obtain inspiring ideas for room
-            design
+            {t("solutions.solution_1.text")}
           </p>
         </Card>
         <Card className="flex flex-col items-center justify-center space-y-5 p-5">
           <IconUserGroup className="w-12 h-12" />
-          <h2 className="text-3xl">Realtime Collaboration</h2>
+          <h2 className="text-3xl">{t("solutions.solution_2.title")}</h2>
           <p className="text-[#878787] text-center">
-            Modern technologies enable efficient and collaborative real-time
-            collaboration between designers, clients, and stakeholder
+            {t("solutions.solution_2.text")}
           </p>
         </Card>
       </div>
 
       <div className="grid grid-rows-2 h-full gap-8">
-        <div className="row-span-2">
+        <div className="flex items-center justify-center">
           <h2 className="text-5xl text-center leading-[55px]">
-            Interior design suggestions tailored to your needs with the simple
-            click of a button.
+            {t("summary")}
           </h2>
         </div>
-
-        <Card className="flex flex-col items-center justify-center space-y-5 p-5 row-span-2">
+        <Card className="flex flex-col items-center justify-center space-y-5 p-5">
           <IconBankNotes className="w-12 h-12" />
-          <h2 className="text-3xl">Affordable</h2>
+          <h2 className="text-3xl">{t("solutions.solution_3.title")}</h2>
           <p className="text-[#878787] text-center">
-            Realizing design dreams without a high budget opens the door to a
-            world of creative possibilities and innovations
+            {t("solutions.solution_3.text")}
           </p>
         </Card>
       </div>

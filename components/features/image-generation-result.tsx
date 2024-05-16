@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { useImageGeneration } from "@/lib/hooks/use-images";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { IconSparkles } from "../icons";
+import { IconSparkles } from "@/components/icons";
 
 export default function ImageGenerationResultCarousel() {
   const { images, progress, message } = useImageGeneration();

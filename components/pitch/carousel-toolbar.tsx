@@ -16,13 +16,13 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../ui/tooltip";
+} from "@/components/ui/tooltip";
 import {
   IconBolt,
   IconChat,
   IconChevronLeft,
   IconChevronRight,
-} from "../icons";
+} from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 type CarouselToolbarProps = {

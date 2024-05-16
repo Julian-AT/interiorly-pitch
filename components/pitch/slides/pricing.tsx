@@ -7,124 +7,10 @@ import {
   IconStack,
   IconX,
 } from "@/components/icons";
+import { useTranslations } from "next-intl";
 
 export function SlideSubscription() {
-  const plans = [
-    {
-      name: "Hobby",
-      price: 0,
-      features: [
-        {
-          feature: "Up to 10 images per day",
-          included: true,
-        },
-        {
-          feature: "Up to 1 workspace",
-          included: true,
-        },
-        {
-          feature: "Up to 2 collaborators",
-          included: true,
-        },
-        {
-          feature: "Up to 1 folder",
-          included: true,
-        },
-        {
-          feature: "Up to 3 files",
-          included: true,
-        },
-        {
-          feature: "Custom logos",
-          included: false,
-        },
-        {
-          feature: "Monetizing of our images",
-          included: false,
-        },
-        {
-          feature: "Attribution is mandatory",
-          included: false,
-        },
-      ],
-    },
-    {
-      name: "Pro",
-      price: 5.95,
-      features: [
-        {
-          feature: "Up to 100 images per day",
-          included: true,
-        },
-        {
-          feature: "Up to 3 workspace",
-          included: true,
-        },
-        {
-          feature: "Up to 10 collaborators",
-          included: true,
-        },
-        {
-          feature: "Up to 5 folder",
-          included: true,
-        },
-        {
-          feature: "Up to 10 files",
-          included: true,
-        },
-        {
-          feature: "Custom logos",
-          included: true,
-        },
-        {
-          feature: "Monetizing of our images",
-          included: true,
-        },
-        {
-          feature: "Attribution is mandatory",
-          included: true,
-        },
-      ],
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      features: [
-        {
-          feature: "Up to 1000 images per day",
-          included: true,
-        },
-        {
-          feature: "Up to 10 workspace",
-          included: true,
-        },
-        {
-          feature: "Up to 100 collaborators",
-          included: true,
-        },
-        {
-          feature: "Up to 50 folders",
-          included: true,
-        },
-        {
-          feature: "Up to 50 files",
-          included: true,
-        },
-        {
-          feature: "Custom logos",
-          included: true,
-        },
-        {
-          feature: "Monetizing of our images",
-          included: true,
-        },
-        {
-          feature: "Attribution is mandatory",
-          included: true,
-        },
-      ],
-    },
-  ];
+  const t = useTranslations("slide_subscriptions");
 
   const features = [
     {
@@ -144,6 +30,12 @@ export function SlideSubscription() {
     },
   ];
 
+  const plans = [
+    t("subscriptions.subscription_1"),
+    t("subscriptions.subscription_2"),
+    t("subscriptions.subscription_3"),
+  ];
+
   return (
     <div className="min-h-screen relative w-screen">
       <div className="absolute left-4 right-4 md:left-8 md:right-8 top-4 flex justify-between text-lg">
@@ -158,13 +50,13 @@ export function SlideSubscription() {
             <h2 className="text-2xl">Plans</h2>
           </div>
           <div className="space-y-6 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3">
-            {plans.map((item, idx) => (
+            {plans.map((item: any, idx) => (
               <Card
                 key={idx}
                 className="relative flex-1 flex items-stretch flex-col p-8 rounded-xl border-2"
               >
                 <div>
-                  <span className="text-xl font-medium">{item.name}</span>
+                  <span className="text-xl font-medium">{item.title}</span>
                   <div className="mt-4 text-3xl font-semibold">
                     {item.price !== "Custom" && "$"}
                     {item.price}
@@ -180,7 +72,7 @@ export function SlideSubscription() {
                   </div>
                 </div>
                 <ul className="py-8 space-y-3">
-                  {item.features.map((featureItem, idx) => (
+                  {/* {item.features.map((featureItem: any, idx: number) => (
                     <li key={idx} className="flex items-center gap-5">
                       {featureItem.included ? (
                         <IconCheck className="w-5 h-5 text-[#2DCE89]" />
@@ -191,7 +83,7 @@ export function SlideSubscription() {
                       )}
                       {featureItem.feature}
                     </li>
-                  ))}
+                  ))} */}
                 </ul>
               </Card>
             ))}
