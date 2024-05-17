@@ -66,35 +66,35 @@
         "price": "0.00",
         "features": {
           "feature_1": {
-            "feature": "Up to 10 images per day",
+            "feature": "Up to 10 image generations per day",
             "included": "true"
           },
           "feature_2": {
-            "feature": "Up to 1 workspace",
+            "feature": "Up to 1 workspace/user",
             "included": "true"
           },
           "feature_3": {
-            "feature": "Up to 2 collaborators",
+            "feature": "Up to 2 collaborators/workspace",
             "included": "true"
           },
           "feature_4": {
-            "feature": "Up to 1 folder",
+            "feature": "Up to 1 folder/workspace",
             "included": "true"
           },
           "feature_5": {
-            "feature": "Up to 3 files",
+            "feature": "Up to 3 files/workspace",
             "included": "true"
           },
           "feature_6": {
-            "feature": "Custom logos",
+            "feature": "Workspace logos",
             "included": "false"
           },
           "feature_7": {
-            "feature": "Monetizing of our images",
+            "feature": "Image monetization",
             "included": "false"
           },
           "feature_8": {
-            "feature": "Attribution is mandatory",
+            "feature": "Attribution is optional",
             "included": "false"
           }
         }
@@ -104,35 +104,35 @@
         "price": "15.99",
         "features": {
           "feature_1": {
-            "feature": "Up to 100 images per day",
+            "feature": "Up to 100 image generations per day",
             "included": "true"
           },
           "feature_2": {
-            "feature": "Up to 3 workspace",
+            "feature": "Up to 3 workspaces/user",
             "included": "true"
           },
           "feature_3": {
-            "feature": "Up to 10 collaborators",
+            "feature": "Up to 10 collaborators/workspace",
             "included": "true"
           },
           "feature_4": {
-            "feature": "Up to 5 folder",
+            "feature": "Up to 5 folders/workspace",
             "included": "true"
           },
           "feature_5": {
-            "feature": "Up to 10 files",
+            "feature": "Up to 10 files/workspace",
             "included": "true"
           },
           "feature_6": {
-            "feature": "Custom logos",
+            "feature": "Workspace logos",
             "included": "true"
           },
           "feature_7": {
-            "feature": "Monetizing of our images",
+            "feature": "Image monetization",
             "included": "true"
           },
           "feature_8": {
-            "feature": "Attribution is mandatory",
+            "feature": "Attribution is optional",
             "included": "true"
           }
         }
@@ -142,38 +142,53 @@
         "price": "Custom",
         "features": {
           "feature_1": {
-            "feature": "Up to 1000 images per day",
+            "feature": "Up to 1000 image generations per day",
             "included": "true"
           },
           "feature_2": {
-            "feature": "Up to 10 workspace",
+            "feature": "Up to 10 workspaces/user",
             "included": "true"
           },
           "feature_3": {
-            "feature": "Up to 100 collaborators",
+            "feature": "Up to 100 collaborators/workspace",
             "included": "true"
           },
           "feature_4": {
-            "feature": "Up to 50 folders",
+            "feature": "Up to 50 folders/workspace",
             "included": "true"
           },
           "feature_5": {
-            "feature": "Up to 50 files",
+            "feature": "Up to 50 files/workspace",
             "included": "true"
           },
           "feature_6": {
-            "feature": "Custom logos",
+            "feature": "Custom workspace logos",
             "included": "true"
           },
           "feature_7": {
-            "feature": "Monetizing of our images",
+            "feature": "Image monetization",
             "included": "true"
           },
           "feature_8": {
-            "feature": "Attribution is mandatory",
+            "feature": "Attribution is optional",
             "included": "true"
           }
         }
+      }
+    },
+    "goals": {
+      "title": "Goals",
+      "goal_1": {
+        "title": "Flexible",
+        "text": "Easily adaptable to diverse design preferences and requirements."
+      },
+      "goal_2": {
+        "title": "Smooth",
+        "text": "Seamless user experience with intuitive navigation and interactions."
+      },
+      "goal_3": {
+        "title": "Secure",
+        "text": "Ensures data privacy and protection against unauthorized access."
       }
     }
   },

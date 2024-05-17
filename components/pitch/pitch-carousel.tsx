@@ -20,6 +20,7 @@ import { SlideScreenshots } from "@/components/pitch/slides/screenshots";
 import { SlideFinish } from "@/components/pitch/slides/finish";
 import { SlidePages } from "@/components/pitch/slides/pages";
 import SlideNextSteps from "@/components/pitch/slides/next-steps";
+import { SlideRoadmap } from "@/components/pitch/slides/roadmap";
 
 const Slides = {
   SlideStart: <SlideStart />,
@@ -34,6 +35,7 @@ const Slides = {
   SlideVision: <SlideVision />,
   SlideFinish: <SlideFinish />,
   SlideNextSteps: <SlideNextSteps />,
+  SlideRoadmap: <SlideRoadmap />,
 };
 
 interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {

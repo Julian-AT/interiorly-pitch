@@ -18,6 +18,7 @@ export default function Home() {
           "SlideVision",
           "SlideTeam",
           "SlideNextSteps",
+          "SlideRoadmap",
           "SlideFinish",
         ]}
       />

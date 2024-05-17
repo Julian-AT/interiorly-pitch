@@ -14,18 +14,18 @@ export function SlideSubscription() {
 
   const features = [
     {
-      name: "Flexible",
-      desc: "Easily adaptable to diverse design preferences and requirements.",
+      name: t("goals.goal_1.title"),
+      desc: t("goals.goal_1.text"),
       icon: <IconStack className="w-7 h-7" />,
     },
     {
-      name: "Smooth",
-      desc: " Seamless user experience with intuitive navigation and interactions.",
+      name: t("goals.goal_2.title"),
+      desc: t("goals.goal_2.text"),
       icon: <IconSparkles className="w-7 h-7" />,
     },
     {
-      name: "Secure",
-      desc: "Ensures data privacy and protection against unauthorized access.",
+      name: t("goals.goal_3.title"),
+      desc: t("goals.goal_3.text"),
       icon: <IconSecure className="w-7 h-7" />,
     },
   ];
@@ -110,7 +110,7 @@ export function SlideSubscription() {
           </div>
 
           <div className="mt-10 mb-4">
-            <h2 className="text-2xl">Featuress</h2>
+            <h2 className="text-2xl">{t("goals.title")}</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5 px-4 md:px-0 md:pt-0">
