@@ -49,9 +49,8 @@ export function SlideFeatures() {
         <div className="flex-1 flex w-full">
           <FollowerPointerCard
             title={<TitleComponent avatar={TestUser} title="Interiorly AI" />}
-            className="w-full"
+            className="w-full h-full"
           >
-            {" "}
             <RealtimeCollaboration />
           </FollowerPointerCard>
         </div>
@@ -67,7 +66,7 @@ const TitleComponent = ({
   title: string;
   avatar: StaticImageData;
 }) => (
-  <div className="flex space-x-2 items-center h-4">
+  <div className="flex space-x-2 items-center h-4 border z-50">
     <Image
       src={avatar}
       height="16"
