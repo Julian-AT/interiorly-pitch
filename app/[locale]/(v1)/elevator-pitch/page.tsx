@@ -12,6 +12,7 @@ export default function ElevatorPitch() {
           "SlideProblem",
           "SlideSolution",
           "SlideFeatures",
+          "SlideGenerativeUI",
           "SlideVision",
           "SlideTeam",
           "SlideFinish",

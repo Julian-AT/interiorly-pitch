@@ -7,6 +7,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
@@ -35,7 +37,7 @@ export default function ImageGenerationResultCarousel() {
   return (
     <Card
       className={cn(
-        "container flex justify-center w-[325px] aspect-square items-center my-3 p-0 m-0 border-none",
+        "container flex justify-center w-[400px] aspect-square items-center my-3 p-0 m-0 border-none bg-transparent",
         images.length > 0 && progress === 0 && "shadow-none"
       )}
     >
@@ -66,6 +68,8 @@ export default function ImageGenerationResultCarousel() {
                 </CarouselItem>
               ))}
             </CarouselContent>{" "}
+            <CarouselPrevious />
+            <CarouselNext />
             <div className="flex justify-center gap-2 p-4">
               {Array.from({ length: images[0].batch.length }).map(
                 (_, index) => (

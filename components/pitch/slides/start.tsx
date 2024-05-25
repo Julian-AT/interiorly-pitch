@@ -48,6 +48,9 @@ export function SlideStart() {
         <h1 className="text-[150px] font-semibold lg:text-[225px] select-none">
           Interiorly
         </h1>
+        <span className="text-muted-foreground text-2xl -mt-16">
+          AI-Powered Interior Design Concepts at Your Fingertips
+        </span>
       </div>
     </div>
   );

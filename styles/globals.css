@@ -39,6 +39,21 @@
   background-clip: content-box, border-box;
 }
 
+.animation_reveal {
+  animation: animation_reveal 0.5s ease forwards;
+}
+
+@keyframes animation_reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

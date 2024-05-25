@@ -21,6 +21,7 @@ import { SlideFinish } from "@/components/pitch/slides/finish";
 import { SlidePages } from "@/components/pitch/slides/pages";
 import SlideNextSteps from "@/components/pitch/slides/next-steps";
 import { SlideRoadmap } from "@/components/pitch/slides/roadmap";
+import { SlideGenerativeUI } from "@/components/pitch/slides/generative-ui";
 
 const Slides = {
   SlideStart: <SlideStart />,
@@ -36,6 +37,7 @@ const Slides = {
   SlideFinish: <SlideFinish />,
   SlideNextSteps: <SlideNextSteps />,
   SlideRoadmap: <SlideRoadmap />,
+  SlideGenerativeUI: <SlideGenerativeUI />,
 };
 
 interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -44,7 +46,6 @@ interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const PitchCarousel = ({ slides }: PitchCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
-  api?.on("select", (idx) => console.log("Selected slide", idx));
 
   return (
     <Carousel className="w-full min-h-full relative" setApi={setApi}>

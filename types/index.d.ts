@@ -15,3 +15,8 @@ interface ImageBatch {
   timestamp: number;
   batch: string[];
 }
+
+interface AnimationComponent {
+  id: number;
+  component: JSX.Element;
+}

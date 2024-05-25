@@ -65,7 +65,7 @@ export function SlideSubscription() {
           <div className="mb-4">
             <h2 className="text-2xl">Plans</h2>
           </div>
-          <div className="space-y-6 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-3">
+          <div className="space-y-6 justify-center gap-6 sm:grid sm:grid-cols-1 sm:space-y-0 lg:grid-cols-3">
             {plans.map((item: any, idx) => (
               <Card
                 key={idx}
