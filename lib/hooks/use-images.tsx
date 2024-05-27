@@ -71,8 +71,6 @@ export const ImageGenerationProvider: React.FC<{
 
   const generateImage = useCallback(
     (prompt: string) => {
-      console.log(prompt);
-
       setIsLoading(true);
       setProgress(0.1);
       setMessage("Initializing Connection...");
@@ -134,10 +132,12 @@ export const ImageGenerationProvider: React.FC<{
                 `Queue Position ${data.rank}/${initalQueueSizeRef.current}`
               );
             } else {
+              if (progress > 0) setProgress(progress + 7.5);
               console.error("Invalid Estimation received. " + data);
             }
             break;
           case "process_starts":
+            setProgress(50);
             setMessage("Generating Images...");
             updateProgressBasedOnEstimation(Date.now());
             break;
@@ -169,7 +169,7 @@ export const ImageGenerationProvider: React.FC<{
       };
 
       const handleError = () => {
-        retryOrAbort("WebSocket error. Retrying...");
+        retryOrAbort("WebSocket error. Are you connected to the internet?");
       };
 
       const retryOrAbort = (message: string) => {
@@ -214,10 +214,16 @@ export const ImageGenerationProvider: React.FC<{
       };
 
       initiateConnection();
+
+      setTimeout(() => {
+        if (isLoading) {
+          setMessage("Connection timeout. Please try again later.");
+          setIsLoading(false);
+        }
+      }, 15000);
     },
     [progress, addImageBatch, setIsLoading, setProgress, setMessage]
   );
-
   return (
     <ImageGenerationContext.Provider
       value={{

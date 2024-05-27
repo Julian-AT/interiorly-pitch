@@ -14,7 +14,7 @@ import { useInView } from "framer-motion";
 
 const ANIMATION_DELAY = 1250;
 
-const ANIMATION_COMPONENTS: AnimationComponent[] = [
+const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 1,
     component: (
@@ -107,6 +107,106 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
             alt="Living room"
             className="w-3/4 rounded-lg"
           />
+        </div>
+      </div>
+    ),
+  },
+];
+
+const ANIMATION_COMPONENTS: AnimationComponent[] = [
+  {
+    id: 1,
+    component: (
+      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+        Hallo, ich bin Interiorly AI! Wie kann ich dir heute helfen? 🏡✨
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    component: (
+      <div className="max-w-[55%] border bg-gray-200 text-primary-foreground ml-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+        Kannst du ein Wohnzimmer im skandinavischen Stil mit natürlichem Licht
+        und minimalistischen Möbeln entwerfen?
+      </div>
+    ),
+  },
+  {
+    id: 3,
+    component: (
+      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+        Aber sicher! 🌿✨ Ich werde ein ruhiges Wohnzimmer im skandinavischen
+        Stil für Sie gestalten, das in natürlichem Licht badet und mit
+        minimalistischen Möbeln geschmückt ist.
+      </div>
+    ),
+  },
+  {
+    id: 4,
+    component: (
+      <div className="w-full text-center font-mono text-sm text-muted-foreground animation_reveal">
+        generateImage(&apos;skandinavisches Wohnzimmer mit..&apos;)
+      </div>
+    ),
+  },
+  {
+    id: 5,
+    component: (
+      <div className="max-w-[45%] flex flex-col gap-2 rounded-lg bg-secondary border border-border p-4 animation_reveal w-1/2">
+        <div>
+          Ihr ruhiges Wohnzimmer im skandinavischen Stil 🌿☀️, durchflutet von
+          natürlichem Licht und geschmückt mit minimalistischen Möbeln ist
+          fertig. 🛋️
+        </div>
+        <div className="relative">
+          <Image
+            src={Livingroom}
+            alt="Wohnzimmer"
+            className="w-3/4 rounded-lg"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 6,
+    component: (
+      <div className="max-w-[75%] border bg-primary text-primary-foreground ml-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+        😍 Wow, sieht toll aus! Wie wäre es mit einem luxuriösen Badezimmer mit
+        freistehender Badewanne?
+      </div>
+    ),
+  },
+  {
+    id: 7,
+    component: (
+      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+        Ich freue mich, dass es dir gefällt. 🛁💫 Ein luxuriöses Badezimmer mit
+        freistehender Badewanne zu gestalten liegt genau in meinem Fachgebiet.
+        Lassen Sie uns das umsetzen!
+      </div>
+    ),
+  },
+  {
+    id: 8,
+    component: (
+      <div className="w-full text-center font-mono text-sm text-muted-foreground animation_reveal">
+        generateImage(&apos;Luxuriöses Badezimmer mit freistehender
+        Badewanne&apos;)
+      </div>
+    ),
+  },
+  {
+    id: 9,
+    component: (
+      <div className="flex flex-col gap-2 rounded-lg bg-secondary border border-border p-4 animation_reveal w-1/2">
+        <div>
+          Ihr luxuriöses Badezimmer mit einer atemberaubenden freistehenden
+          Badewanne, steht zur Bewunderung bereit. Sollen wir einen Blick darauf
+          werfen? 🛁✨💖
+        </div>
+        <div className="relative">
+          <Image src={Bathroom} alt="Wohnzimmer" className="w-3/4 rounded-lg" />
         </div>
       </div>
     ),

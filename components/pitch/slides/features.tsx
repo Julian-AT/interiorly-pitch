@@ -70,7 +70,7 @@ export function SlideFeatures() {
             <div className="flex flex-col gap-5 items-center justify-center -mt-5">
               <Image src={LivingRoom} alt="livingroom" className="rounded-lg" />
               <span className="text-muted-foreground">
-                Your image is done generating. 🏡✨
+                Dein Bild ist fertig. 🏡✨
               </span>
             </div>
           )}

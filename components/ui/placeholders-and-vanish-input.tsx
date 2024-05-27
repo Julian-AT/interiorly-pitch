@@ -168,7 +168,7 @@ export function PlaceholdersAndVanishInput({
         className="absolute left-3 top-1/2 z-50 -translate-y-1/2 h-6 w-6 rounded-full transition duration-200"
       />
       <button
-        disabled={!value}
+        disabled={!value || disabled}
         type="submit"
         className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full bg-background transition duration-200 flex items-center justify-center"
       >

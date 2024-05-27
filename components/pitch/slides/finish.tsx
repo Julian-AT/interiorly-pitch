@@ -4,25 +4,30 @@ import { useTranslations } from "next-intl";
 import SlideShell from "@/components/pitch/slide-shell";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import { FlipWords } from "@/components/ui/flip-words";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ImageGenerationResultCarousel from "@/components/features/image-generation-result";
 import { useImageGeneration } from "@/lib/hooks/use-images";
 import { Spotlight } from "@/components/ui/spotlight";
 import { getRandomPrompt } from "@/lib/utils";
 
-const words = ["stunning", "unique", "beautiful", "elegant", "innovative"];
+const words = [
+  "atemberaubende",
+  "einzigartige",
+  "wunderschöne",
+  "elegante",
+  "innovative",
+];
 
 export function SlideFinish() {
   const t = useTranslations("slide_finish");
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const { generateImage } = useImageGeneration();
+  const { generateImage, isLoading, images } = useImageGeneration();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => null;
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsGenerating(true);
-    generateImage((e.currentTarget[0] as HTMLInputElement).value);
+    const prompt = (e.currentTarget[0] as HTMLInputElement).value;
+    generateImage(prompt);
   };
 
   return (
@@ -34,33 +39,42 @@ export function SlideFinish() {
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
-      <span className="text-center text-5xl text-secondary-foreground font-bold">
-        Generate
-        <FlipWords
-          words={words}
-          className="text-secondary-foreground font-bold text-5xl"
-        />
-        <br />
-        Room designs with Interiorly AI.
-      </span>
-      {isGenerating && <ImageGenerationResultCarousel />}
+      {!isLoading ? (
+        <span className="font-semibold uppercase animation_reveal text-2xl text-center mt-3">
+          &quot;{images[0]?.prompt || ""}&quot;
+        </span>
+      ) : (
+        <span className="text-center text-5xl text-secondary-foreground font-bold">
+          Generiere
+          <FlipWords
+            words={words}
+            className="text-secondary-foreground font-bold text-5xl"
+          />
+          <br />
+          Innenraumkonzepte mit Interiorly AI.
+        </span>
+      )}
+
+      <div className="flex flex-col items-center justify-center -my-4">
+        <ImageGenerationResultCarousel />
+      </div>
       <PlaceholdersAndVanishInput
-        disabled={isGenerating}
-        placeholder={"Imagine your dream home"}
+        disabled={isLoading}
+        placeholder={"Stell dir dein Traumhaus vor..."}
         onChange={handleChange}
         onSubmit={onSubmit}
       />
-      <div>
-        <span>Can&apos;t decide?</span>
+      <div className="">
+        <span>Nicht sicher?</span>
         <Button
           onClick={() => {
-            setIsGenerating(true);
             generateImage(getRandomPrompt());
           }}
           variant={"link"}
           className="px-1 text-base"
+          disabled={isLoading}
         >
-          Generate random design
+          Generiere ein zufälliges Konzept
         </Button>
       </div>
     </SlideShell>

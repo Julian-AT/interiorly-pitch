@@ -37,7 +37,7 @@ export default function ImageGenerationResultCarousel() {
   return (
     <Card
       className={cn(
-        "container flex justify-center w-[400px] aspect-square items-center my-3 p-0 m-0 border-none bg-transparent",
+        "container flex justify-center w-[400px] aspect-square items-center p-0 m-0 border-none bg-transparent",
         images.length > 0 && progress === 0 && "shadow-none"
       )}
     >

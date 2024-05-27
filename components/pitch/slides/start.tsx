@@ -49,7 +49,7 @@ export function SlideStart() {
           Interiorly
         </h1>
         <span className="text-muted-foreground text-2xl -mt-16">
-          AI-Powered Interior Design Concepts at Your Fingertips
+          Innenarchitekturkonzepte durch künstliche Intelligenz
         </span>
       </div>
     </div>
