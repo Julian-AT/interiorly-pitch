@@ -64,7 +64,7 @@ export function SlideSolutionStackElevatorPitch() {
   }, [inView, controls]);
 
   return (
-    <SlideShell title="Solution Stack" className="">
+    <SlideShell title="Interiorly Engine">
       <div className="col-span-3 flex overflow-hidden h-full transform-gpu flex-col items-center justify-between gap-5 rounded-lg border border-border bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] xl:flex-row">
         <div className="flex w-full flex-col items-start justify-between gap-y-10 p-10 xl:h-full xl:w-1/2">
           <div className="group rounded-full border border-border text-base transition-all ease-in bg-secondary">
@@ -85,19 +85,19 @@ export function SlideSolutionStackElevatorPitch() {
             <AnimatedBeamStack />
           </div>
           <div className="h-auto w-full grid grid-cols-3 gap-4">
-            <Card className="relative bg-secondary h-auto">
+            <Card className="relative flex flex-col py-3 gap-3 items-center justify-center bg-secondary h-auto">
               <IconGenerativeUI className="h-8 w-8" />
               <h3 className="text-lg text-center font-semibold text-neutral-400">
-                Generative UI (Fn Calling)
+                Generative UI <br /> (Fn Calling)
               </h3>
             </Card>
-            <Card className="relative bg-secondary h-auto">
+            <Card className="relative flex flex-col py-3 gap-3 items-center justify-center bg-secondary h-auto">
               <IconVectorEmbeddings className="h-8 w-8" />
               <h3 className="text-lg text-center font-semibold text-neutral-400">
-                Vector Embeddings
+                Vector <br /> Embeddings
               </h3>
             </Card>
-            <Card className="relative bg-secondary h-auto">
+            <Card className="relative flex flex-col py-3 gap-3 items-center justify-center bg-secondary h-auto">
               <IconLoraWeights className="h-8 w-8" />
               <h3 className="text-lg text-center font-semibold text-neutral-400">
                 SDXL / 1.5 <br /> Lora Weights

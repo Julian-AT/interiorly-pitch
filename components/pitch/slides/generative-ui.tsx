@@ -255,7 +255,10 @@ export function SlideGenerativeUI() {
   }, [isPlaying, renderedFrames]);
 
   return (
-    <SlideShell title={"ANIMATION (EXPERIMENTAL)"} className="xl:grid-cols-1">
+    <SlideShell
+      title={"Generatives UI & Chat Interaktionen"}
+      className="xl:grid-cols-1"
+    >
       <Card className="bg-background h-full overflow-hidden">
         <ScrollArea className="px-10 m-1 h-full">
           <div className="flex items-center justify-center h-full">

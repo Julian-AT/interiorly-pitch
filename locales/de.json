@@ -41,7 +41,7 @@
     "summary": "Maßgeschneiderte Innenarchitektur-\nvorschläge, nur ein Klick entfernt!"
   },
   "slide_features": {
-    "title": "Funktionen",
+    "title": "Hauptfunktionen",
     "features": {
       "feature_1": {
         "title": "Chat-Interaktion",
@@ -275,7 +275,7 @@
     }
   },
   "slide_finish": {
-    "title": "Kontakt",
+    "title": "Demo",
     "text": "Interessiert an Interiorly AI? Kontaktieren Sie uns für ein Meeting! 🚀"
   }
 }
