@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, {
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import {
   Carousel,
   CarouselApi,
@@ -22,6 +28,9 @@ import { SlidePages } from "@/components/pitch/slides/pages";
 import SlideNextSteps from "@/components/pitch/slides/next-steps";
 import { SlideRoadmap } from "@/components/pitch/slides/roadmap";
 import { SlideGenerativeUI } from "@/components/pitch/slides/generative-ui";
+import { SlideProblemElevatorPitch } from "./slides/elevator-pitch/problem";
+import { SlideSolutionElevatorPitch } from "./slides/elevator-pitch/solution";
+import { SlideSolutionStackElevatorPitch } from "./slides/elevator-pitch/solution-stack";
 
 const Slides = {
   SlideStart: <SlideStart />,
@@ -38,6 +47,9 @@ const Slides = {
   SlideNextSteps: <SlideNextSteps />,
   SlideRoadmap: <SlideRoadmap />,
   SlideGenerativeUI: <SlideGenerativeUI />,
+  SlideProblemElevatorPitch: <SlideProblemElevatorPitch />,
+  SlideSolutionElevatorPitch: <SlideSolutionElevatorPitch />,
+  SlideSolutionStackElevatorPitch: <SlideSolutionStackElevatorPitch />,
 };
 
 interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {

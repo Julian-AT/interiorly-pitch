@@ -10,8 +10,9 @@ export default function ElevatorPitch() {
         <PitchCarousel
           slides={[
             "SlideStart",
-            "SlideProblem",
-            "SlideSolution",
+            "SlideProblemElevatorPitch",
+            "SlideSolutionElevatorPitch",
+            "SlideSolutionStackElevatorPitch",
             "SlideFeatures",
             "SlideGenerativeUI",
             "SlideVision",
