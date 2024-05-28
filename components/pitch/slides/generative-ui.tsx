@@ -219,6 +219,7 @@ export function SlideGenerativeUI() {
     ANIMATION_COMPONENTS[0],
   ]);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(scrollAreaRef);
 
   useEffect(() => {
@@ -249,7 +250,7 @@ export function SlideGenerativeUI() {
       );
     }
 
-    // scrollAreaRef.current?.scrollIntoView(false);
+    // if (isPlaying) bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     return () => clearTimeout(animationTimer);
   }, [isPlaying, renderedFrames]);
 
@@ -259,7 +260,7 @@ export function SlideGenerativeUI() {
         <ScrollArea className="px-10 m-1 h-full">
           <div className="flex items-center justify-center h-full">
             <div
-              className="mx-auto flex w-full flex-col gap-4 overflow-auto p-6"
+              className="mx-auto flex w-full flex-col-reverse gap-4 overflow-auto p-6"
               ref={scrollAreaRef}
             >
               {isInView &&
@@ -270,6 +271,7 @@ export function SlideGenerativeUI() {
                 ))}
             </div>
           </div>
+          <div ref={bottomRef} />
         </ScrollArea>
         <div className="absolute bottom-0 p-1">
           {isPlaying ? (

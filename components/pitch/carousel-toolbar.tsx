@@ -59,7 +59,7 @@ export function CarouselToolbar({ api }: CarouselToolbarProps) {
                       className="py-1 px-3 rounded-sm"
                       sideOffset={25}
                     >
-                      <span className="text-xs">Previous slide</span>
+                      <span className="text-xs">Vorherige Slide</span>
                     </TooltipContent>
                   </Tooltip>
                   <Tooltip>
@@ -79,7 +79,7 @@ export function CarouselToolbar({ api }: CarouselToolbarProps) {
                       className="py-1 px-3 rounded-sm"
                       sideOffset={25}
                     >
-                      <span className="text-xs">Next slide</span>
+                      <span className="text-xs">Nächste slide</span>
                     </TooltipContent>
                   </Tooltip>
                 </div>

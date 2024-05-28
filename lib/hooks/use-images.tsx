@@ -194,6 +194,7 @@ export const ImageGenerationProvider: React.FC<{
 
           const timeProgress = (elapsedTime / estimatedEta) * 40;
 
+          if (progress === 100) return;
           setProgress(50 + timeProgress);
           if (currentQueuePositionRef.current !== 0) {
             setMessage(

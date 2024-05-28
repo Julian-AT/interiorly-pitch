@@ -39,25 +39,21 @@ export function SlideFinish() {
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
-      {!isLoading ? (
-        <span className="font-semibold uppercase animation_reveal text-2xl text-center mt-3">
-          &quot;{images[0]?.prompt || ""}&quot;
-        </span>
-      ) : (
-        <span className="text-center text-5xl text-secondary-foreground font-bold">
-          Generiere
-          <FlipWords
-            words={words}
-            className="text-secondary-foreground font-bold text-5xl"
-          />
-          <br />
-          Innenraumkonzepte mit Interiorly AI.
-        </span>
-      )}
 
-      <div className="flex flex-col items-center justify-center -my-4">
-        <ImageGenerationResultCarousel />
-      </div>
+      <span className="text-center text-5xl text-secondary-foreground font-bold">
+        Generiere
+        <FlipWords
+          words={words}
+          className="text-secondary-foreground font-bold text-5xl"
+        />
+        <br />
+        Innenraumkonzepte mit Interiorly AI.
+      </span>
+      {(images.length > 0 || isLoading) && (
+        <div className="-my-4">
+          <ImageGenerationResultCarousel />
+        </div>
+      )}
       <PlaceholdersAndVanishInput
         disabled={isLoading}
         placeholder={"Stell dir dein Traumhaus vor..."}

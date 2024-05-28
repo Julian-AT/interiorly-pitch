@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-  ReactElement,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import React, { useState } from "react";
 import {
   Carousel,
   CarouselApi,

@@ -37,7 +37,7 @@ export default function ImageGenerationResultCarousel() {
   return (
     <Card
       className={cn(
-        "container flex justify-center w-[400px] aspect-square items-center p-0 m-0 border-none bg-transparent",
+        "container flex justify-center w-[350px] aspect-square items-center p-0 m-0 border-none bg-transparent",
         images.length > 0 && progress === 0 && "shadow-none"
       )}
     >
@@ -45,12 +45,11 @@ export default function ImageGenerationResultCarousel() {
         images.length === 0 ? (
           <div className="text-center w-full flex flex-col gap-3">
             <IconSparkles className="w-16 h-16 mx-auto" />
-            <span className="text-lg mt-3 leading-6">
-              You have not generated any images yet
+            <span className="text-xl mt-3 leading-6">
+              Du hast noch keine Bilder generiert
             </span>
             <span className="text-muted-foreground mx-5">
-              Enter a prompt or randomize the prompt to generate Interior Design
-              concepts
+              Starte die Bildgenerierung, um die Ergebnisse zu sehen.
             </span>
           </div>
         ) : (
@@ -89,7 +88,7 @@ export default function ImageGenerationResultCarousel() {
           </Carousel>
         )
       ) : (
-        <div className="text-center w-full flex flex-col gap-2">
+        <div className="text-center w-full flex flex-col items-center justify-center gap-2">
           <ImageGenerationProgress progress={progress} message={message} />
         </div>
       )}

@@ -11,10 +11,10 @@ export function ImageGenerationProgress({
   ...props
 }: ProgressProps) {
   return (
-    <div {...props}>
+    <div {...props} className="flex flex-col items-center justify-center">
       <CircularProgress
         classNames={{
-          svg: "w-40 h-40 drop-shadow-md",
+          svg: "w-40 h-40 drop-shadow-md mx-auto",
           indicator: "stroke-primary",
           track: "stroke-secondary",
           value: "text-3xl font-semibold text-primary",
