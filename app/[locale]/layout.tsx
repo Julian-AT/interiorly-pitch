@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ImageGenerationProvider } from "@/lib/hooks/use-images";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
+import { siteConfig } from "@/config/site";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -14,10 +15,54 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Interiorly AI Pitch",
-  description: "Interiorly AI Pitch",
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  metadataBase: new URL(siteConfig.url),
+  description: siteConfig.description,
+  keywords: ["Interiorly", "Interiorly AI", "Interior Design", "AI", "Pitch"],
+  authors: [
+    {
+      name: "Julian Schmidt",
+      url: "https://github.com/Julian-AT",
+    },
+    {
+      name: "Anthony Owah",
+      url: "https://github.com/An-thonny",
+    },
+  ],
+  creator: "Julian Schmidt & Anthony Owah",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+    creator: "@Julian-AT, @An-thonny",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: `${siteConfig.url}/site.webmanifest`,
 };
-
 export default async function LocaleLayout({
   children,
   params: { locale },
