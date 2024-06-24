@@ -21,7 +21,8 @@ const words = [
 
 export function SlideFinish() {
   const t = useTranslations("slide_finish");
-  const { generateImage, isLoading, images } = useImageGeneration();
+  const { generateImage, isLoading, images, clearImages } =
+    useImageGeneration();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => null;
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -31,48 +32,54 @@ export function SlideFinish() {
   };
 
   return (
-    <SlideShell
-      title={t("title")}
-      className="xl:grid-cols-1 flex flex-col gap-8"
-    >
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
-
-      <span className="text-center text-5xl text-secondary-foreground font-bold">
-        Generiere
-        <FlipWords
-          words={words}
-          className="text-secondary-foreground font-bold text-5xl"
+    <div className="relative">
+      <SlideShell
+        title={t("title")}
+        className="xl:grid-cols-1 flex flex-col gap-8"
+      >
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="white"
         />
-        <br />
-        Innenraumkonzepte mit Interiorly AI.
-      </span>
-      {(images.length > 0 || isLoading) && (
-        <div className="-my-4">
-          <ImageGenerationResultCarousel />
-        </div>
-      )}
-      <PlaceholdersAndVanishInput
-        disabled={isLoading}
-        placeholder={"Stell dir dein Traumhaus vor..."}
-        onChange={handleChange}
-        onSubmit={onSubmit}
-      />
-      <div className="">
-        <span>Nicht sicher?</span>
-        <Button
-          onClick={() => {
-            generateImage(getRandomPrompt());
-          }}
-          variant={"link"}
-          className="px-1 text-base"
+
+        <span className="text-center text-5xl text-secondary-foreground font-bold">
+          Generiere
+          <FlipWords
+            words={words}
+            className="text-secondary-foreground font-bold text-5xl"
+          />
+          <br />
+          Innenraumkonzepte mit Interiorly AI.
+        </span>
+        {(images.length > 0 || isLoading) && (
+          <div className="-my-4">
+            <ImageGenerationResultCarousel />
+          </div>
+        )}
+        <PlaceholdersAndVanishInput
           disabled={isLoading}
-        >
-          Generiere ein zufälliges Konzept
-        </Button>
-      </div>
-    </SlideShell>
+          placeholder={"Stell dir dein Traumhaus vor..."}
+          onChange={handleChange}
+          onSubmit={onSubmit}
+        />
+        <div className="">
+          <span>Nicht sicher?</span>
+          <Button
+            onClick={() => {
+              generateImage(getRandomPrompt());
+            }}
+            variant={"link"}
+            className="px-1 text-base"
+            disabled={isLoading}
+          >
+            Generiere ein zufälliges Konzept
+          </Button>
+        </div>
+      </SlideShell>
+      <div
+        className="absolute w-24 h-24 bottom-0 right-0 z-20 cursor-pointer"
+        onClick={clearImages}
+      />
+    </div>
   );
 }

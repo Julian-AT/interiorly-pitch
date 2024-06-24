@@ -24,6 +24,7 @@ import {
   IconChevronRight,
 } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "../mode-toggle";
 
 type CarouselToolbarProps = {
   api: any;

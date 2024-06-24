@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ImageGenerationProvider } from "@/lib/hooks/use-images";
 import { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -38,7 +39,14 @@ export default async function LocaleLayout({
         <ImageGenerationProvider>
           <TooltipProvider>
             <NextIntlClientProvider messages={messages}>
-              {children}
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
+                {children}
+              </ThemeProvider>
             </NextIntlClientProvider>
           </TooltipProvider>
         </ImageGenerationProvider>

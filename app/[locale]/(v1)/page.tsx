@@ -11,17 +11,16 @@ export default function Home() {
         <PitchCarousel
           slides={[
             "SlideStart",
-            "SlideProblem",
-            "SlideSolution",
+            "SlideProblemElevatorPitch",
+            "SlideSolutionElevatorPitch",
+            "SlideSolutionStackElevatorPitch",
             "SlideFeatures",
-            "SlideSubscription",
+            "SlideGenerativeUI",
             "SlidePages",
             "SlideTechStack",
-            "SlideGenerativeUI",
             "SlideVision",
             "SlideTeam",
             "SlideNextSteps",
-            "SlideRoadmap",
             "SlideFinish",
           ]}
         />
