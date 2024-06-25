@@ -77,7 +77,7 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
       className={cn(
         "relative size-20 cursor-pointer overflow-hidden rounded-2xl border p-4",
         "bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
-        "transform-gpu dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+        "transform-gpu dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
       )}
     >
       {card.icon}
@@ -106,10 +106,10 @@ export function SlideSolutionElevatorPitch() {
 
   return (
     <SlideShell title="Lösungsansatz" className="grid-cols-1">
-      <section id="cta" className="w-full h-full col-span-3">
+      <section id="cta" className="col-span-3 h-full w-full">
         <div className="py-14">
           <div className="container flex w-full flex-col items-center justify-center">
-            <div className="relative flex w-full max-w-full px-12 flex-col items-center justify-center overflow-hidden rounded-[2rem]">
+            <div className="relative flex w-full max-w-full flex-col items-center justify-center overflow-hidden rounded-[2rem] px-12">
               <Marquee
                 reverse
                 className="-delay-[200ms] [--duration:20s]"
@@ -149,7 +149,7 @@ export function SlideSolutionElevatorPitch() {
                 ))}
               </Marquee>
               <div className="absolute z-10">
-                <div className="mx-auto size-24 rounded-[2rem] border bg-background/50 p-3 shadow-2xl backdrop-blur-md  lg:size-32">
+                <div className="mx-auto size-24 rounded-[2rem] border bg-background/50 p-3 shadow-2xl backdrop-blur-md lg:size-32">
                   <Image
                     src={InteriorlyLogo}
                     alt="Interiorly"
@@ -171,16 +171,16 @@ export function SlideSolutionElevatorPitch() {
                         size: "lg",
                         variant: "outline",
                       }),
-                      "group mt-4 rounded-[2rem] px-6"
+                      "group mt-4 rounded-[2rem] px-6",
                     )}
                   >
                     Worauf warten Sie noch?
                     <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
                   </a>
                 </div>
-                <div className="absolute inset-0 -z-10 rounded-full  bg-background opacity-40 blur-xl dark:bg-black" />
+                <div className="absolute inset-0 -z-10 rounded-full bg-background opacity-40 blur-xl dark:bg-black" />
               </div>
-              <div className="absolute inset-x-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-background to-80% dark:to-black" />
+              <div className="absolute inset-x-0 bottom-0 h-full w-full bg-gradient-to-b from-transparent to-background to-80% dark:to-black" />
             </div>
           </div>
         </div>

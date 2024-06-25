@@ -15,8 +15,8 @@ export function SlideTeam() {
 
   return (
     <SlideShell title={t("title")} className="xl:grid-cols-2">
-      <div className="grid grid-cols-1 h-full gap-8">
-        <Card className="flex flex-col gap-3 p-5 h-full w-full">
+      <div className="grid h-full grid-cols-1 gap-8">
+        <Card className="flex h-full w-full flex-col gap-3 p-5">
           <div className="flex items-center">
             <Image
               src={Julian}
@@ -24,12 +24,12 @@ export function SlideTeam() {
               width={128}
               height={128}
               quality={100}
-              className="rounded-full w-24 h-24 object-cover"
+              className="h-24 w-24 rounded-full object-cover"
             />
           </div>
           <div>
             <h2 className="text-2xl">{t("team_members.team_member_1.name")}</h2>
-            <span className="text-muted-foreground text-lg">
+            <span className="text-lg text-muted-foreground">
               {t("team_members.team_member_1.role")}
             </span>
           </div>
@@ -39,7 +39,7 @@ export function SlideTeam() {
             </p>
           </div>
         </Card>
-        <Card className="flex flex-col p-5 gap-3 h-full w-full">
+        <Card className="flex h-full w-full flex-col gap-3 p-5">
           <div className="flex items-center">
             <Image
               src={Anthony}
@@ -47,12 +47,12 @@ export function SlideTeam() {
               width={128}
               height={128}
               quality={100}
-              className="rounded-full w-24 h-24 object-cover"
+              className="h-24 w-24 rounded-full object-cover"
             />
           </div>
           <div>
             <h2 className="text-2xl">{t("team_members.team_member_2.name")}</h2>
-            <span className="text-muted-foreground text-lg">
+            <span className="text-lg text-muted-foreground">
               {t("team_members.team_member_2.role")}
             </span>
           </div>
@@ -63,12 +63,12 @@ export function SlideTeam() {
           </div>
         </Card>
       </div>
-      <div className="h-full w-full relative">
+      <div className="relative h-full w-full">
         <Image
           src={Team}
           alt="Team"
           fill
-          className="absolute -right-4 lg:-top-[40%] filter -bottom-10 object-cover rounded-2xl"
+          className="absolute -bottom-10 -right-4 rounded-2xl object-cover filter lg:-top-[40%]"
         />
       </div>
     </SlideShell>

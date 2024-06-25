@@ -65,15 +65,15 @@ export function SlideSolutionStackElevatorPitch() {
 
   return (
     <SlideShell title="Interiorly Engine">
-      <div className="col-span-3 flex overflow-hidden h-full transform-gpu flex-col items-center justify-between gap-5 rounded-lg border border-border bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] xl:flex-row">
+      <div className="col-span-3 flex h-full transform-gpu flex-col items-center justify-between gap-5 overflow-hidden rounded-lg border border-border bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] xl:flex-row">
         <div className="flex w-full flex-col items-start justify-between gap-y-10 p-10 xl:h-full xl:w-1/2">
-          <div className="group rounded-full border border-border text-base transition-all ease-in bg-secondary">
+          <div className="group rounded-full border border-border bg-secondary text-base transition-all ease-in">
             <AnimatedGradientText className="bg-secondary">
-              <Logo className="w-5 h-5" fill="#e6e6e6" />
+              <Logo className="h-5 w-5" fill="#e6e6e6" />
               <hr className="mx-2 h-4 w-[1px] shrink-0 bg-muted-foreground" />{" "}
               <span
                 className={cn(
-                  `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+                  `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
                 )}
               >
                 Interiorly - Engine
@@ -81,37 +81,37 @@ export function SlideSolutionStackElevatorPitch() {
               {/* <Cpu className="ml-2 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" /> */}
             </AnimatedGradientText>
           </div>
-          <div className="flex-1 w-full">
+          <div className="w-full flex-1">
             <AnimatedBeamStack />
           </div>
-          <div className="h-auto w-full grid grid-cols-3 gap-4">
-            <Card className="relative flex flex-col py-3 gap-3 items-center justify-center bg-secondary h-auto">
+          <div className="grid h-auto w-full grid-cols-3 gap-4">
+            <Card className="relative flex h-auto flex-col items-center justify-center gap-3 bg-secondary py-3">
               <IconGenerativeUI className="h-8 w-8" />
-              <h3 className="text-lg text-center font-semibold text-neutral-400">
+              <h3 className="text-center text-lg font-semibold text-neutral-400">
                 Generative UI <br /> (Fn Calling)
               </h3>
             </Card>
-            <Card className="relative flex flex-col py-3 gap-3 items-center justify-center bg-secondary h-auto">
+            <Card className="relative flex h-auto flex-col items-center justify-center gap-3 bg-secondary py-3">
               <IconVectorEmbeddings className="h-8 w-8" />
-              <h3 className="text-lg text-center font-semibold text-neutral-400">
+              <h3 className="text-center text-lg font-semibold text-neutral-400">
                 Vector <br /> Embeddings
               </h3>
             </Card>
-            <Card className="relative flex flex-col py-3 gap-3 items-center justify-center bg-secondary h-auto">
+            <Card className="relative flex h-auto flex-col items-center justify-center gap-3 bg-secondary py-3">
               <IconLoraWeights className="h-8 w-8" />
-              <h3 className="text-lg text-center font-semibold text-neutral-400">
+              <h3 className="text-center text-lg font-semibold text-neutral-400">
                 SDXL / 1.5 <br /> Lora Weights
               </h3>
             </Card>
           </div>
         </div>
-        <div className="relative w-full overflow-hidden xl:w-1/2 h-full">
-          <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1/3  bg-gradient-to-b from-[#121212] dark:from-black" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/3  bg-gradient-to-t from-[#121212] dark:from-black" />
+        <div className="relative h-full w-full overflow-hidden xl:w-1/2">
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1/3 bg-gradient-to-b from-[#121212] dark:from-black" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/3 bg-gradient-to-t from-[#121212] dark:from-black" />
 
           <div
             ref={containerRef}
-            className="relative -right-[75px] -top-20  grid max-h-full grid-cols-3 gap-5 [transform:rotate(-15deg)translateZ(10px);]"
+            className="relative -right-[75px] -top-20 grid max-h-full grid-cols-3 gap-5 [transform:rotate(-15deg)translateZ(10px);]"
           >
             <AnimatePresence>
               {Array.from({ length: 6 }).map((_, i) =>
@@ -145,7 +145,7 @@ export function SlideSolutionStackElevatorPitch() {
                       {card.title}
                     </p>
                   </motion.div>
-                ))
+                )),
               )}
             </AnimatePresence>
           </div>

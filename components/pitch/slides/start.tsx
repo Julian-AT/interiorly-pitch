@@ -20,11 +20,11 @@ export function SlideStart() {
 
   return (
     <div className="min-h-screen">
-      <div className="absolute left-4 right-4 md:left-8 md:right-8 top-4 flex justify-between text-lg">
+      <div className="absolute left-4 right-4 top-4 flex justify-between text-lg md:left-8 md:right-8">
         <Select
           onValueChange={(value) =>
             router.push(
-              `/${pathname.split("/")[1]}/${value === "main" ? "" : value}`
+              `/${pathname.split("/")[1]}/${value === "main" ? "" : value}`,
             )
           }
           defaultValue={
@@ -43,12 +43,12 @@ export function SlideStart() {
         <span className="text-[#878787]">Pitch Interiorly/2024</span>
       </div>
 
-      <div className="container min-h-screen relative flex flex-col items-center justify-center">
-        <Logo className="w-80 h-80 -mb-[100px]" fill="#e6e6e6" />
-        <h1 className="text-[150px] font-semibold lg:text-[225px] select-none">
+      <div className="container relative flex min-h-screen flex-col items-center justify-center">
+        <Logo className="-mb-[100px] h-80 w-80" fill="#e6e6e6" />
+        <h1 className="select-none text-[150px] font-semibold lg:text-[225px]">
           Interiorly
         </h1>
-        <span className="text-muted-foreground text-2xl -mt-16">
+        <span className="-mt-16 text-2xl text-muted-foreground">
           Innenarchitekturkonzepte durch künstliche Intelligenz
         </span>
       </div>

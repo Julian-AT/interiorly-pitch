@@ -36,11 +36,11 @@ export function CarouselToolbar({ api }: CarouselToolbarProps) {
 
   return (
     <Dialog>
-      <div className="fixed flex justify-center left-0 bottom-5 w-full">
+      <div className="fixed bottom-5 left-0 flex w-full justify-center">
         <AnimatePresence>
           <motion.div animate={{ y: 0 }} initial={{ y: 100 }}>
             <TooltipProvider delayDuration={20}>
-              <div className="flex backdrop-filter backdrop-blur-lg dark:bg-[#1A1A1A]/80 h-10 px-4 py-2 border border-[#2C2C2C] items-center rounded-2xl space-x-4">
+              <div className="flex h-10 items-center space-x-4 rounded-2xl border border-[#2C2C2C] px-4 py-2 backdrop-blur-lg backdrop-filter dark:bg-[#1A1A1A]/80">
                 <span className="text-[#878787]">Interiorly AI Pitch</span>
                 <div className="flex items-center border-l-[1px] border-border pl-4">
                   <Tooltip>
@@ -57,7 +57,7 @@ export function CarouselToolbar({ api }: CarouselToolbarProps) {
                       </button>
                     </TooltipTrigger>
                     <TooltipContent
-                      className="py-1 px-3 rounded-sm"
+                      className="rounded-sm px-3 py-1"
                       sideOffset={25}
                     >
                       <span className="text-xs">Vorherige Slide</span>
@@ -77,7 +77,7 @@ export function CarouselToolbar({ api }: CarouselToolbarProps) {
                       </button>
                     </TooltipTrigger>
                     <TooltipContent
-                      className="py-1 px-3 rounded-sm"
+                      className="rounded-sm px-3 py-1"
                       sideOffset={25}
                     >
                       <span className="text-xs">Nächste slide</span>

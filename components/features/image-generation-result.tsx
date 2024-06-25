@@ -37,18 +37,18 @@ export default function ImageGenerationResultCarousel() {
   return (
     <Card
       className={cn(
-        "container flex justify-center w-[350px] aspect-square items-center p-0 m-0 border-none bg-transparent",
-        images.length > 0 && progress === 0 && "shadow-none"
+        "container m-0 flex aspect-square w-[350px] items-center justify-center border-none bg-transparent p-0",
+        images.length > 0 && progress === 0 && "shadow-none",
       )}
     >
       {progress === 0 ? (
         images.length === 0 ? (
-          <div className="text-center w-full flex flex-col gap-3">
-            <IconSparkles className="w-16 h-16 mx-auto" />
-            <span className="text-xl mt-3 leading-6">
+          <div className="flex w-full flex-col gap-3 text-center">
+            <IconSparkles className="mx-auto h-16 w-16" />
+            <span className="mt-3 text-xl leading-6">
               Du hast noch keine Bilder generiert
             </span>
-            <span className="text-muted-foreground mx-5">
+            <span className="mx-5 text-muted-foreground">
               Starte die Bildgenerierung, um die Ergebnisse zu sehen.
             </span>
           </div>
@@ -62,7 +62,7 @@ export default function ImageGenerationResultCarousel() {
                     alt="Generated Image"
                     width="0"
                     height="0"
-                    className="w-full aspect-square rounded-lg shadow-2xl"
+                    className="aspect-square w-full rounded-lg shadow-2xl"
                   />
                 </CarouselItem>
               ))}
@@ -79,16 +79,16 @@ export default function ImageGenerationResultCarousel() {
                     onClick={() => api?.scrollTo(index)}
                     className={cn(
                       "h-2 w-2 rounded-full p-0",
-                      index + 1 === current ? "bg-primary" : "bg-secondary"
+                      index + 1 === current ? "bg-primary" : "bg-secondary",
                     )}
                   />
-                )
+                ),
               )}
             </div>
           </Carousel>
         )
       ) : (
-        <div className="text-center w-full flex flex-col items-center justify-center gap-2">
+        <div className="flex w-full flex-col items-center justify-center gap-2 text-center">
           <ImageGenerationProgress progress={progress} message={message} />
         </div>
       )}

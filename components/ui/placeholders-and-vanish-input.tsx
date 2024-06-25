@@ -132,15 +132,15 @@ export function PlaceholdersAndVanishInput({
   return (
     <form
       className={cn(
-        "w-full relative max-w-xl mx-auto bg-secondary h-12 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
-        value && "bg-secondary border"
+        "relative mx-auto h-12 w-full max-w-xl overflow-hidden rounded-full bg-secondary shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
+        value && "border bg-secondary",
       )}
       onSubmit={handleSubmit}
     >
       <canvas
         className={cn(
-          "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20",
-          !animating ? "opacity-0" : "opacity-100"
+          "pointer-events-none absolute left-2 top-[20%] origin-top-left scale-50 transform pr-20 text-base invert filter dark:invert-0 sm:left-8",
+          !animating ? "opacity-0" : "opacity-100",
         )}
         ref={canvasRef}
       />
@@ -157,20 +157,20 @@ export function PlaceholdersAndVanishInput({
         value={value}
         type="text"
         className={cn(
-          "w-full relative text-sm sm:text-base z-50 border-none text-secondary-foreground bg-transparent  h-full rounded-full focus:outline-none focus:ring-0 pl-6 sm:pl-11 pr-20",
-          animating && "text-transparent dark:text-transparent"
+          "relative z-50 h-full w-full rounded-full border-none bg-transparent pl-6 pr-20 text-sm text-secondary-foreground focus:outline-none focus:ring-0 sm:pl-11 sm:text-base",
+          animating && "text-transparent dark:text-transparent",
         )}
       />
 
       <Image
         src={InteriorlyLogoSVG}
         alt="Interiorly Logo"
-        className="absolute left-3 top-1/2 z-50 -translate-y-1/2 h-6 w-6 rounded-full transition duration-200"
+        className="absolute left-3 top-1/2 z-50 h-6 w-6 -translate-y-1/2 rounded-full transition duration-200"
       />
       <button
         disabled={!value || disabled}
         type="submit"
-        className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full bg-background transition duration-200 flex items-center justify-center"
+        className="absolute right-2 top-1/2 z-50 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-background transition duration-200"
       >
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +182,7 @@ export function PlaceholdersAndVanishInput({
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-gray-300 h-4 w-4"
+          className="h-4 w-4 text-gray-300"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <motion.path

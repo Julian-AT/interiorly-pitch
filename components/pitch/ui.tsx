@@ -6,8 +6,8 @@ export function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(
-        "flex border flex-col items-center justify-center border-border rounded-xl px-6 pt-8 pb-6 space-y-4",
-        className
+        "flex flex-col items-center justify-center space-y-4 rounded-xl border border-border px-6 pb-6 pt-8",
+        className,
       )}
     >
       {children}
@@ -18,14 +18,14 @@ export function Card({ children, className }: CardProps) {
 export function Grid() {
   return (
     <div className="pointer-events-none absolute inset-0 flex justify-center">
-      <div className="h-full w-full grid-cols-6 gap-3.5 px-4 grid">
+      <div className="grid h-full w-full grid-cols-6 gap-3.5 px-4">
         <div className="border-r-[1px] border-[#161616]" />
         <div className="border-r-[1px] border-[#161616]" />
         <div className="border-r-[1px] border-[#161616]" />
         <div className="border-r-[1px] border-[#161616]" />
         <div className="border-r-[1px] border-[#161616]" />
       </div>
-      <div className="h-full w-full absolute flex justify-between flex-col">
+      <div className="absolute flex h-full w-full flex-col justify-between">
         <div className="border-t-[1px] border-[#161616]" />
         <div className="border-t-[1px] border-[#161616]" />
         <div className="border-t-[1px] border-[#161616]" />

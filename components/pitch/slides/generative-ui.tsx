@@ -18,7 +18,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 1,
     component: (
-      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
         Hello, I&apos;m Interiorly AI! How can I assist you today? 🏡✨
       </div>
     ),
@@ -26,7 +26,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 2,
     component: (
-      <div className="max-w-[55%] border bg-gray-200 text-primary-foreground ml-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal ml-auto w-fit max-w-[55%] rounded-md border bg-gray-200 px-3 py-2 text-left text-primary-foreground">
         Can you generate a serene Scandinavian-style living room with natural
         light and minimalist furniture?
       </div>
@@ -35,7 +35,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 3,
     component: (
-      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
         Absolutely! 🌿✨ I&apos;ll craft a serene Scandinavian-style living room
         for you, bathed in natural light and adorned with minimalist furniture.
       </div>
@@ -44,7 +44,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 4,
     component: (
-      <div className="w-full text-center font-mono text-sm text-muted-foreground animation_reveal">
+      <div className="animation_reveal w-full text-center font-mono text-sm text-muted-foreground">
         generateImage(&quot;scandinavian living room with...&quot;)
       </div>
     ),
@@ -52,7 +52,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 5,
     component: (
-      <div className="max-w-[45%] flex flex-col gap-2 rounded-lg bg-secondary border border-border p-4 animation_reveal w-1/2">
+      <div className="animation_reveal flex w-1/2 max-w-[45%] flex-col gap-2 rounded-lg border border-border bg-secondary p-4">
         <div>
           Your serene Scandinavian-style living room 🌿☀️, infused with natural
           light and adorned with minimalist furniture, awaits your approval. 🛋️
@@ -70,7 +70,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 6,
     component: (
-      <div className="max-w-[75%] border bg-primary text-primary-foreground ml-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal ml-auto w-fit max-w-[75%] rounded-md border bg-primary px-3 py-2 text-left text-primary-foreground">
         😍 Wow, looks great! How about a lavish bathroom with a freestanding
         tub?
       </div>
@@ -79,7 +79,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 7,
     component: (
-      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
         I&apos;m thrilled you&apos;re on board! 🛁💫 Crafting a lavish bathroom
         with a freestanding tub is right up my alley. Let&apos;s make it happen!
       </div>
@@ -88,7 +88,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 8,
     component: (
-      <div className="w-full text-center font-mono text-sm text-muted-foreground animation_reveal">
+      <div className="animation_reveal w-full text-center font-mono text-sm text-muted-foreground">
         generateImage(&quot;Lavish bathroom with a freestanding tub&quot;)
       </div>
     ),
@@ -96,7 +96,7 @@ const _ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 9,
     component: (
-      <div className="flex flex-col gap-2 rounded-lg bg-secondary border border-border p-4 animation_reveal w-1/2">
+      <div className="animation_reveal flex w-1/2 flex-col gap-2 rounded-lg border border-border bg-secondary p-4">
         <div>
           Your lavish bathroom, complete with a stunning freestanding tub, is
           ready for your admiration. Shall we take a look? 🛁✨💖
@@ -117,7 +117,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 1,
     component: (
-      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
         Hallo, ich bin Interiorly AI! Wie kann ich dir heute helfen? 🏡✨
       </div>
     ),
@@ -125,7 +125,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 2,
     component: (
-      <div className="max-w-[55%] border bg-gray-200 text-primary-foreground ml-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal ml-auto w-fit max-w-[55%] rounded-md border bg-gray-200 px-3 py-2 text-left text-primary-foreground">
         Kannst du ein Wohnzimmer im skandinavischen Stil mit natürlichem Licht
         und minimalistischen Möbeln entwerfen?
       </div>
@@ -134,7 +134,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 3,
     component: (
-      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
         Aber sicher! 🌿✨ Ich werde ein ruhiges Wohnzimmer im skandinavischen
         Stil für Sie gestalten, das in natürlichem Licht badet und mit
         minimalistischen Möbeln geschmückt ist.
@@ -144,7 +144,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 4,
     component: (
-      <div className="w-full text-center font-mono text-sm text-muted-foreground animation_reveal">
+      <div className="animation_reveal w-full text-center font-mono text-sm text-muted-foreground">
         generateImage(&apos;skandinavisches Wohnzimmer mit..&apos;)
       </div>
     ),
@@ -152,7 +152,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 5,
     component: (
-      <div className="max-w-[45%] flex flex-col gap-2 rounded-lg bg-secondary border border-border p-4 animation_reveal w-1/2">
+      <div className="animation_reveal flex w-1/2 max-w-[45%] flex-col gap-2 rounded-lg border border-border bg-secondary p-4">
         <div>
           Ihr ruhiges Wohnzimmer im skandinavischen Stil 🌿☀️, durchflutet von
           natürlichem Licht und geschmückt mit minimalistischen Möbeln ist
@@ -171,7 +171,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 6,
     component: (
-      <div className="max-w-[75%] border bg-primary text-primary-foreground ml-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal ml-auto w-fit max-w-[75%] rounded-md border bg-primary px-3 py-2 text-left text-primary-foreground">
         😍 Wow, sieht toll aus! Wie wäre es mit einem luxuriösen Badezimmer mit
         freistehender Badewanne?
       </div>
@@ -180,7 +180,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 7,
     component: (
-      <div className="max-w-[55%] border bg-secondary text-secondary-foreground mr-auto w-fit rounded-md px-3 py-2 text-left animation_reveal">
+      <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
         Ich freue mich, dass es dir gefällt. 🛁💫 Ein luxuriöses Badezimmer mit
         freistehender Badewanne zu gestalten liegt genau in meinem Fachgebiet.
         Lassen Sie uns das umsetzen!
@@ -190,7 +190,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 8,
     component: (
-      <div className="w-full text-center font-mono text-sm text-muted-foreground animation_reveal">
+      <div className="animation_reveal w-full text-center font-mono text-sm text-muted-foreground">
         generateImage(&apos;Luxuriöses Badezimmer mit freistehender
         Badewanne&apos;)
       </div>
@@ -199,7 +199,7 @@ const ANIMATION_COMPONENTS: AnimationComponent[] = [
   {
     id: 9,
     component: (
-      <div className="flex flex-col gap-2 rounded-lg bg-secondary border border-border p-4 animation_reveal w-1/2">
+      <div className="animation_reveal flex w-1/2 flex-col gap-2 rounded-lg border border-border bg-secondary p-4">
         <div>
           Ihr luxuriöses Badezimmer mit einer atemberaubenden freistehenden
           Badewanne, steht zur Bewunderung bereit. Sollen wir einen Blick darauf
@@ -239,14 +239,14 @@ export function SlideGenerativeUI() {
             const nextFrameIndex =
               prevFrames.length % ANIMATION_COMPONENTS.length;
             const nextFrame = ANIMATION_COMPONENTS.find(
-              (component) => component.id === nextFrameIndex + 1
+              (component) => component.id === nextFrameIndex + 1,
             );
             return [...prevFrames, nextFrame!];
           });
         },
         renderedFrames.length < ANIMATION_COMPONENTS.length
           ? ANIMATION_DELAY
-          : 2000
+          : 2000,
       );
     }
 
@@ -259,9 +259,9 @@ export function SlideGenerativeUI() {
       title={"Generatives UI & Chat Interaktionen"}
       className="xl:grid-cols-1"
     >
-      <Card className="bg-background h-full overflow-hidden">
-        <ScrollArea className="px-10 m-1 h-full">
-          <div className="flex items-center justify-center h-full">
+      <Card className="h-full overflow-hidden bg-background">
+        <ScrollArea className="m-1 h-full px-10">
+          <div className="flex h-full items-center justify-center">
             <div
               className="mx-auto flex w-full flex-col-reverse gap-4 overflow-auto p-6"
               ref={scrollAreaRef}
@@ -279,11 +279,11 @@ export function SlideGenerativeUI() {
         <div className="absolute bottom-0 p-1">
           {isPlaying ? (
             <Button onClick={() => setIsPlaying(false)} variant={"outline"}>
-              <PauseIcon className="w-5 h-5" />
+              <PauseIcon className="h-5 w-5" />
             </Button>
           ) : (
             <Button onClick={() => setIsPlaying(true)} variant={"outline"}>
-              <PlayIcon className="w-5 h-5" />
+              <PlayIcon className="h-5 w-5" />
             </Button>
           )}
         </div>

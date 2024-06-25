@@ -35,18 +35,18 @@ export function SlideFinish() {
     <div className="relative">
       <SlideShell
         title={t("title")}
-        className="xl:grid-cols-1 flex flex-col gap-8"
+        className="flex flex-col gap-8 xl:grid-cols-1"
       >
         <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
+          className="-top-40 left-0 md:-top-20 md:left-60"
           fill="white"
         />
 
-        <span className="text-center text-5xl text-secondary-foreground font-bold">
+        <span className="text-center text-5xl font-bold text-secondary-foreground">
           Generiere
           <FlipWords
             words={words}
-            className="text-secondary-foreground font-bold text-5xl"
+            className="text-5xl font-bold text-secondary-foreground"
           />
           <br />
           Innenraumkonzepte mit Interiorly AI.
@@ -77,7 +77,7 @@ export function SlideFinish() {
         </div>
       </SlideShell>
       <div
-        className="absolute w-24 h-24 bottom-0 right-0 z-20 cursor-pointer"
+        className="absolute bottom-0 right-0 z-20 h-24 w-24 cursor-pointer"
         onClick={clearImages}
       />
     </div>

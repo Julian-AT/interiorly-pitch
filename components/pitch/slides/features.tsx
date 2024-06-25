@@ -14,7 +14,7 @@ export function SlideFeatures() {
   return (
     <SlideShell title={t("title")}>
       <div
-        className="flex items-center justify-center col-span-3 w-full h-full relative overflow-hidden"
+        className="relative col-span-3 flex h-full w-full items-center justify-center overflow-hidden"
         ref={ref}
       >
         {isInView && <FeatureBentoGrid />}

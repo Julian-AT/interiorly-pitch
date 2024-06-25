@@ -10,7 +10,7 @@ import SlideShell from "@/components/pitch/slide-shell";
 export function SlideScreenshots() {
   return (
     <SlideShell title="Pages">
-      <Card className="py-3 flex flex-col items-center space-y-3">
+      <Card className="flex flex-col items-center space-y-3 py-3">
         <h2 className="text-xl">Workspace Settings</h2>
         <Image
           src={WorkspaceSettings}
@@ -21,34 +21,34 @@ export function SlideScreenshots() {
           height={200}
         />
       </Card>
-      <Card className="py-3 flex flex-col items-center space-y-3">
+      <Card className="flex flex-col items-center space-y-3 py-3">
         <h2 className="text-xl">Trash</h2>
         <Image
           src={Trash}
           alt="Trash"
-          className="w-4/5  rounded-lg"
+          className="w-4/5 rounded-lg"
           quality={100}
           width={400}
           height={400}
         />
       </Card>
-      <Card className="min-h-[350px] py-3 flex flex-col items-center  space-y-3">
+      <Card className="flex min-h-[350px] flex-col items-center space-y-3 py-3">
         <h2 className="text-xl">Create Folder</h2>
         <Image
           src={CreateFolder}
           alt="Create Folder"
-          className="w-4/5  rounded-lg"
+          className="w-4/5 rounded-lg"
           quality={100}
           width={400}
           height={400}
         />
       </Card>
-      <Card className="min-h-[350px] py-3 flex flex-col items-center space-y-3">
+      <Card className="flex min-h-[350px] flex-col items-center space-y-3 py-3">
         <h2 className="text-xl">Create Workspace</h2>
         <Image
           src={CreateWorkspace}
           alt="Create Workspace"
-          className="w-4/5  rounded-lg"
+          className="w-4/5 rounded-lg"
           quality={100}
           width={400}
           height={400}

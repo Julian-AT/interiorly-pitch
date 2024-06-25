@@ -7,44 +7,9 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { SlideStart } from "@/components/pitch/slides/start";
-import { SlideProblem } from "@/components/pitch/slides/problem";
-import { SlideSolution } from "@/components/pitch/slides/solution";
-import { SlideTeam } from "@/components/pitch/slides/team";
-import { SlideSubscription } from "@/components/pitch/slides/pricing";
-import { SlideVision } from "@/components/pitch/slides/vision";
-import { SlideTechStack } from "@/components/pitch/slides/stack";
-import { SlideFeatures } from "@/components/pitch/slides/features";
+import { Slides } from "@/components/pitch/slides";
 import { CarouselToolbar } from "@/components/pitch/carousel-toolbar";
-import { SlideScreenshots } from "@/components/pitch/slides/screenshots";
-import { SlideFinish } from "@/components/pitch/slides/finish";
-import { SlidePages } from "@/components/pitch/slides/pages";
-import SlideNextSteps from "@/components/pitch/slides/next-steps";
-import { SlideRoadmap } from "@/components/pitch/slides/roadmap";
-import { SlideGenerativeUI } from "@/components/pitch/slides/generative-ui";
-import { SlideProblemElevatorPitch } from "./slides/elevator-pitch/problem";
-import { SlideSolutionElevatorPitch } from "./slides/elevator-pitch/solution";
-import { SlideSolutionStackElevatorPitch } from "./slides/elevator-pitch/solution-stack";
-
-const Slides = {
-  SlideStart: <SlideStart />,
-  SlideProblem: <SlideProblem />,
-  SlideSolution: <SlideSolution />,
-  SlideFeatures: <SlideFeatures />,
-  SlideSubscription: <SlideSubscription />,
-  SlideTeam: <SlideTeam />,
-  SlideTechStack: <SlideTechStack />,
-  SlidePages: <SlidePages />,
-  SlideScreenshots: <SlideScreenshots />,
-  SlideVision: <SlideVision />,
-  SlideFinish: <SlideFinish />,
-  SlideNextSteps: <SlideNextSteps />,
-  SlideRoadmap: <SlideRoadmap />,
-  SlideGenerativeUI: <SlideGenerativeUI />,
-  SlideProblemElevatorPitch: <SlideProblemElevatorPitch />,
-  SlideSolutionElevatorPitch: <SlideSolutionElevatorPitch />,
-  SlideSolutionStackElevatorPitch: <SlideSolutionStackElevatorPitch />,
-};
+import { usePathname } from "next/navigation";
 
 interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   slides: (keyof typeof Slides)[];
@@ -52,9 +17,10 @@ interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const PitchCarousel = ({ slides }: PitchCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
+  const pathname = usePathname();
 
   return (
-    <Carousel className="w-full min-h-full relative" setApi={setApi}>
+    <Carousel className="relative min-h-full w-full" setApi={setApi}>
       <CarouselContent>
         {slides.map((slide, index) => {
           if (!Slides[slide]) {
@@ -65,6 +31,7 @@ const PitchCarousel = ({ slides }: PitchCarouselProps) => {
         })}
       </CarouselContent>
       <CarouselToolbar api={api} />
+      {pathname}
     </Carousel>
   );
 };

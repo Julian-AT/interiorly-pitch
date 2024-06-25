@@ -42,9 +42,9 @@ export function SlidePages() {
       {screens.map(
         (screen: { image: StaticImageData; title: string }, index: number) => (
           <Dialog key={index}>
-            <DialogTrigger className="h-full relative">
+            <DialogTrigger className="relative h-full">
               <Card
-                className="py-3 flex flex-col items-center gap-3 h-full"
+                className="flex h-full flex-col items-center gap-3 py-3"
                 key={index}
               >
                 <h2 className="text-xl">{screen.title}</h2>
@@ -58,20 +58,20 @@ export function SlidePages() {
                 />
               </Card>
             </DialogTrigger>
-            <DialogContent className="max-w-screen-xl w-full">
+            <DialogContent className="w-full max-w-screen-xl">
               <DialogHeader>
                 <DialogDescription>
                   <Image
                     src={screen.image}
                     alt={screen.title}
-                    className="w-screen object-cover rounded-lg p-3"
+                    className="w-screen rounded-lg object-cover p-3"
                     quality={100}
                   />
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
           </Dialog>
-        )
+        ),
       )}
     </SlideShell>
   );

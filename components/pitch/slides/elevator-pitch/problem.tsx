@@ -11,11 +11,11 @@ export function SlideProblemElevatorPitch() {
 
   return (
     <SlideShell title={t("title")}>
-      <div className="relative flex flex-col gap-3 w-full h-1/2  max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl ">
+      <div className="relative flex h-1/2 w-full max-w-[32rem] flex-col items-center justify-center gap-3 overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
         <div>
-          <Lightbulb className="w-16 h-16" />
+          <Lightbulb className="h-16 w-16" />
         </div>
-        <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter  ">
+        <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter">
           Kreativität
         </p>
         <AnimatedGridPattern
@@ -25,15 +25,15 @@ export function SlideProblemElevatorPitch() {
           repeatDelay={1}
           className={cn(
             "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
           )}
         />
       </div>
-      <div className="relative flex flex-col gap-3 w-full h-1/2  max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl ">
+      <div className="relative flex h-1/2 w-full max-w-[32rem] flex-col items-center justify-center gap-3 overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
         <div>
-          <IconPuzzlePiece className="w-16 h-16" />
+          <IconPuzzlePiece className="h-16 w-16" />
         </div>
-        <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter  ">
+        <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter">
           Komplexität
         </p>
         <AnimatedGridPattern
@@ -43,15 +43,15 @@ export function SlideProblemElevatorPitch() {
           repeatDelay={1}
           className={cn(
             "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
           )}
         />
       </div>
-      <div className="relative flex flex-col gap-3 w-full h-1/2  max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl ">
+      <div className="relative flex h-1/2 w-full max-w-[32rem] flex-col items-center justify-center gap-3 overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
         <div>
-          <IconBankNotes className="w-16 h-16" />
+          <IconBankNotes className="h-16 w-16" />
         </div>
-        <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter  ">
+        <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter">
           Kosten
         </p>
         <AnimatedGridPattern
@@ -61,7 +61,7 @@ export function SlideProblemElevatorPitch() {
           repeatDelay={1}
           className={cn(
             "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
           )}
         />
       </div>

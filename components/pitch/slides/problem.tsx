@@ -10,17 +10,17 @@ export function SlideProblem() {
 
   return (
     <SlideShell title={t("title")}>
-      <div className="grid grid-rows-2 h-full gap-8">
+      <div className="grid h-full grid-rows-2 gap-8">
         <Card className="flex flex-col items-center justify-center space-y-5 p-5">
-          <IconPuzzlePiece className="w-12 h-12" />
-          <h2 className="text-3xl text-center">
+          <IconPuzzlePiece className="h-12 w-12" />
+          <h2 className="text-center text-3xl">
             {t("problems.problem_1.title")}
           </h2>
-          <p className="text-[#878787] text-center">
+          <p className="text-center text-[#878787]">
             {t("problems.problem_1.text")}
           </p>
         </Card>
-        <h2 className="flex items-center justify-center text-5xl text-center leading-tight">
+        <h2 className="flex items-center justify-center text-center text-5xl leading-tight">
           {t("summary")}
         </h2>
       </div>
@@ -31,25 +31,25 @@ export function SlideProblem() {
           width={650}
           height={875}
           quality={100}
-          className="object-cover w-full h-full rounded-lg"
+          className="h-full w-full rounded-lg object-cover"
         />
       </div>
-      <div className="grid grid-rows-2 h-full gap-8">
-        <Card className="flex flex-col items-center justify-center space-y-5 p-5 h-full w-full">
-          <IconBolt className="w-12 h-12" />
-          <h2 className="text-3xl text-center">
+      <div className="grid h-full grid-rows-2 gap-8">
+        <Card className="flex h-full w-full flex-col items-center justify-center space-y-5 p-5">
+          <IconBolt className="h-12 w-12" />
+          <h2 className="text-center text-3xl">
             {t("problems.problem_2.title")}
           </h2>
-          <p className="text-[#878787] text-center">
+          <p className="text-center text-[#878787]">
             {t("problems.problem_2.text")}
           </p>
         </Card>
-        <Card className="flex flex-col items-center justify-center space-y-5 p-5 h-full w-full">
-          <IconBankNotes className="w-12 h-12" />
-          <h2 className="text-3xl text-center">
+        <Card className="flex h-full w-full flex-col items-center justify-center space-y-5 p-5">
+          <IconBankNotes className="h-12 w-12" />
+          <h2 className="text-center text-3xl">
             {t("problems.problem_3.title")}
           </h2>
-          <p className="text-[#878787] text-center">
+          <p className="text-center text-[#878787]">
             {t("problems.problem_3.text")}
           </p>
         </Card>

@@ -5,14 +5,14 @@ import { MapIcon } from "lucide-react";
 export function SlideRoadmap() {
   return (
     <SlideShell title={"Roadmap"} className="xl:grid-cols-1">
-      <div className="w-full h-full flex flex-col gap-8">
-        <div className="flex gap-3 items-center justify-center">
-          <MapIcon className="w-8 h-8" />
-          <span className="text-4xl text-center font-bold">Roadmap</span>
+      <div className="flex h-full w-full flex-col gap-8">
+        <div className="flex items-center justify-center gap-3">
+          <MapIcon className="h-8 w-8" />
+          <span className="text-center text-4xl font-bold">Roadmap</span>
         </div>
         <iframe
           src="https://interiorly-ai.productlane.com/roadmap"
-          className="w-full h-full border border-border rounded-lg  overflow-hidden"
+          className="h-full w-full overflow-hidden rounded-lg border border-border"
         />
       </div>
     </SlideShell>

@@ -11,7 +11,7 @@ const BentoGrid = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("grid w-full h-full grid-cols-3 gap-4", className)}>
+    <div className={cn("grid h-full w-full grid-cols-3 gap-4", className)}>
       {children}
     </div>
   );
@@ -38,8 +38,8 @@ const BentoCard = ({
     key={name}
     className={cn(
       "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
-      "transform-gpu bg-background border",
-      className
+      "transform-gpu border bg-background",
+      className,
     )}
   >
     <div>{background}</div>

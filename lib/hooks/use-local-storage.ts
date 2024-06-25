@@ -52,7 +52,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
         console.error("Error writing to localStorage:", error);
       }
     },
-    [key, value]
+    [key, value],
   );
 
   const remove = useCallback(() => {

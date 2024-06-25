@@ -62,7 +62,7 @@ export const ImageGenerationProvider: React.FC<{
         ...(prevBatches || []).slice(0, 4),
       ]);
     },
-    [setImages]
+    [setImages],
   );
 
   const clearImages = useCallback(() => {
@@ -129,7 +129,7 @@ export const ImageGenerationProvider: React.FC<{
 
               setProgress(queueProgress);
               setMessage(
-                `Queue Position ${data.rank}/${initalQueueSizeRef.current}`
+                `Queue Position ${data.rank}/${initalQueueSizeRef.current}`,
               );
             } else {
               if (progress > 0) setProgress(progress + 7.5);
@@ -146,7 +146,7 @@ export const ImageGenerationProvider: React.FC<{
             break;
           case "queue_full":
             retryOrAbort(
-              `Queue is full. Retrying... (${retriesRef.current + 1})`
+              `Queue is full. Retrying... (${retriesRef.current + 1})`,
             );
             break;
           default:
@@ -200,7 +200,7 @@ export const ImageGenerationProvider: React.FC<{
             setMessage(
               `Queue Position ${currentQueuePositionRef.current--}/${
                 initalQueueSizeRef.current
-              }`
+              }`,
             );
           } else {
             setMessage("Generating Images...");
@@ -209,7 +209,7 @@ export const ImageGenerationProvider: React.FC<{
           const randomDelay = Math.random() * 500 + 500;
           setTimeout(
             () => updateProgressBasedOnEstimation(startTime),
-            randomDelay
+            randomDelay,
           );
         }
       };
@@ -223,7 +223,7 @@ export const ImageGenerationProvider: React.FC<{
         }
       }, 15000);
     },
-    [progress, addImageBatch, setIsLoading, setProgress, setMessage]
+    [progress, addImageBatch, setIsLoading, setProgress, setMessage],
   );
   return (
     <ImageGenerationContext.Provider

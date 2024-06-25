@@ -8,15 +8,15 @@ import IPhoneMockup from "@/public/images/mockups/iphone-mockup.png";
 import NoiseImage from "@/public/images/noise.webp";
 import { useTranslations } from "next-intl";
 
-const SlideNextSteps = () => {
+export function SlideNextSteps() {
   const t = useTranslations("slide_next_steps");
 
   return (
     <SlideShell title={t("title")} className="grid-rows-2">
-      <Card className="flex flex-col justify-center p-5 h-full col-span-2 relative overflow-hidden">
+      <Card className="relative col-span-2 flex h-full flex-col justify-center overflow-hidden p-5">
         <div className="ml-10 w-96">
-          <h1 className="font-bold text-4xl">{t("steps.step_1.title")}</h1>
-          <span className="text-muted-foreground text-lg">
+          <h1 className="text-4xl font-bold">{t("steps.step_1.title")}</h1>
+          <span className="text-lg text-muted-foreground">
             {t("steps.step_1.text")}
           </span>
         </div>
@@ -25,21 +25,21 @@ const SlideNextSteps = () => {
           width={512}
           height={512}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[10%]  filter -top-28 object-contain rounded-2xl rotate-6"
+          className="absolute -right-4 -top-28 rotate-6 rounded-2xl object-contain filter lg:-right-[10%]"
         />
         <Noise />
       </Card>
-      <Card className="flex flex-col items-center justify-center p-5 h-full relative">
+      <Card className="relative flex h-full flex-col items-center justify-center p-5">
         <Noise />
-        <h1 className="font-bold text-4xl">{t("steps.step_2.title")}</h1>
-        <span className="text-muted-foreground text-lg text-center">
+        <h1 className="text-4xl font-bold">{t("steps.step_2.title")}</h1>
+        <span className="text-center text-lg text-muted-foreground">
           {t("steps.step_2.text")}
         </span>{" "}
       </Card>
-      <Card className="flex flex-col items-center justify-center p-5 h-full col-span-3 relative overflow-hidden">
-        <div className="w-[600px] text-center flex flex-col gap-5">
-          <h1 className="font-bold text-4xl">{t("steps.step_3.title")}</h1>
-          <span className="text-muted-foreground text-lg text-center">
+      <Card className="relative col-span-3 flex h-full flex-col items-center justify-center overflow-hidden p-5">
+        <div className="flex w-[600px] flex-col gap-5 text-center">
+          <h1 className="text-4xl font-bold">{t("steps.step_3.title")}</h1>
+          <span className="text-center text-lg text-muted-foreground">
             {t("steps.step_3.text")}
           </span>
         </div>
@@ -48,25 +48,25 @@ const SlideNextSteps = () => {
           width={350}
           height={350}
           alt="linear demo image"
-          className="absolute -right-[7.5%] -bottom-48 object-contain rounded-2xl"
+          className="absolute -bottom-48 -right-[7.5%] rounded-2xl object-contain"
         />
         <Image
           src={DashboardScreen}
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-left -left-[15%] -bottom-16 object-contain rounded-2xl"
+          className="-right-left absolute -bottom-16 -left-[15%] rounded-2xl object-contain"
         />
         <Noise />
       </Card>
     </SlideShell>
   );
-};
+}
 
 const Noise = () => {
   return (
     <div
-      className="absolute inset-0 w-full h-full transform opacity-[0.015] [mask-image:radial-gradient(#fff,#ffed00,10%)]"
+      className="absolute inset-0 h-full w-full transform opacity-[0.015] [mask-image:radial-gradient(#fff,#ffed00,10%)]"
       style={{
         backgroundImage: `url(${NoiseImage.src})`,
         backgroundSize: "30%",
@@ -74,5 +74,3 @@ const Noise = () => {
     ></div>
   );
 };
-
-export default SlideNextSteps;

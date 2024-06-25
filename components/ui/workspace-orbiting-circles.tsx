@@ -3,8 +3,8 @@ import OrbitingCircles from "./orbiting-circles";
 
 export function WorkspaceOrbitingCircles() {
   return (
-    <div className="relative flex h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background ">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center text-6xl font-semibold leading-none text-transparent from-white to-slate-900/10">
+    <div className="relative flex h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-slate-900/10 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent">
         Julian&apos;s Workspace
       </span>
 

@@ -28,7 +28,7 @@ const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
         // Shimmer gradient
         "bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent",
 
-        className
+        className,
       )}
     >
       {children}
