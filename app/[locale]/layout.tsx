@@ -5,7 +5,7 @@ import { getMessages } from "next-intl/server";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ImageGenerationProvider } from "@/lib/hooks/use-images";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/config/site";
 
@@ -62,7 +62,22 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/en",
+      de: "/de",
+    },
+  },
 };
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f8f8f8' },
+    { media: '(prefers-color-scheme: dark)', color: '#212529' },
+  ],
+}
+
 export default async function LocaleLayout({
   children,
   params: { locale },

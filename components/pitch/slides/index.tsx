@@ -13,9 +13,7 @@ import { SlidePages } from "@/components/pitch/slides/pages";
 import { SlideNextSteps } from "@/components/pitch/slides/next-steps";
 import { SlideRoadmap } from "@/components/pitch/slides/roadmap";
 import { SlideGenerativeUI } from "@/components/pitch/slides/generative-ui";
-import { SlideProblemElevatorPitch } from "@/components/pitch/slides/elevator-pitch/problem";
-import { SlideSolutionElevatorPitch } from "@/components/pitch/slides/elevator-pitch/solution";
-import { SlideSolutionStackElevatorPitch } from "@/components/pitch/slides/elevator-pitch/solution-stack";
+import { SlideEngine } from "./engine";
 
 export const Slides = {
   SlideStart: <SlideStart />,
@@ -32,7 +30,5 @@ export const Slides = {
   SlideNextSteps: <SlideNextSteps />,
   SlideRoadmap: <SlideRoadmap />,
   SlideGenerativeUI: <SlideGenerativeUI />,
-  SlideProblemElevatorPitch: <SlideProblemElevatorPitch />,
-  SlideSolutionElevatorPitch: <SlideSolutionElevatorPitch />,
-  SlideSolutionStackElevatorPitch: <SlideSolutionStackElevatorPitch />,
+  SlideEngine: <SlideEngine />,
 };

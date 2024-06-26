@@ -19,7 +19,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex h-20 w-20 items-center justify-center rounded-full border-2 border-border bg-background p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex h-20 w-20 items-center justify-center rounded-full border-2 border-border bg-secondary p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className,
       )}
     >
@@ -39,7 +39,7 @@ export function AnimatedBeamStack() {
 
   return (
     <div
-      className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background"
+      className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-md border bg-background p-8"
       ref={containerRef}
     >
       <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">

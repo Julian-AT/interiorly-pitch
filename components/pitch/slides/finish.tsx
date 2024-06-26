@@ -42,15 +42,21 @@ export function SlideFinish() {
           fill="white"
         />
 
-        <span className="text-center text-5xl font-bold text-secondary-foreground">
-          Generiere
-          <FlipWords
-            words={words}
-            className="text-5xl font-bold text-secondary-foreground"
-          />
-          <br />
-          Innenraumkonzepte mit Interiorly AI.
-        </span>
+        {images.length === 0 || isLoading ? (
+          <span className="text-center text-5xl font-bold text-secondary-foreground">
+            Generiere
+            <FlipWords
+              words={words}
+              className="text-5xl font-bold text-secondary-foreground"
+            />
+            <br />
+            Innenraumkonzepte mit Interiorly AI.
+          </span>
+        ) : (
+          <span className="mb-3 w-2/3 text-pretty text-center text-4xl font-bold">
+            &quot;{images[0].prompt}&quot;
+          </span>
+        )}
         {(images.length > 0 || isLoading) && (
           <div className="-my-4">
             <ImageGenerationResultCarousel />

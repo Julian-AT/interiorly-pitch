@@ -1,6 +1,5 @@
 import PitchCarousel from "@/components/pitch/pitch-carousel";
 import { Grid } from "@/components/pitch/ui";
-import Image from "next/image";
 
 export default function ElevatorPitch() {
   return (
@@ -10,12 +9,12 @@ export default function ElevatorPitch() {
         <PitchCarousel
           slides={[
             "SlideStart",
-            "SlideProblemElevatorPitch",
-            "SlideSolutionElevatorPitch",
-            "SlideSolutionStackElevatorPitch",
+            "SlideProblem",
+            "SlideSolution",
+            "SlideVision",
+            "SlideEngine",
             "SlideFeatures",
             "SlideGenerativeUI",
-            "SlideVision",
             "SlideTeam",
             "SlideFinish",
           ]}

@@ -24,7 +24,10 @@ import {
   IconChevronRight,
 } from "@/components/icons";
 import { cn } from "@/lib/utils";
-import { ModeToggle } from "../mode-toggle";
+import LanguageSelectionDropdown from "@/components/pitch/language-dropdown";
+import { Separator } from "@/components/ui/separator";
+import InteriorlyLogoSVG from "@/public/images/logo.svg";
+import Image from "next/image";
 
 type CarouselToolbarProps = {
   api: any;
@@ -36,13 +39,23 @@ export function CarouselToolbar({ api }: CarouselToolbarProps) {
 
   return (
     <Dialog>
-      <div className="fixed bottom-5 left-0 flex w-full justify-center">
+      <div className="fixed bottom-5 left-0 right-0 flex justify-center">
         <AnimatePresence>
           <motion.div animate={{ y: 0 }} initial={{ y: 100 }}>
             <TooltipProvider delayDuration={20}>
-              <div className="flex h-10 items-center space-x-4 rounded-2xl border border-[#2C2C2C] px-4 py-2 backdrop-blur-lg backdrop-filter dark:bg-[#1A1A1A]/80">
-                <span className="text-[#878787]">Interiorly AI Pitch</span>
-                <div className="flex items-center border-l-[1px] border-border pl-4">
+              <div className="flex h-10 items-center space-x-3 rounded-2xl border border-[#2C2C2C] px-4 py-2 backdrop-blur-lg backdrop-filter dark:bg-[#1A1A1A]/80">
+                <Image
+                  src={InteriorlyLogoSVG}
+                  alt="Interiorly Logo"
+                  className="-mr-1.5 h-6 w-6 rounded-full"
+                />
+                <span className="relative flex gap-1 text-nowrap text-[#878787]">
+                  Interiorly AI Pitch
+                </span>
+                <Separator orientation="vertical" />
+                <LanguageSelectionDropdown />
+                <Separator orientation="vertical" />
+                <div className="flex items-center">
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <button
@@ -53,7 +66,7 @@ export function CarouselToolbar({ api }: CarouselToolbarProps) {
                           api.scrollPrev();
                         }}
                       >
-                        <IconChevronLeft className="h-5 w-5" />
+                        <IconChevronLeft className="h-5 w-5 text-[#878787]" />
                       </button>
                     </TooltipTrigger>
                     <TooltipContent
@@ -73,7 +86,7 @@ export function CarouselToolbar({ api }: CarouselToolbarProps) {
                           api.scrollNext();
                         }}
                       >
-                        <IconChevronRight className="h-5 w-5" />
+                        <IconChevronRight className="h-5 w-5 text-[#878787]" />
                       </button>
                     </TooltipTrigger>
                     <TooltipContent

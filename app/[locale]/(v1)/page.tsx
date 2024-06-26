@@ -1,7 +1,6 @@
 import ImageGenerationResultCarousel from "@/components/features/image-generation-result";
 import PitchCarousel from "@/components/pitch/pitch-carousel";
 import { Grid } from "@/components/pitch/ui";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,14 +10,14 @@ export default function Home() {
         <PitchCarousel
           slides={[
             "SlideStart",
-            "SlideProblemElevatorPitch",
-            "SlideSolutionElevatorPitch",
-            "SlideSolutionStackElevatorPitch",
+            "SlideProblem",
+            "SlideSolution",
+            "SlideVision",
+            "SlideEngine",
             "SlideFeatures",
             "SlideGenerativeUI",
             "SlidePages",
             "SlideTechStack",
-            "SlideVision",
             "SlideTeam",
             "SlideNextSteps",
             "SlideFinish",

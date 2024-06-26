@@ -1,7 +1,7 @@
 "use client";
 
 import SlideShell from "@/components/pitch/slide-shell";
-import { useEffect, useRef, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
@@ -241,6 +241,7 @@ export function SlideGenerativeUI() {
             const nextFrame = ANIMATION_COMPONENTS.find(
               (component) => component.id === nextFrameIndex + 1,
             );
+
             return [...prevFrames, nextFrame!];
           });
         },
@@ -250,7 +251,9 @@ export function SlideGenerativeUI() {
       );
     }
 
-    // if (isPlaying) bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    // if (isPlaying ) {
+    //   bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    // }
     return () => clearTimeout(animationTimer);
   }, [isPlaying, renderedFrames]);
 
@@ -263,7 +266,7 @@ export function SlideGenerativeUI() {
         <ScrollArea className="m-1 h-full px-10">
           <div className="flex h-full items-center justify-center">
             <div
-              className="mx-auto flex w-full flex-col-reverse gap-4 overflow-auto p-6"
+              className="mx-auto flex w-full flex-col gap-4 overflow-auto p-6"
               ref={scrollAreaRef}
             >
               {isInView &&

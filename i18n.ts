@@ -2,11 +2,10 @@ import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
 import deLocale from "@/locales/de.json";
 import enLocale from "@/locales/en.json";
-
-const locales = ["en", "de"];
+import { locales } from "@/config/locales";
 
 export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale)) notFound();
+  if (!(locales as ReadonlyArray<string>).includes(locale)) notFound();
 
   const messages = locale === "en" ? enLocale : deLocale;
   return { messages };
@@ -15,3 +14,7 @@ export default getRequestConfig(async ({ locale }) => {
   //   messages: (await import(`@/locales/${locale}.json`)).default,
   // };
 });
+
+export function getLocale(locale: string): (typeof locales)[number] | null {
+  return locales.find((l) => l === locale) || null;
+}
