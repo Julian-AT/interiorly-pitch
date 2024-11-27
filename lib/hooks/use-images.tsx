@@ -6,8 +6,8 @@ import React, {
   useCallback,
   useState,
   useRef,
+  useEffect,
 } from "react";
-import { useLocalStorage } from "@/lib/hooks/use-local-storage";
 import {
   BASEURL,
   DEFAULT_MESSAGE,
@@ -17,11 +17,18 @@ import {
   RETRY_TIMEOUT,
 } from "@/config/generation";
 
+interface ImageBatch {
+  prompt: string;
+  timestamp: number;
+  batch: string[];
+}
+
 interface ImageGenerationContextType {
   images: ImageBatch[];
   message: string;
   progress: number;
   isLoading: boolean;
+  isPending: boolean;
   generateImage: (prompt: string) => void;
   addImageBatch: (prompt: string, newImageArray: string[]) => void;
   clearImages: () => void;
@@ -32,6 +39,7 @@ const ImageGenerationContext = createContext<ImageGenerationContextType>({
   message: DEFAULT_MESSAGE,
   progress: 0,
   isLoading: false,
+  isPending: false,
   generateImage: () => {},
   addImageBatch: () => {},
   clearImages: () => {},
@@ -40,8 +48,9 @@ const ImageGenerationContext = createContext<ImageGenerationContextType>({
 export const ImageGenerationProvider: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
-  const [images, setImages] = useLocalStorage<ImageBatch[]>("images", []);
+  const [images, setImages] = useState<ImageBatch[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isPending, setIsPending] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
   const [message, setMessage] = useState<string>(DEFAULT_MESSAGE);
   const retriesRef = useRef<number>(0);
@@ -50,6 +59,22 @@ export const ImageGenerationProvider: React.FC<{
   const estimatedEtaRef = useRef<number>(0);
   const wsRef = useRef<WebSocket | null>(null);
 
+  const getImages = useCallback(() => {
+    const storedImages = localStorage.getItem("imageBatches");
+    return storedImages ? (JSON.parse(storedImages) as ImageBatch[]) : [];
+  }, []);
+
+  const fetchImages = useCallback(() => {
+    setIsPending(true);
+    const images = getImages();
+    setIsPending(false);
+    setImages(images);
+  }, [getImages]);
+
+  useEffect(() => {
+    fetchImages();
+  }, [fetchImages]);
+
   const addImageBatch = useCallback(
     (prompt: string, newImageArray: string[]) => {
       const newBatch: ImageBatch = {
@@ -57,17 +82,22 @@ export const ImageGenerationProvider: React.FC<{
         timestamp: Date.now(),
         batch: newImageArray,
       };
-      setImages((prevBatches) => [
-        newBatch,
-        ...(prevBatches || []).slice(0, 4),
-      ]);
+
+      setImages((prevImages) => {
+        const updatedImages = [...prevImages, newBatch].sort(
+          (i1, i2) => i2.timestamp - i1.timestamp,
+        );
+        localStorage.setItem("imageBatches", JSON.stringify(updatedImages));
+        return updatedImages;
+      });
     },
-    [setImages],
+    [],
   );
 
   const clearImages = useCallback(() => {
     setImages([]);
-  }, [setImages]);
+    localStorage.removeItem("imageBatches");
+  }, []);
 
   const generateImage = useCallback(
     (prompt: string) => {
@@ -194,7 +224,6 @@ export const ImageGenerationProvider: React.FC<{
 
           const timeProgress = (elapsedTime / estimatedEta) * 40;
 
-          if (progress === 100) return;
           setProgress(50 + timeProgress);
           if (currentQueuePositionRef.current !== 0) {
             setMessage(
@@ -215,23 +244,18 @@ export const ImageGenerationProvider: React.FC<{
       };
 
       initiateConnection();
-
-      setTimeout(() => {
-        if (isLoading) {
-          setMessage("Connection timeout. Please try again later.");
-          setIsLoading(false);
-        }
-      }, 15000);
     },
     [progress, addImageBatch, setIsLoading, setProgress, setMessage],
   );
+
   return (
     <ImageGenerationContext.Provider
       value={{
-        images: images || [],
+        images,
         progress,
         message,
         isLoading,
+        isPending,
         generateImage,
         addImageBatch,
         clearImages,

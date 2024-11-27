@@ -1,14 +1,12 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import Julian from "@/public/images/team/Julian.jpg";
 import Anthony from "@/public/images/team/Anthony.jpg";
 import SlideShell from "@/components/pitch/slide-shell";
 import { useTranslations } from "next-intl";
 import Team from "@/public/images/team/team.jpg";
-import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect } from "react";
 
 export function SlideTeam() {
   const t = useTranslations("slide_team");

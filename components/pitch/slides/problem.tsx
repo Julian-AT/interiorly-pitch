@@ -16,7 +16,7 @@ export function SlideProblem() {
           <Lightbulb className="h-16 w-16" />
         </div>
         <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter">
-          Kreativität
+          {t("problems.problem_1.title")}
         </p>
         <AnimatedGridPattern
           numSquares={10}
@@ -34,7 +34,7 @@ export function SlideProblem() {
           <IconPuzzlePiece className="h-16 w-16" />
         </div>
         <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter">
-          Komplexität
+          {t("problems.problem_2.title")}
         </p>
         <AnimatedGridPattern
           numSquares={10}
@@ -52,7 +52,7 @@ export function SlideProblem() {
           <IconBankNotes className="h-16 w-16" />
         </div>
         <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter">
-          Kosten
+          {t("problems.problem_3.title")}
         </p>
         <AnimatedGridPattern
           numSquares={10}

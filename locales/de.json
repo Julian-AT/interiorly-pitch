@@ -1,8 +1,10 @@
 {
   "slide_start": {
+    "title": "Pitch Interiorly/2024",
     "select_menu": {
       "main": "Hauptversion"
-    }
+    },
+    "subtitle": "Innenarchitekturkonzepte durch künstliche Intelligenz"
   },
   "slide_problem": {
     "title": "Aktuelles Problem",
@@ -24,218 +26,43 @@
   },
   "slide_solution": {
     "title": "Unsere Lösung",
-    "solutions": {
-      "solution_1": {
-        "title": "Künstliche Intelligenz",
-        "text": "Intelligente Designkonzepte bieten einen bequemen und effizienten Weg, inspirierende Ideen für Raumgestaltung zu erhalten."
-      },
-      "solution_2": {
-        "title": "Echtzeit-Zusammenarbeit",
-        "text": "Moderne Technologien ermöglichen effiziente Echtzeit-Zusammenarbeit zwischen Designern, Kunden und Stakeholdern."
-      },
-      "solution_3": {
-        "title": "Erschwinglich",
-        "text": "Die Verwirklichung von Designträumen ohne ein hohes Budget eröffnet eine Welt voller kreativer Möglichkeiten und Innovationen."
-      }
-    },
-    "summary": "Maßgeschneiderte Innenarchitektur-\nvorschläge, nur ein Klick entfernt!"
+    "header": "Maßgeschneiderte Innenarchitektur-\nvorschläge, nur ein Klick entfernt!",
+    "subtitle": "Atemberaubende Innenraumkonzepte mittels KI in Sekunden",
+    "cta": "Worauf warten Sie noch?"
   },
   "slide_features": {
     "title": "Hauptfunktionen",
     "features": {
       "feature_1": {
-        "title": "Chat-Interaktion",
-        "message_text": "Hier ist ein Konzept für ein modernes, dunkles Wohnzimmer 📌",
-        "delivered_indicator": "Zugestellt"
+        "title": "Bildgenerierung",
+        "subtitle": "Textbasierte Bildgenerierung durch SDXL."
       },
       "feature_2": {
-        "title": "Bildgenerierung",
-        "button_text": "Generieren",
-        "tooltip_text": "Zufälligen Anstoß erstellen"
+        "title": "Gemeinsamer Workspace",
+        "subtitle": "Gemeinsamer Workspace als zentraler Ort für die Zusammenarbeit."
       },
       "feature_3": {
-        "title": "Echtzeit-Zusammenarbeit"
+        "title": "Echtzeit-Kollaboration",
+        "subtitle": "Gemeinsames bearbeiten von Datein in Echtzeit."
+      },
+      "feature_4": {
+        "title": "Semantische Suche",
+        "subtitle": "Semantische Suche über alle Datein und Inhalte."
       }
     }
   },
-  "slide_subscriptions": {
-    "title": "Abonnementmodell",
-    "subscriptions": {
-      "subscription_1": {
-        "title": "Hobby",
-        "price": "0,00",
-        "features": {
-          "feature_1": {
-            "feature": "Bis zu 10 Bild-Generationen pro Tag",
-            "included": "true"
-          },
-          "feature_2": {
-            "feature": "Bis zu 1 Workspace/User",
-            "included": "true"
-          },
-          "feature_3": {
-            "feature": "Bis zu 2 Kollaboratoren/Workspace",
-            "included": "true"
-          },
-          "feature_4": {
-            "feature": "Bis zu 1 Ordner/Workspace",
-            "included": "true"
-          },
-          "feature_5": {
-            "feature": "Bis zu 3 Datein/Workspace",
-            "included": "true"
-          },
-          "feature_6": {
-            "feature": "Workspace Logos",
-            "included": "false"
-          },
-          "feature_7": {
-            "feature": "Monetarisierung der Bilder",
-            "included": "false"
-          },
-          "feature_8": {
-            "feature": "Quellenangabe ist optional",
-            "included": "false"
-          }
-        }
-      },
-      "subscription_2": {
-        "title": "Pro",
-        "price": "15,99",
-        "features": {
-          "feature_1": {
-            "feature": "Bis zu 100 Bild-Generationen pro Tag",
-            "included": "true"
-          },
-          "feature_2": {
-            "feature": "Bis zu 3 Workspaces/User",
-            "included": "true"
-          },
-          "feature_3": {
-            "feature": "Bis zu 10 Kollaboratoren/Workspace",
-            "included": "true"
-          },
-          "feature_4": {
-            "feature": "Bis zu 5 Ordner/Workspace",
-            "included": "true"
-          },
-          "feature_5": {
-            "feature": "Bis zu 10 Datein/Workspace",
-            "included": "true"
-          },
-          "feature_6": {
-            "feature": "Workspace Logos",
-            "included": "true"
-          },
-          "feature_7": {
-            "feature": "Monetarisierung der Bilder",
-            "included": "true"
-          },
-          "feature_8": {
-            "feature": "Quellenangabe ist optional",
-            "included": "true"
-          }
-        }
-      },
-      "subscription_3": {
-        "title": "Unternehmen",
-        "price": "Individuell",
-        "features": {
-          "feature_1": {
-            "feature": "Bis zu 1000 Bild-Generationen pro Tag",
-            "included": "true"
-          },
-          "feature_2": {
-            "feature": "Bis zu 10 Workspaces/User",
-            "included": "true"
-          },
-          "feature_3": {
-            "feature": "Bis zu 100 Kollaboratoren/Workspace",
-            "included": "true"
-          },
-          "feature_4": {
-            "feature": "Bis zu 50 Ordner/Workspace",
-            "included": "true"
-          },
-          "feature_5": {
-            "feature": "Bis zu 50 Datein/Workspace",
-            "included": "true"
-          },
-          "feature_6": {
-            "feature": "Individuelle Workspace Logos",
-            "included": "true"
-          },
-          "feature_7": {
-            "feature": "Monetarisierung der Bilder",
-            "included": "true"
-          },
-          "feature_8": {
-            "feature": "Quellenangabe ist optional",
-            "included": "true"
-          }
-        }
-      }
-    },
-    "goals": {
-      "title": "Ziele",
-      "goal_1": {
-        "title": "Flexibel",
-        "text": "Leicht anpassbar an unterschiedliche Designvorlieben und Anforderungen."
-      },
-      "goal_2": {
-        "title": "Reibungslos",
-        "text": "Nahtlose Benutzererfahrung mit intuitiver Navigation und Interaktionen."
-      },
-      "goal_3": {
-        "title": "Sicher",
-        "text": "Gewährleistet den Datenschutz und schützt vor unbefugtem Zugriff."
-      }
-    }
-  },
-  "slide_pages": {
-    "title": "Seiten",
-    "pages": {
-      "page_1": {
-        "title": "Dashboard-Seite"
-      },
-      "page_2": {
-        "title": "Einstellungen-Seite"
-      },
-      "page_3": {
-        "title": "Anmelden-Seite"
-      },
-      "page_4": {
-        "title": "Registrieren-Seite"
-      }
-    }
-  },
-  "slide_tech_stack": {
-    "title": "Technologie-Stack",
-    "technologies": {
-      "technology_1": {
-        "title": "Clerk",
-        "description": "Benutzerverwaltungsplattform",
-        "text": "Einbettbare UIs, flexible APIs und Administrations-Dashboards zur Authentifizierung und Verwaltung von Benutzern."
-      },
-      "technology_2": {
-        "title": "Trunk",
-        "description": "Automatisierte Code-Qualität",
-        "text": "Führt automatisch einen Satz von über 100 idiomatischen statischen Analysewerkzeugen, Lintern, Formattierungs- und Sicherheitswerkzeugen aus."
-      },
-      "technology_3": {
-        "title": "NextJS",
-        "description": "Fullstack-Framework"
-      },
-      "technology_4": {
-        "title": "Convex",
-        "description": "Open-Source-Backend",
-        "text": "Open-Source Backend as a Service Plattform. Ermöglicht die effiziente und skalierbare Entwicklung von APIs und Anwendungen."
-      },
-      "technology_5": {
-        "title": "Edgestore",
-        "description": "Dateispeicher & CDN",
-        "text": "Blob Speicher, CDN und eine sehr einfach zu bedienende, type-safe libraries."
-      }
+  "generative_ui": {
+    "title": "Generatives UI & Chat Interaktionen",
+    "keyframes": {
+      "keyframe_1": "Hallo, ich bin Interiorly AI! Wie kann ich dir heute helfen? 🏡✨",
+      "keyframe_2": "Kannst du ein Wohnzimmer im skandinavischen Stil mit natürlichem Licht und minimalistischen Möbeln entwerfen?",
+      "keyframe_3": "Aber sicher! 🌿✨ Ich werde ein ruhiges Wohnzimmer im skandinavischen Stil für Sie gestalten, das in natürlichem Licht badet und mit minimalistischen Möbeln geschmückt ist.",
+      "keyframe_4": "generateImage(\"skandinavisches Wohnzimmer mit..\")",
+      "keyframe_5": "Ihr ruhiges Wohnzimmer im skandinavischen Stil 🌿☀️, durchflutet von natürlichem Licht und geschmückt mit minimalistischen Möbeln ist fertig. 🛋️",
+      "keyframe_6": "😍 Wow, sieht toll aus! Wie wäre es mit einem luxuriösen Badezimmer mit freistehender Badewanne?",
+      "keyframe_7": "Ich freue mich, dass es dir gefällt. 🛁💫 Ein luxuriöses Badezimmer mit freistehender Badewanne zu gestalten liegt genau in meinem Fachgebiet. Lassen Sie uns das umsetzen!",
+      "keyframe_8": "generateImage(\"Luxuriöses Badezimmer mit freistehender Badewanne\")",
+      "keyframe_9": "Ihr luxuriöses Badezimmer mit einer atemberaubenden freistehenden Badewanne, steht zur Bewunderung bereit. Sollen wir einen Blick darauf werfen? 🛁✨💖"
     }
   },
   "slide_vision": {
@@ -254,23 +81,6 @@
         "name": "Anthony Owah",
         "role": "Backend-Entwicklung & PM",
         "text": "Projektmanager und (Backend-)Entwickler. Verantwortlich für die Entwicklung von APIs und die Koordination des Entwicklerteams."
-      }
-    }
-  },
-  "slide_next_steps": {
-    "title": "Nächste Schritte",
-    "steps": {
-      "step_1": {
-        "title": "Vorstudie Erstellen",
-        "text": "Einleiten einer vorläufigen Studie, um erste Erkenntnisse zu sammeln und die Machbarkeit vor der Durchführung einer detaillierten Analyse zu bewerten."
-      },
-      "step_2": {
-        "title": "Rich-Text Editor",
-        "text": "Notion Style Editor für die Erstellung von Designkonzepten und die Zusammenarbeit in Echtzeit."
-      },
-      "step_3": {
-        "title": "Weiterentwicklung der Benutzererfahrung durch UI-Implementierung",
-        "text": "Ausführen des Design-Blueprints, um die vorgestellte Benutzeroberfläche zum Leben zu erwecken, und dabei eine nahtlose Implementierung und benutzerzentrierte Funktionalität sicherstellen."
       }
     }
   },

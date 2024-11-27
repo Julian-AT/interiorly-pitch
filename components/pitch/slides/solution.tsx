@@ -87,6 +87,7 @@ const Card = (card: { icon: JSX.Element; bg: JSX.Element }) => {
 };
 
 export function SlideSolution() {
+  const t = useTranslations("slide_solution");
   const [randomTiles1, setRandomTiles1] = useState<typeof tiles>([]);
   const [randomTiles2, setRandomTiles2] = useState<typeof tiles>([]);
   const [randomTiles3, setRandomTiles3] = useState<typeof tiles>([]);
@@ -105,7 +106,7 @@ export function SlideSolution() {
   }, []);
 
   return (
-    <SlideShell title="Lösungsansatz" className="grid-cols-1">
+    <SlideShell title={t("title")} className="grid-cols-1">
       <section id="cta" className="col-span-3 h-full w-full">
         <div className="py-14">
           <div className="container flex w-full flex-col items-center justify-center">
@@ -159,11 +160,9 @@ export function SlideSolution() {
                 </div>
                 <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
                   <h1 className="text-4xl font-bold lg:text-5xl">
-                    Erschwinglich, Effizient, Funktional
+                    {t("header")}
                   </h1>
-                  <p className="mt-2 text-muted-foreground">
-                    Atemberaubende Innenraumkonzepte mittels KI in Sekunden
-                  </p>
+                  <p className="mt-2 text-muted-foreground">{t("subtitle")}</p>
                   <a
                     href="/"
                     className={cn(
@@ -174,7 +173,7 @@ export function SlideSolution() {
                       "group mt-4 rounded-[2rem] px-6",
                     )}
                   >
-                    Worauf warten Sie noch?
+                    {t("cta")}
                     <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
                   </a>
                 </div>
