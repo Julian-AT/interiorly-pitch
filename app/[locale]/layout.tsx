@@ -8,6 +8,9 @@ import { ImageGenerationProvider } from "@/lib/hooks/use-images";
 import { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/config/site";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -73,10 +76,10 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f8f8f8' },
-    { media: '(prefers-color-scheme: dark)', color: '#212529' },
+    { media: "(prefers-color-scheme: light)", color: "#f8f8f8" },
+    { media: "(prefers-color-scheme: dark)", color: "#212529" },
   ],
-}
+};
 
 export default async function LocaleLayout({
   children,
@@ -85,6 +88,10 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
   const messages = await getMessages();
 
   return (
@@ -105,7 +112,7 @@ export default async function LocaleLayout({
                 enableSystem
                 disableTransitionOnChange
               >
-                {children}
+                <NuqsAdapter>{children}</NuqsAdapter>
               </ThemeProvider>
             </NextIntlClientProvider>
           </TooltipProvider>

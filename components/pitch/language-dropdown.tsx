@@ -1,26 +1,32 @@
+"use client";
+
 import React from "react";
 import {
   Select,
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
 import { useLocale } from "next-intl";
-import { getLocale } from "@/i18n";
 import LangFlag from "@/components/lang-flag";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useCurrentSlide } from "@/lib/hooks/use-current-slide";
 
 const LanguageSelectionDropdown = () => {
   const rawLocale = useLocale();
-  const locale = getLocale(rawLocale);
+  const router = useRouter();
+  const { currentSlide } = useCurrentSlide();
+  const locale = useLocale() as "en" | "de";
   if (!locale) return null;
 
   return (
-    <Select onValueChange={(v) => redirect(`/${v}`)} defaultValue={locale}>
-      <SelectTrigger className="m-0 border-none bg-transparent p-0">
+    <Select
+      onValueChange={(v) => router.push(`/${v}?slide=${currentSlide}`)}
+      defaultValue={locale}
+    >
+      <SelectTrigger className="m-0 border-none bg-transparent p-0 focus:outline-none focus:ring-0 focus:ring-offset-0">
         <SelectValue>
           <div className="flex justify-center gap-1.5 px-1 text-[#878787]">
             <LangFlag lang={locale} className="h-5 w-5" />

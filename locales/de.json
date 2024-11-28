@@ -26,7 +26,7 @@
   },
   "slide_solution": {
     "title": "Unsere Lösung",
-    "header": "Maßgeschneiderte Innenarchitektur-\nvorschläge, nur ein Klick entfernt!",
+    "header": "Erschwinglich, Kreativ, Funktional",
     "subtitle": "Atemberaubende Innenraumkonzepte mittels KI in Sekunden",
     "cta": "Worauf warten Sie noch?"
   },
@@ -70,7 +70,7 @@
     "vision": "Unser Ziel ist es, führende Anlaufstelle für Innenarchitektur-Design sowohl für Unternehmen als auch Einzelpersonen zu werden."
   },
   "slide_team": {
-    "title": "Wer wir sind",
+    "title": "Wer sind wir?",
     "team_members": {
       "team_member_1": {
         "name": "Julian Schmidt",
@@ -86,6 +86,6 @@
   },
   "slide_finish": {
     "title": "Demo",
-    "text": "Interessiert an Interiorly AI? Kontaktieren Sie uns für ein Meeting! 🚀"
+    "text": ""
   }
 }

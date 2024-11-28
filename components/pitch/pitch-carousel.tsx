@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
+import dynamic from "next/dynamic";
 import {
   Carousel,
   CarouselApi,
@@ -16,6 +17,15 @@ interface PitchCarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   slides: (keyof typeof Slides)[];
 }
 
+const CarouselSlide = memo(({ slide }: { slide: keyof typeof Slides }) => {
+  if (!Slides[slide]) {
+    console.error(`Slide ${slide} not found`);
+    return null;
+  }
+  return Slides[slide];
+});
+CarouselSlide.displayName = "CarouselSlide";
+
 const PitchCarousel = ({ slides }: PitchCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
   const { currentSlide, setCurrentSlide } = useCurrentSlide();
@@ -24,23 +34,27 @@ const PitchCarousel = ({ slides }: PitchCarouselProps) => {
   useEffect(() => {
     if (!api) return;
 
-    setCurrentSlide(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
+    const handleSelect = () => {
       setCurrentSlide(api.selectedScrollSnap() + 1);
-    });
-  }, [api, setCurrentSlide]);
+    };
+
+    setCurrentSlide(currentSlide || api.selectedScrollSnap() + 1);
+    api.scrollTo(currentSlide - 1);
+    api.on("select", handleSelect);
+
+    return () => {
+      api.off("select", handleSelect);
+    };
+  }, [api, currentSlide, setCurrentSlide]);
 
   return (
     <Carousel className="relative min-h-full w-full" setApi={setApi}>
       <CarouselContent>
-        {slides.map((slide, index) => {
-          if (!Slides[slide]) {
-            console.error(`Slide ${slide} not found`);
-            return null;
-          }
-          return <CarouselItem key={index}>{Slides[slide]}</CarouselItem>;
-        })}
+        {slides.map((slide, index) => (
+          <CarouselItem key={`${slide}-${index}`}>
+            <CarouselSlide slide={slide} />
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <CarouselToolbar api={api} />
       {pathname}
@@ -48,4 +62,4 @@ const PitchCarousel = ({ slides }: PitchCarouselProps) => {
   );
 };
 
-export default PitchCarousel;
+export default memo(PitchCarousel);

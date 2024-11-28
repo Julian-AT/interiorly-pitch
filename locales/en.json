@@ -1,281 +1,91 @@
 {
   "slide_start": {
+    "title": "Pitch Interiorly/2024",
     "select_menu": {
       "main": "Main Version"
-    }
+    },
+    "subtitle": "Interior Design Concepts Through Artificial Intelligence"
   },
   "slide_problem": {
-    "title": "Current Problem",
+    "title": "Current Challenge",
     "problems": {
       "problem_1": {
         "title": "Complexity",
-        "text": "The process of designing living spaces is exceedingly complex, demanding not only a deep understanding of a room&apos;s aesthetic and functional requirements but also a significant financial commitment."
+        "text": "Designing living spaces is complex and requires understanding of both aesthetic and functional requirements."
       },
       "problem_2": {
         "title": "Creativity",
-        "text": "Interior design can often feel overwhelming due to its intricacies and the broad spectrum of decisions and options that must be considered."
+        "text": "Interior design can be overwhelming due to its complexity and the multitude of decisions and options available."
       },
       "problem_3": {
-        "title": "Expenses",
-        "text": "The considerable costs often discourage many individuals from seriously considering the remodeling or redesign of their living spaces."
+        "title": "Cost",
+        "text": "High costs deter many from redesigning their living spaces. Most people don't have the budget to hire an interior designer."
       }
     },
-    "summary": "The interior design market lacks customer-friendly tools.   "
+    "summary": "The market lacks user-oriented\ndesign tools."
   },
   "slide_solution": {
     "title": "Our Solution",
-    "solutions": {
-      "solution_1": {
-        "title": "Artificial Intelligence",
-        "text": "Intelligent design concepts provide a convenient and efficient way to obtain inspiring ideas for room design."
-      },
-      "solution_2": {
-        "title": "Realtime Collaboration",
-        "text": "Modern technologies enable efficient and collaborative real-time collaboration between designers, clients, and stakeholders."
-      },
-      "solution_3": {
-        "title": "Affordable",
-        "text": "Realizing design dreams without a high budget opens the door to a world of creative possibilities and innovations"
-      }
-    },
-    "summary": "Interior design suggestions tailored to your needs with the simple click of a button."
+    "header": "Affordable, Creative, Functional",
+    "subtitle": "Breathtaking Interior Concepts Through AI in Seconds",
+    "cta": "What Are You Waiting For?"
   },
   "slide_features": {
-    "title": "Features",
+    "title": "Key Features",
     "features": {
       "feature_1": {
-        "title": "Chat Interaction",
-        "message_text": "Check out this dark modern living room, generated with Interiorly AI",
-        "delivered_indicator": "Delivered"
+        "title": "Image Generation",
+        "subtitle": "Text-based image generation powered by SDXL."
       },
       "feature_2": {
-        "title": "Image Generation",
-        "button_text": "Generate",
-        "tooltip_text": "Randomize Prompt"
+        "title": "Shared Workspace",
+        "subtitle": "Collaborative workspace as a central hub for teamwork."
       },
       "feature_3": {
-        "title": "Realtime Collaboration"
+        "title": "Real-time Collaboration",
+        "subtitle": "Joint editing of files in real-time."
+      },
+      "feature_4": {
+        "title": "Semantic Search",
+        "subtitle": "Semantic search across all files and content."
       }
     }
   },
-  "slide_subscriptions": {
-    "title": "Subscription Model",
-    "subscriptions": {
-      "subscription_1": {
-        "title": "Hobby",
-        "price": "0.00",
-        "features": {
-          "feature_1": {
-            "feature": "Up to 10 image generations per day",
-            "included": "true"
-          },
-          "feature_2": {
-            "feature": "Up to 1 workspace/user",
-            "included": "true"
-          },
-          "feature_3": {
-            "feature": "Up to 2 collaborators/workspace",
-            "included": "true"
-          },
-          "feature_4": {
-            "feature": "Up to 1 folder/workspace",
-            "included": "true"
-          },
-          "feature_5": {
-            "feature": "Up to 3 files/workspace",
-            "included": "true"
-          },
-          "feature_6": {
-            "feature": "Workspace logos",
-            "included": "false"
-          },
-          "feature_7": {
-            "feature": "Image monetization",
-            "included": "false"
-          },
-          "feature_8": {
-            "feature": "Attribution is optional",
-            "included": "false"
-          }
-        }
-      },
-      "subscription_2": {
-        "title": "Pro",
-        "price": "15.99",
-        "features": {
-          "feature_1": {
-            "feature": "Up to 100 image generations per day",
-            "included": "true"
-          },
-          "feature_2": {
-            "feature": "Up to 3 workspaces/user",
-            "included": "true"
-          },
-          "feature_3": {
-            "feature": "Up to 10 collaborators/workspace",
-            "included": "true"
-          },
-          "feature_4": {
-            "feature": "Up to 5 folders/workspace",
-            "included": "true"
-          },
-          "feature_5": {
-            "feature": "Up to 10 files/workspace",
-            "included": "true"
-          },
-          "feature_6": {
-            "feature": "Workspace logos",
-            "included": "true"
-          },
-          "feature_7": {
-            "feature": "Image monetization",
-            "included": "true"
-          },
-          "feature_8": {
-            "feature": "Attribution is optional",
-            "included": "true"
-          }
-        }
-      },
-      "subscription_3": {
-        "title": "Enterprise",
-        "price": "Custom",
-        "features": {
-          "feature_1": {
-            "feature": "Up to 1000 image generations per day",
-            "included": "true"
-          },
-          "feature_2": {
-            "feature": "Up to 10 workspaces/user",
-            "included": "true"
-          },
-          "feature_3": {
-            "feature": "Up to 100 collaborators/workspace",
-            "included": "true"
-          },
-          "feature_4": {
-            "feature": "Up to 50 folders/workspace",
-            "included": "true"
-          },
-          "feature_5": {
-            "feature": "Up to 50 files/workspace",
-            "included": "true"
-          },
-          "feature_6": {
-            "feature": "Custom workspace logos",
-            "included": "true"
-          },
-          "feature_7": {
-            "feature": "Image monetization",
-            "included": "true"
-          },
-          "feature_8": {
-            "feature": "Attribution is optional",
-            "included": "true"
-          }
-        }
-      }
-    },
-    "goals": {
-      "title": "Goals",
-      "goal_1": {
-        "title": "Flexible",
-        "text": "Easily adaptable to diverse design preferences and requirements."
-      },
-      "goal_2": {
-        "title": "Smooth",
-        "text": "Seamless user experience with intuitive navigation and interactions."
-      },
-      "goal_3": {
-        "title": "Secure",
-        "text": "Ensures data privacy and protection against unauthorized access."
-      }
-    }
-  },
-  "slide_pages": {
-    "title": "Pages",
-    "pages": {
-      "page_1": {
-        "title": "Dashboard Page"
-      },
-      "page_2": {
-        "title": "Settings Page"
-      },
-      "page_3": {
-        "title": "Sign-In Page"
-      },
-      "page_4": {
-        "title": "Sign-Up Page"
-      }
-    }
-  },
-  "slide_tech_stack": {
-    "title": "Tech Stack",
-    "technologies": {
-      "technology_1": {
-        "title": "Clerk",
-        "description": "User Management Platform",
-        "text": "embeddable UIs, flexible APIs, and admin dashboards to authenticate and manage users."
-      },
-      "technology_2": {
-        "title": "Trunk",
-        "description": "Automated code quality",
-        "text": "Automatically run a set of 100+ idiomatic static analyzers, linters, formatters, and security tools."
-      },
-      "technology_3": {
-        "title": "NextJS",
-        "description": "Fullstack Framework"
-      },
-      "technology_4": {
-        "title": "Convex",
-        "description": "Open-Source Backend",
-        "text": "Fetch data and perform business logic with strong consistency by writing pure TypeScript."
-      },
-      "technology_5": {
-        "title": "Edgestore",
-        "description": "File Storage & CDN",
-        "text": "Storage, CDN and a super easy to use type-safe library."
-      }
+  "generative_ui": {
+    "title": "Generative UI & Chat Interactions",
+    "keyframes": {
+      "keyframe_1": "Hello, I'm Interiorly AI! How can I assist you today? 🏡✨",
+      "keyframe_2": "Can you design a Scandinavian-style living room with natural light and minimalist furniture?",
+      "keyframe_3": "Absolutely! 🌿✨ I'll create a serene Scandinavian living room for you, bathed in natural light and adorned with minimalist furniture.",
+      "keyframe_4": "generateImage(\"Scandinavian living room with..\")",
+      "keyframe_5": "Your serene Scandinavian living room 🌿☀️, flooded with natural light and decorated with minimalist furniture is ready. 🛋️",
+      "keyframe_6": "😍 Wow, that looks amazing! How about a luxurious bathroom with a freestanding bathtub?",
+      "keyframe_7": "I'm glad you like it! 🛁💫 Creating a luxurious bathroom with a freestanding bathtub is right up my alley. Let's make it happen!",
+      "keyframe_8": "generateImage(\"Luxurious bathroom with freestanding bathtub\")",
+      "keyframe_9": "Your luxurious bathroom featuring a stunning freestanding bathtub is ready for your review. Shall we take a look? 🛁✨💖"
     }
   },
   "slide_vision": {
     "title": "Our Vision",
-    "vision": "Our goal is to become the premier destination for interior design, serving both businesses and individuals alike."
+    "vision": "Our goal is to become the leading destination for interior design solutions for both businesses and individuals."
   },
   "slide_team": {
-    "title": "Who we are",
+    "title": "Who Are We?",
     "team_members": {
       "team_member_1": {
         "name": "Julian Schmidt",
         "role": "Fullstack Development & AI",
-        "text": "Full Stack Developer. Founded Interiorly (formerly \"RoomVision\") in 2021. Passionate about AI and its applications in the real world."
+        "text": "Full-stack developer. Responsible for implementing AI technologies and developing user-centric applications"
       },
       "team_member_2": {
         "name": "Anthony Owah",
         "role": "Backend Development & PM",
-        "text": "Project Manager and (backend) Developer. Effectively coordinate complex projects while developing technical solutions to meet requirements and implement efficient systems."
-      }
-    }
-  },
-  "slide_next_steps": {
-    "title": "Next Steps",
-    "steps": {
-      "step_1": {
-        "title": "Preliminary Study",
-        "text": "Initiating a preliminary study to gather initial insights and evaluate feasibility prior to engaging in detailed analysis."
-      },
-      "step_2": {
-        "title": "Rich-Text Editor",
-        "text": "Notion like rich-text editor for users to express their design ideas."
-      },
-      "step_3": {
-        "title": "Evolving User Experience through UI Implementation",
-        "text": "Execute the design blueprint to bring the envisioned UI to life, ensuring seamless implementation and user-centric functionality."
+        "text": "Project manager and (backend) developer. Responsible for API development and development team coordination."
       }
     }
   },
   "slide_finish": {
-    "title": "Contact",
-    "text": "Interested in Interiorly AI? Book a Meeting. 🚀"
+    "title": "Demo",
+    "text": ""
   }
 }

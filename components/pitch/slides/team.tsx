@@ -23,6 +23,7 @@ export function SlideTeam() {
               height={128}
               quality={100}
               className="h-24 w-24 rounded-full object-cover"
+              priority
             />
           </div>
           <div>
@@ -46,6 +47,7 @@ export function SlideTeam() {
               height={128}
               quality={100}
               className="h-24 w-24 rounded-full object-cover"
+              priority
             />
           </div>
           <div>
@@ -66,6 +68,9 @@ export function SlideTeam() {
           src={Team}
           alt="Team"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={90}
+          priority
           className="absolute -bottom-10 -right-4 rounded-2xl object-cover filter lg:-top-[40%]"
         />
       </div>
