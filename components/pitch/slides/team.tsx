@@ -63,7 +63,7 @@ export function SlideTeam() {
           </div>
         </Card>
       </div>
-      <div className="relative h-full w-full">
+      <div className="relative hidden h-full w-full xl:block">
         <Image
           src={Team}
           alt="Team"

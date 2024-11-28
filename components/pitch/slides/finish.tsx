@@ -53,9 +53,9 @@ export function SlideFinish() {
             Innenraumkonzepte mit Interiorly AI.
           </span>
         ) : (
-          <span className="mb-3 w-2/3 text-pretty text-center text-4xl font-bold">
-            &quot;{images[0].prompt}&quot;
-          </span>
+          <blockquote className="mb-3 line-clamp-2 w-2/3 text-pretty text-center text-4xl font-bold">
+            {images[0].prompt}
+          </blockquote>
         )}
         {(images.length > 0 || isLoading) && (
           <div className="-my-4">

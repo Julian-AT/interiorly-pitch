@@ -1,7 +1,6 @@
 import { IconBankNotes, IconPuzzlePiece } from "@/components/icons";
 import { useTranslations } from "next-intl";
 import SlideShell from "@/components/pitch/slide-shell";
-import GridPattern from "@/components/ui/grid-pattern";
 import { cn } from "@/lib/utils";
 import { Lightbulb } from "lucide-react";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";

@@ -159,7 +159,7 @@ export function SlideGenerativeUI() {
       className="xl:grid-cols-1"
     >
       <Card className="h-full overflow-hidden bg-background">
-        <ScrollArea className="m-1 h-full px-10">
+        <ScrollArea className="m-1 h-full md:px-10">
           <div className="flex h-full items-center justify-center">
             <div
               className="mx-auto flex w-full flex-col gap-4 overflow-auto p-6"

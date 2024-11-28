@@ -11,6 +11,7 @@ const Logo = ({ ...props }: LogoProps) => {
       viewBox="0 0 512.000000 512.000000"
       preserveAspectRatio="xMidYMid meet"
       className="fill-current"
+      color="currentColor"
       {...props}
     >
       <g

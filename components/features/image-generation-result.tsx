@@ -11,11 +11,14 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { useImageGeneration } from "@/lib/hooks/use-images";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { IconSparkles } from "@/components/icons";
+import Logo from "../logo";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 export default function ImageGenerationResultCarousel() {
   const { images, progress, message } = useImageGeneration();
@@ -57,13 +60,42 @@ export default function ImageGenerationResultCarousel() {
             <CarouselContent>
               {images[0].batch.map((image, index) => (
                 <CarouselItem key={index}>
-                  <Image
-                    src={image}
-                    alt="Generated Image"
-                    width="0"
-                    height="0"
-                    className="aspect-square w-full rounded-lg shadow-2xl"
-                  />
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <div className="cursor-pointer">
+                        <Image
+                          src={image}
+                          alt="Generated Image"
+                          width="0"
+                          height="0"
+                          className="aspect-square w-full rounded-lg shadow-2xl"
+                        />
+                        <div className="relative">
+                          <div className="absolute bottom-1 right-2 opacity-50">
+                            <Logo className="h-10 w-10 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="h-[95%] max-w-screen-lg border border-green-500">
+                      <DialogTitle>
+                        <span className="text-lg font-bold">
+                          {images[0].prompt}
+                        </span>
+                      </DialogTitle>
+                      <div className="relative h-full w-full p-12">
+                        <Image
+                          src={image}
+                          alt="Generated Image"
+                          width={1024}
+                          height={1024}
+                          className="relative h-full w-full overflow-hidden rounded-lg object-contain"
+                        />
+                        <CarouselPrevious className="h-12 w-12 border border-red-500 p-1.5" />
+                        <CarouselNext className="h-12 w-12 border border-red-500 p-1.5" />
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </CarouselItem>
               ))}
             </CarouselContent>{" "}

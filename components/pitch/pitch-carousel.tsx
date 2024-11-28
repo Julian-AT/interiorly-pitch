@@ -35,6 +35,7 @@ const PitchCarousel = ({ slides }: PitchCarouselProps) => {
     if (!api) return;
 
     const handleSelect = () => {
+      console.log("handleSelect", api.selectedScrollSnap() + 1);
       setCurrentSlide(api.selectedScrollSnap() + 1);
     };
 
