@@ -86,6 +86,19 @@
   },
   "slide_finish": {
     "title": "Demo",
-    "text": ""
+    "placeholder": "Stell dir deine Traumwohnung vor...",
+    "words": {
+      "prefix": "Generiere",
+      "word_1": "atemberaubende",
+      "word_2": "einzigartige",
+      "word_3": "wunderschöne",
+      "word_4": "elegante",
+      "word_5": "innovative",
+      "suffix": "Innenraumkonzepte mit Interiorly AI."
+    },
+    "tooltips": {
+      "not_sure": "Nicht Sicher?",
+      "cta": "Generiere ein zufälliges Konzept"
+    }
   }
 }

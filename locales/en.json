@@ -4,7 +4,7 @@
     "select_menu": {
       "main": "Main Version"
     },
-    "subtitle": "Interior Design Concepts Through Artificial Intelligence"
+    "subtitle": "Interior Design Concepts Powered by Artificial Intelligence"
   },
   "slide_problem": {
     "title": "Current Challenge",
@@ -86,6 +86,19 @@
   },
   "slide_finish": {
     "title": "Demo",
-    "text": ""
+    "placeholder": "Imagine your dream apartment...",
+    "words": {
+      "prefix": "Generate",
+      "word_1": "breathtaking",
+      "word_2": "unique",
+      "word_3": "beautiful",
+      "word_4": "elegant",
+      "word_5": "innovative",
+      "suffix": "Interior Design Concepts with Interiorly AI."
+    },
+    "tooltips": {
+      "not_sure": "Not Sure?",
+      "cta": "Generate a random concept"
+    }
   }
 }
