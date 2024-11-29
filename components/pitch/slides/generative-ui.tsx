@@ -1,190 +1,251 @@
 "use client";
 
 import SlideShell from "@/components/pitch/slide-shell";
-import { use, useEffect, useRef, useState, useMemo } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import Livingroom from "@/public/images/rooms/livingroom_chat.jpg";
 import Bathroom from "@/public/images/rooms/bathroom_chat.jpg";
-
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { PauseIcon, PlayIcon } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
 const ANIMATION_DELAY = 1250;
+const RESET_DELAY = 2000;
+
+interface AnimationComponent {
+  id: number;
+  component: JSX.Element;
+}
+
+interface MessageProps {
+  children: React.ReactNode;
+  align?: "left" | "right" | "center";
+  variant?: "primary" | "secondary" | "muted";
+  maxWidth?: string;
+  className?: string;
+  withImage?: {
+    src: any;
+    alt: string;
+  };
+}
+
+const Message = ({
+  children,
+  align = "left",
+  variant = "secondary",
+  className,
+  withImage,
+}: MessageProps) => {
+  const alignmentClasses = {
+    left: "mr-auto",
+    right: "ml-auto",
+    center: "min-w-full text-center",
+  };
+
+  const variantClasses = {
+    primary: "bg-primary text-primary-foreground",
+    secondary: "bg-secondary text-secondary-foreground",
+    muted:
+      "font-mono text-sm text-muted-foreground w-full text-center flex items-center justify-center -my-2 truncate overflow-hidden overflow-ellipsis",
+  };
+
+  const baseClasses = cn(
+    "animation_reveal max-w-[66%]",
+    alignmentClasses[align],
+    variantClasses[variant],
+    !withImage && "w-fit rounded-md px-3 py-2 text-left",
+    variant !== "muted" && "border border-border",
+    withImage && "flex flex-col gap-2 rounded-lg border border-border p-4",
+    className,
+  );
+
+  return (
+    <div className={baseClasses}>
+      {children}
+      {withImage && (
+        <div className="relative">
+          <Image
+            src={withImage.src}
+            alt={withImage.alt}
+            className="w-3/4 rounded-lg"
+            priority
+          />
+        </div>
+      )}
+    </div>
+  );
+};
 
 export function SlideGenerativeUI() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const t = useTranslations("generative_ui");
 
-  const ANIMATION_COMPONENTS = useMemo(
+  const ANIMATION_COMPONENTS = useMemo<AnimationComponent[]>(
     () => [
       {
         id: 1,
         component: (
-          <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
+          <Message align="left" variant="secondary">
             {t("keyframes.keyframe_1")}
-          </div>
+          </Message>
         ),
       },
       {
         id: 2,
         component: (
-          <div className="animation_reveal ml-auto w-fit max-w-[55%] rounded-md border bg-gray-200 px-3 py-2 text-left text-primary-foreground">
+          <Message align="right" variant="primary">
             {t("keyframes.keyframe_2")}
-          </div>
+          </Message>
         ),
       },
       {
         id: 3,
-        component: (
-          <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
-            {t("keyframes.keyframe_3")}
-          </div>
-        ),
+        component: <Message align="left">{t("keyframes.keyframe_3")}</Message>,
       },
       {
         id: 4,
         component: (
-          <div className="animation_reveal w-full text-center font-mono text-sm text-muted-foreground">
+          <Message align="center" maxWidth="100%" variant="muted">
             {t("keyframes.keyframe_4")}
-          </div>
+          </Message>
         ),
       },
       {
         id: 5,
         component: (
-          <div className="animation_reveal flex w-1/2 max-w-[45%] flex-col gap-2 rounded-lg border border-border bg-secondary p-4">
-            <div>{t("keyframes.keyframe_5")}</div>
-            <div className="relative">
-              <Image
-                src={Livingroom}
-                alt="Wohnzimmer"
-                className="w-3/4 rounded-lg"
-              />
-            </div>
-          </div>
+          <Message
+            align="left"
+            maxWidth="45%"
+            withImage={{ src: Livingroom, alt: "Living room" }}
+          >
+            {t("keyframes.keyframe_5")}
+          </Message>
         ),
       },
       {
         id: 6,
         component: (
-          <div className="animation_reveal ml-auto w-fit max-w-[75%] rounded-md border bg-primary px-3 py-2 text-left text-primary-foreground">
+          <Message align="right" variant="primary" maxWidth="75%">
             {t("keyframes.keyframe_6")}
-          </div>
+          </Message>
         ),
       },
       {
         id: 7,
-        component: (
-          <div className="animation_reveal mr-auto w-fit max-w-[55%] rounded-md border bg-secondary px-3 py-2 text-left text-secondary-foreground">
-            {t("keyframes.keyframe_7")}
-          </div>
-        ),
+        component: <Message align="left">{t("keyframes.keyframe_7")}</Message>,
       },
       {
         id: 8,
         component: (
-          <div className="animation_reveal w-full text-center font-mono text-sm text-muted-foreground">
+          <Message align="center" maxWidth="100%" variant="muted">
             {t("keyframes.keyframe_8")}
-          </div>
+          </Message>
         ),
       },
       {
         id: 9,
         component: (
-          <div className="animation_reveal flex w-1/2 flex-col gap-2 rounded-lg border border-border bg-secondary p-4">
-            <div>{t("keyframes.keyframe_9")}</div>
-            <div className="relative">
-              <Image
-                src={Bathroom}
-                alt="Wohnzimmer"
-                className="w-3/4 rounded-lg"
-              />
-            </div>
-          </div>
+          <Message align="left" withImage={{ src: Bathroom, alt: "Bathroom" }}>
+            {t("keyframes.keyframe_9")}
+          </Message>
         ),
       },
     ],
     [t],
   );
 
-  const [renderedFrames, setRenderedFrames] = useState<AnimationComponent[]>([
-    ANIMATION_COMPONENTS[0],
-  ]);
+  const [renderedFrames, setRenderedFrames] = useState<AnimationComponent[]>(
+    [],
+  );
   const scrollAreaRef = useRef<HTMLDivElement>(null);
-  const bottomRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(scrollAreaRef);
+  const isInView = useInView(scrollAreaRef, { once: false });
+  const frameContainerRef = useRef<HTMLDivElement>(null);
 
+  // Reset animation when component comes into view
   useEffect(() => {
-    if (!isInView) return setIsPlaying(false);
+    if (!isInView) {
+      setIsPlaying(false);
+      setRenderedFrames([]);
+      return;
+    }
     setRenderedFrames([ANIMATION_COMPONENTS[0]]);
     setIsPlaying(true);
   }, [isInView, ANIMATION_COMPONENTS]);
 
+  // Handle animation frames
   useEffect(() => {
-    let animationTimer: NodeJS.Timeout;
+    if (!isPlaying) return;
 
-    if (isPlaying) {
-      animationTimer = setTimeout(
-        () => {
-          setRenderedFrames((prevFrames: any[]) => {
-            if (prevFrames.length >= ANIMATION_COMPONENTS.length) return [];
-            const nextFrameIndex =
-              prevFrames.length % ANIMATION_COMPONENTS.length;
-            const nextFrame = ANIMATION_COMPONENTS.find(
-              (component) => component.id === nextFrameIndex + 1,
-            );
+    const animationTimer = setTimeout(
+      () => {
+        setRenderedFrames((prevFrames) => {
+          if (prevFrames.length >= ANIMATION_COMPONENTS.length) {
+            return [];
+          }
+          const nextFrameIndex = prevFrames.length;
+          return [...prevFrames, ANIMATION_COMPONENTS[nextFrameIndex]];
+        });
+      },
+      renderedFrames.length < ANIMATION_COMPONENTS.length
+        ? ANIMATION_DELAY
+        : RESET_DELAY,
+    );
 
-            return [...prevFrames, nextFrame!];
-          });
-        },
-        renderedFrames.length < ANIMATION_COMPONENTS.length
-          ? ANIMATION_DELAY
-          : 2000,
-      );
+    // Handle scroll after frames update
+    if (frameContainerRef.current) {
+      frameContainerRef.current.scrollTo({
+        top: frameContainerRef.current.scrollHeight,
+        behavior: "smooth",
+      });
     }
 
-    // if (isPlaying ) {
-    //   bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-    // }
     return () => clearTimeout(animationTimer);
-  }, [isPlaying, renderedFrames, ANIMATION_COMPONENTS]);
+  }, [isPlaying, renderedFrames.length, ANIMATION_COMPONENTS]);
+
+  const togglePlayback = () => setIsPlaying((prev) => !prev);
 
   return (
     <SlideShell
-      title={"Generatives UI & Chat Interaktionen"}
+      title="Generatives UI & Chat Interaktionen"
       className="xl:grid-cols-1"
     >
-      <Card className="h-full overflow-hidden bg-background">
+      <Card className="relative h-full overflow-hidden bg-background">
         <ScrollArea className="m-1 h-full md:px-10">
           <div className="flex h-full items-center justify-center">
             <div
-              className="mx-auto flex w-full flex-col gap-4 overflow-auto p-6"
               ref={scrollAreaRef}
+              className="mx-auto flex w-full flex-col gap-4 overflow-auto p-6"
             >
-              {isInView &&
-                renderedFrames.map((frame) => (
-                  <div key={frame.id} className="w-auto">
-                    {frame.component}
-                  </div>
-                ))}
+              <div
+                ref={frameContainerRef}
+                className="flex w-full flex-col gap-4"
+              >
+                {isInView &&
+                  renderedFrames.map((frame) => (
+                    <div key={frame.id} className="w-auto">
+                      {frame.component}
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
-          <div ref={bottomRef} />
         </ScrollArea>
         <div className="absolute bottom-0 p-1">
-          {isPlaying ? (
-            <Button onClick={() => setIsPlaying(false)} variant={"outline"}>
+          <Button
+            onClick={togglePlayback}
+            variant="outline"
+            aria-label={isPlaying ? "Pause animation" : "Play animation"}
+          >
+            {isPlaying ? (
               <PauseIcon className="h-5 w-5" />
-            </Button>
-          ) : (
-            <Button onClick={() => setIsPlaying(true)} variant={"outline"}>
+            ) : (
               <PlayIcon className="h-5 w-5" />
-            </Button>
-          )}
+            )}
+          </Button>
         </div>
       </Card>
     </SlideShell>
