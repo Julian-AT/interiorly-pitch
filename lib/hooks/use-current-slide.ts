@@ -11,7 +11,7 @@ export function useCurrentSlide() {
 
   const setCurrentSlide = useCallback(
     (slideNumber: number) => {
-      if (slideNumber !== currentSlide) return;
+      if (slideNumber === currentSlide) return;
       if (slideNumber < 1) slideNumber = 1;
       if (slideNumber > 9) slideNumber = 9;
 
