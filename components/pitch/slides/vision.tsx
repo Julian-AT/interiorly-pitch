@@ -12,10 +12,7 @@ export function SlideVision() {
 
   return (
     <SlideShell title={t("title")} className="xl:grid-cols-1">
-      <h1
-        className="px-4 text-center text-7xl font-medium leading-[1.2] md:px-0"
-        ref={ref}
-      >
+      <h1 className="px-4 text-center text-xl font-medium md:px-0" ref={ref}>
         {isInView && <TextGenerateEffect words={vision} />}
       </h1>
     </SlideShell>

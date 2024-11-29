@@ -2,10 +2,9 @@
 
 import { cn } from "@/lib/utils";
 import React, { forwardRef, useRef } from "react";
-import { AnimatedBeam } from "./animated-beam";
-import { LucideIcon, User } from "lucide-react";
-import Logo from "../logo";
-import Ripple from "./ripple";
+import { AnimatedBeam } from "@/components/ui/animated-beam";
+import { User } from "lucide-react";
+import Logo from "@/components/logo";
 
 // eslint-disable-next-line react/display-name
 const Circle = forwardRef<
@@ -54,7 +53,7 @@ export function AnimatedBeamMultiple() {
             <User className="h-6 w-6" />
           </Circle>
           <Circle ref={div4Ref} className="h-16 w-16">
-            <Logo className="h-12 w-12" fill="#e6e6e6" />
+            <Logo className="h-12 w-12 text-secondary-foreground" />
           </Circle>
           <Circle ref={div6Ref}>
             <User className="h-6 w-6" />

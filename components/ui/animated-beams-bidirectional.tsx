@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import React, { forwardRef, useRef } from "react";
-import { AnimatedBeam } from "./animated-beam";
+import { AnimatedBeam } from "@/components/ui/animated-beam";
 import { User } from "lucide-react";
 
 // eslint-disable-next-line react/display-name

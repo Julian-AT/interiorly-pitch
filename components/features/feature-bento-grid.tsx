@@ -6,10 +6,10 @@ import Bathroom from "@/public/images/rooms/bathroom_chat.jpg";
 import Livingroom from "@/public/images/rooms/livingroom_chat.jpg";
 import Livingroom2 from "@/public/images/rooms/livingroom.png";
 import Image from "next/image";
-import { AnimatedBeamMultiple } from "../ui/animated-beam-multiple";
-import Ripple from "../ui/ripple";
-import { WorkspaceOrbitingCircles } from "../ui/workspace-orbiting-circles";
-import RetroGrid from "../ui/retro-grid";
+import { AnimatedBeamMultiple } from "@/components/ui/animated-beam-multiple";
+import Ripple from "@/components/ui/ripple";
+import { WorkspaceOrbitingCircles } from "@/components/ui/workspace-orbiting-circles";
+import RetroGrid from "@/components/ui/retro-grid";
 import { useTranslations } from "next-intl";
 
 const images = [
@@ -61,7 +61,7 @@ export function FeatureBentoGrid() {
               </blockquote>
             </figure>
           ))}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-full bg-gradient-to-t from-[#121212] from-15%" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-full bg-gradient-to-t from-background to-transparent" />
         </Marquee>
       ),
     },
@@ -78,7 +78,7 @@ export function FeatureBentoGrid() {
             <WorkspaceOrbitingCircles />
           </div>
           <RetroGrid />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-full bg-gradient-to-t from-[#121212] from-5%" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-full bg-gradient-to-t from-background to-transparent" />
         </div>
       ),
     },
@@ -93,7 +93,7 @@ export function FeatureBentoGrid() {
         <div className="absolute flex h-full w-full items-center justify-center overflow-hidden">
           <AnimatedBeamMultiple />
           <Ripple />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-full bg-gradient-to-t from-[#121212] from-20%" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-full bg-gradient-to-t from-background to-transparent" />
         </div>
       ),
     },
@@ -101,7 +101,7 @@ export function FeatureBentoGrid() {
       Icon: TextSearch,
       name: t("feature_4.title"),
       description: t("feature_4.subtitle"),
-      className: "col-span-3 lg:col-span-1",
+      className: "col-span-3 lg:col-span-1 ",
       href: "/",
       cta: "Learn more",
       background: (
@@ -129,7 +129,7 @@ export function FeatureBentoGrid() {
               </span>
             </div>
           </div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-full bg-gradient-to-t from-[#121212] from-20%" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-full bg-gradient-to-t from-background to-transparent" />
         </div>
       ),
     },

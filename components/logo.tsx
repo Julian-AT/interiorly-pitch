@@ -1,8 +1,9 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
 interface LogoProps extends React.SVGProps<SVGSVGElement> {}
 
-const Logo = ({ ...props }: LogoProps) => {
+const Logo = ({ className, ...props }: LogoProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,8 +11,7 @@ const Logo = ({ ...props }: LogoProps) => {
       height="512px"
       viewBox="0 0 512.000000 512.000000"
       preserveAspectRatio="xMidYMid meet"
-      className="fill-current"
-      color="currentColor"
+      className={cn("fill-current text-secondary-foreground", className)}
       {...props}
     >
       <g

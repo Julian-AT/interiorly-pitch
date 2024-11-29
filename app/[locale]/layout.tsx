@@ -111,7 +111,7 @@ export default async function LocaleLayout(props: {
             <NextIntlClientProvider messages={messages}>
               <ThemeProvider
                 attribute="class"
-                defaultTheme="system"
+                defaultTheme="dark"
                 enableSystem
                 disableTransitionOnChange
               >

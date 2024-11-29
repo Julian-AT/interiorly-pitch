@@ -44,9 +44,11 @@ const BentoCard = ({
   >
     <div className="overflow-hidden">{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300">
-      <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-300 transition-all duration-300 ease-in-out group-hover:scale-75" />
-      <h3 className="text-xl font-semibold text-neutral-300">{name}</h3>
-      <p className="max-w-lg text-neutral-400">{description}</p>
+      <Icon className="h-8 w-8 origin-left transform-gpu text-secondary-foreground transition-all duration-300 ease-in-out group-hover:scale-75 xl:h-12 xl:w-12" />
+      <h3 className="text-xl font-semibold text-secondary-foreground">
+        {name}
+      </h3>
+      <p className="max-w-lg text-secondary-foreground">{description}</p>
     </div>
     <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
   </div>

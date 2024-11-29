@@ -6,7 +6,7 @@ import { SlideVision } from "@/components/pitch/slides/vision";
 import { SlideFeatures } from "@/components/pitch/slides/features";
 import { SlideFinish } from "@/components/pitch/slides/finish";
 import { SlideGenerativeUI } from "@/components/pitch/slides/generative-ui";
-import { SlideEngine } from "./engine";
+import { SlideEngine } from "@/components/pitch/slides/engine";
 
 export const Slides = {
   SlideStart: <SlideStart />,

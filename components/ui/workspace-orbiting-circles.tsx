@@ -1,10 +1,10 @@
 import { Folder, Paperclip, Search, Sheet, Trash, Users } from "lucide-react";
-import OrbitingCircles from "./orbiting-circles";
+import OrbitingCircles from "@/components/ui/orbiting-circles";
 
 export function WorkspaceOrbitingCircles() {
   return (
     <div className="relative flex h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-slate-900/10 bg-clip-text text-center text-6xl font-semibold leading-none text-transparent">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-primary to-secondary bg-clip-text text-center text-6xl font-semibold leading-none text-transparent">
         Julian&apos;s Workspace
       </span>
 

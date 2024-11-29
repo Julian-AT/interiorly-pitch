@@ -3,7 +3,7 @@ import { Grid } from "@/components/pitch/ui";
 
 export default function ElevatorPitch() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 top-0 h-screen bg-[#0C0C0C] text-white">
+    <div className="fixed bottom-0 left-0 right-0 top-0 h-screen bg-background text-white">
       <div className="">
         <Grid />
         <PitchCarousel

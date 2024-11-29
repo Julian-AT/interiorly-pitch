@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 import { Cloud, User } from "lucide-react";
 import React, { forwardRef, useRef } from "react";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
-import InteriorlyLogo from "@/public/images/logo.svg";
 import OpenAILogo from "@/public/images/logos/openai.webp";
 import HFLogo from "@/public/images/logos/hf.png";
 import QdrantLogo from "@/public/images/logos/qdrant.png";
 import Image from "next/image";
+import Logo from "@/components/logo";
 
 // eslint-disable-next-line react/display-name
 const Circle = forwardRef<
@@ -39,7 +39,7 @@ export function AnimatedBeamStack() {
 
   return (
     <div
-      className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-md border bg-background p-8"
+      className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-md border bg-background p-8 text-secondary-foreground"
       ref={containerRef}
     >
       <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">
@@ -56,11 +56,7 @@ export function AnimatedBeamStack() {
         </div>
         <div className="flex flex-col justify-center">
           <Circle ref={div6Ref} className="h-20 w-20">
-            <Image
-              src={InteriorlyLogo}
-              alt="Interiorly"
-              className="h-12 w-12"
-            />
+            <Logo />
           </Circle>
         </div>
         <div className="flex flex-col justify-center">

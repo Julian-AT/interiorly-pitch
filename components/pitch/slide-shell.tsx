@@ -10,10 +10,10 @@ interface SlideShellProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const SlideShell = ({ title, className, children }: SlideShellProps) => {
   return (
-    <div className="relative min-h-screen w-screen">
+    <div className="relative min-h-screen w-screen text-secondary-foreground">
       <div className="absolute left-4 right-4 top-4 flex justify-between text-lg md:left-8 md:right-8">
         <span>{title}</span>
-        <span className="text-[#878787]">
+        <span className="text-muted-foreground">
           <Link href={SLIDE_URI}>{SLIDE_URI_TITLE}</Link>
         </span>
       </div>

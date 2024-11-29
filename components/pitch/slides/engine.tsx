@@ -7,7 +7,7 @@ import {
   useAnimation,
   useInView,
 } from "framer-motion";
-import { useEffect, useRef, forwardRef } from "react";
+import { useEffect, useRef } from "react";
 import SlideShell from "@/components/pitch/slide-shell";
 import OpenAILogo from "@/public/images/logos/openai.webp";
 import HFLogo from "@/public/images/logos/hf.png";
@@ -19,8 +19,6 @@ import {
   IconLoraWeights,
   IconVectorEmbeddings,
 } from "@/components/icons";
-import AnimatedGradientText from "@/components/ui/animated-gradient-text";
-import { cn } from "@/lib/utils";
 import Logo from "@/components/logo";
 import { AnimatedBeamStack } from "@/components/ui/animated-beams-stack";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
@@ -69,8 +67,8 @@ export function SlideEngine() {
       <div className="col-span-3 flex h-full transform-gpu flex-col items-center justify-between gap-5 overflow-hidden rounded-lg border border-border bg-background backdrop-blur-md xl:flex-row">
         <div className="flex w-full flex-col items-start justify-between gap-y-10 p-10 xl:h-full xl:w-1/2">
           <div className="group rounded-full border border-border bg-secondary text-base transition-all ease-in">
-            <AnimatedShinyText className="flex items-center gap-1.5 px-3 py-0.5">
-              <Logo className="h-5 w-5" fill="#a3a3a380" />
+            <AnimatedShinyText className="flex items-center gap-1.5 px-3 py-0.5 text-secondary-foreground">
+              <Logo className="h-5 w-5" />
               Interiorly AI - Engine
             </AnimatedShinyText>
           </div>
@@ -80,27 +78,27 @@ export function SlideEngine() {
           <div className="grid h-auto w-full grid-cols-3 gap-4">
             <Card className="relative flex h-auto flex-col items-center justify-center gap-3 bg-background py-3">
               <IconGenerativeUI className="h-8 w-8" />
-              <h3 className="text-center text-lg font-semibold text-neutral-400">
+              <h3 className="text-center text-lg font-semibold text-secondary-foreground">
                 Generative UI <br /> (Fn Calling)
               </h3>
             </Card>
             <Card className="relative flex h-auto flex-col items-center justify-center gap-3 bg-background py-3">
               <IconVectorEmbeddings className="h-8 w-8" />
-              <h3 className="text-center text-lg font-semibold text-neutral-400">
+              <h3 className="text-center text-lg font-semibold text-secondary-foreground">
                 Vector <br /> Embeddings
               </h3>
             </Card>
             <Card className="relative flex h-auto flex-col items-center justify-center gap-3 bg-background py-3">
               <IconLoraWeights className="h-8 w-8" />
-              <h3 className="text-center text-lg font-semibold text-neutral-400">
+              <h3 className="text-center text-lg font-semibold text-secondary-foreground">
                 SDXL / 1.5 <br /> Lora Weights
               </h3>
             </Card>
           </div>
         </div>
         <div className="relative h-full w-full overflow-hidden xl:w-1/2">
-          <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1/3 bg-gradient-to-b from-[#121212]" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/3 bg-gradient-to-t from-[#121212]" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1/3 bg-gradient-to-b from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/3 bg-gradient-to-t from-background to-transparent" />
           <div
             ref={containerRef}
             className="relative -right-[75px] -top-20 grid max-h-full grid-cols-3 gap-5 [transform:rotate(-15deg)translateZ(10px);]"
@@ -125,9 +123,9 @@ export function SlideEngine() {
                       },
                     }}
                     transition={{
-                      duration: 0.1,
+                      duration: 0.187,
                       ease: cubicBezier(0.22, 1, 0.36, 1),
-                      delay: (i * cardImages.length + index) * 0.05,
+                      delay: (i * cardImages.length + index) * 0.069,
                     }}
                     key={i * cardImages.length + index}
                     className="flex flex-col items-center gap-y-2 rounded-md border bg-secondary p-5"

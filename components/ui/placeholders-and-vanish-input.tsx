@@ -1,10 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
-import InteriorlyLogoSVG from "@/public/images/logo.svg";
-import Image from "next/image";
+import Logo from "@/components/logo";
 
 export function PlaceholdersAndVanishInput({
   placeholder,
@@ -79,51 +78,6 @@ export function PlaceholdersAndVanishInput({
     draw();
   }, [value, draw]);
 
-  const animate = (start: number) => {
-    const animateFrame = (pos: number = 0) => {
-      requestAnimationFrame(() => {
-        const newArr = [];
-        for (let i = 0; i < newDataRef.current.length; i++) {
-          const current = newDataRef.current[i];
-          if (current.x < pos) {
-            newArr.push(current);
-          } else {
-            if (current.r <= 0) {
-              current.r = 0;
-              continue;
-            }
-            current.x += Math.random() > 0.5 ? 1 : -1;
-            current.y += Math.random() > 0.5 ? 1 : -1;
-            current.r -= 0.05 * Math.random();
-            newArr.push(current);
-          }
-        }
-        newDataRef.current = newArr;
-        const ctx = canvasRef.current?.getContext("2d");
-        if (ctx) {
-          ctx.clearRect(pos, 0, 800, 800);
-          newDataRef.current.forEach((t) => {
-            const { x: n, y: i, r: s, color: color } = t;
-            if (n > pos) {
-              ctx.beginPath();
-              ctx.rect(n, i, s, s);
-              ctx.fillStyle = color;
-              ctx.strokeStyle = color;
-              ctx.stroke();
-            }
-          });
-        }
-        if (newDataRef.current.length > 0) {
-          animateFrame(pos - 8);
-        } else {
-          setValue("");
-          setAnimating(false);
-        }
-      });
-    };
-    animateFrame(start);
-  };
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSubmit && onSubmit(e);
@@ -162,11 +116,7 @@ export function PlaceholdersAndVanishInput({
         )}
       />
 
-      <Image
-        src={InteriorlyLogoSVG}
-        alt="Interiorly Logo"
-        className="absolute left-3 top-1/2 z-50 h-6 w-6 -translate-y-1/2 rounded-full transition duration-200"
-      />
+      <Logo className="absolute left-3 top-1/2 z-50 h-6 w-6 -translate-y-1/2 rounded-full transition duration-200" />
       <button
         disabled={!value || disabled}
         type="submit"

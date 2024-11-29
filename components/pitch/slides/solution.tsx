@@ -19,6 +19,7 @@ import { cn, shuffleArray } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Marquee from "@/components/ui/marquee";
 import Image from "next/image";
+import Logo from "@/components/logo";
 
 const tiles = [
   {
@@ -108,9 +109,9 @@ export function SlideSolution() {
   return (
     <SlideShell title={t("title")} className="grid-cols-1">
       <section id="cta" className="col-span-3 h-full w-full">
-        <div className="py-14">
-          <div className="container flex w-full flex-col items-center justify-center">
-            <div className="relative flex w-full max-w-full flex-col items-center justify-center overflow-hidden rounded-[2rem] px-12">
+        <div className="h-full xl:py-14">
+          <div className="flex h-full w-full flex-col items-center justify-center xl:container">
+            <div className="relative flex h-full w-full max-w-full flex-col items-center justify-center overflow-hidden rounded-[2rem] xl:px-12">
               <Marquee
                 reverse
                 className="-delay-[200ms] [--duration:20s]"
@@ -151,12 +152,7 @@ export function SlideSolution() {
               </Marquee>
               <div className="absolute z-10">
                 <div className="mx-auto size-24 rounded-[2rem] border bg-background/50 p-3 shadow-2xl backdrop-blur-md lg:size-32">
-                  <Image
-                    src={InteriorlyLogo}
-                    alt="Interiorly"
-                    width={128}
-                    height={128}
-                  />
+                  <Logo className="size-full text-secondary-foreground" />
                 </div>
                 <div className="z-10 mt-4 flex flex-col items-center text-center text-primary">
                   <h1 className="text-4xl font-bold lg:text-5xl">
